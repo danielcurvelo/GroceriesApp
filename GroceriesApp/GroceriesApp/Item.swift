@@ -15,6 +15,7 @@ class Item: NSManagedObject {
     @NSManaged var purchase: NSNumber
     @NSManaged var purchaseDate: NSDate
     @NSManaged var shelfLife: NSNumber
+    @NSManaged var name: String
     @NSManaged var lists: NSOrderedSet
     @NSManaged var recipes: NSOrderedSet
     @NSManaged var tags: NSOrderedSet
