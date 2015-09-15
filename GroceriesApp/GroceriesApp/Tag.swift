@@ -13,7 +13,7 @@ class Tag: NSManagedObject {
 
     @NSManaged var tag: String
     @NSManaged var items: NSOrderedSet
-    @NSManaged var recipes: NSOrderedSet
     @NSManaged var lists: NSOrderedSet
+    @NSManaged var recipes: NSOrderedSet
 
 }

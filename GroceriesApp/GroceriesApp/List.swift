@@ -11,9 +11,9 @@ import CoreData
 
 class List: NSManagedObject {
 
-    @NSManaged var listTitle: String
     @NSManaged var date: NSDate
     @NSManaged var icon: String
+    @NSManaged var listTitle: String
     @NSManaged var items: NSOrderedSet
     @NSManaged var recipes: NSOrderedSet
     @NSManaged var tags: NSOrderedSet

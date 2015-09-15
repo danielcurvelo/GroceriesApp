@@ -11,10 +11,10 @@ import CoreData
 
 class Recipe: NSManagedObject {
 
-    @NSManaged var title: String
+    @NSManaged var cookingDirections: String
     @NSManaged var image: String
     @NSManaged var recipeSummary: String
-    @NSManaged var cookingDirections: String
+    @NSManaged var title: String
     @NSManaged var items: NSOrderedSet
     @NSManaged var lists: NSOrderedSet
     @NSManaged var tags: NSOrderedSet
