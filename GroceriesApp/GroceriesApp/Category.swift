@@ -1,5 +1,5 @@
 //
-//  Tag.swift
+//  Category.swift
 //  GroceriesApp
 //
 //  Created by Mac User on 9/15/15.
@@ -9,11 +9,10 @@
 import Foundation
 import CoreData
 
-class Tag: NSManagedObject {
+class Category: NSManagedObject {
 
-    @NSManaged var tag: String
+    @NSManaged var title: String
+    @NSManaged var colorIdentifier: NSNumber
     @NSManaged var items: NSOrderedSet
-    @NSManaged var recipes: NSOrderedSet
-    @NSManaged var lists: NSOrderedSet
 
 }
