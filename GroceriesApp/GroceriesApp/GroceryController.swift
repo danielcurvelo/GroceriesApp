@@ -27,13 +27,16 @@ class GroceryController: NSObject {
     {
         get{
             let fetchRequest = NSFetchRequest(entityName:"Category")
-            return appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest, error:nil) as! [Category]
+            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest)) as! [Category]
         }
     }
     
     func save()
     {
-        appDelegate.managedObjectContext?.save(nil)
+        do {
+            try appDelegate.managedObjectContext?.save()
+        } catch _ {
+        }
     }
     
     
