@@ -21,16 +21,28 @@ class GroceryController: NSObject {
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
-    func createItemInCategory(category:Category, name:String, shelfLife: NSNumber, tags: NSOrderedSet)
+    func createItemInCategory(category: Category, name: String, shelfLife: NSNumber, tags: NSOrderedSet, image: String, purchase: NSNumber, purchaseDate: NSDate, lists: NSOrderedSet)
     {
         let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext:appDelegate.managedObjectContext!) as! Item
         item.name = name
         item.category = category
         item.shelfLife = shelfLife
         item.tags = tags
+        item.purchaseDate = purchaseDate
+        item.purchase = purchase
+        item.lists = lists
+        item.image = image
+        
         save()
     }
-
+    
+    func createAList() {
+        NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: appDelegate.managedObjectContext!) as! List
+        
+     save()
+       
+}
+    
     var categories:[Category]
     {
         get{
@@ -62,8 +74,5 @@ class GroceryController: NSObject {
         }
     }
     
-    
-    
-
    
 }

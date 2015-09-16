@@ -21,7 +21,6 @@ extension Item {
     @NSManaged var shelfLife: NSNumber?
     @NSManaged var category: Category?
     @NSManaged var lists: NSOrderedSet?
-    @NSManaged var recipes: NSOrderedSet?
     @NSManaged var tags: NSOrderedSet?
-
+//  @NSManaged var recipes: NSOrderedSet?
 }
