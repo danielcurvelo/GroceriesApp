@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="14F27" minimumToolsVersion="Xcode 4.3">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Xcode 4.3">
     <entity name="Category" representedClassName="PRODUCT_MODULE_NAME.Category" syncable="YES">
         <attribute name="colorIdentifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fridges" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Fridge" inverseName="category" inverseEntity="Fridge" syncable="YES"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Item" inverseName="category" inverseEntity="Item" syncable="YES"/>
     </entity>
-    <entity name="Fridge" syncable="YES">
+    <entity name="Fridge" representedClassName=".Fridge" syncable="YES">
         <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="fridges" inverseEntity="Category" syncable="YES"/>
@@ -59,11 +59,11 @@
     </entity>
     <elements>
         <element name="Category" positionX="18" positionY="135" width="128" height="105"/>
+        <element name="Fridge" positionX="-27" positionY="81" width="128" height="105"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="180"/>
         <element name="List" positionX="-54" positionY="27" width="128" height="150"/>
         <element name="Recipe" positionX="-36" positionY="45" width="128" height="165"/>
         <element name="Tag" positionX="0" positionY="90" width="128" height="105"/>
         <element name="User" positionX="-18" positionY="72" width="128" height="150"/>
-        <element name="Fridge" positionX="-27" positionY="81" width="128" height="105"/>
     </elements>
 </model>

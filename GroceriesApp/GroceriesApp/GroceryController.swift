@@ -11,6 +11,14 @@ import CoreData
 
 class GroceryController: NSObject {
     
+    var user: User
+    {
+        get{
+            let fetchRequest = NSFetchRequest(entityName: "User")
+            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest).first) as! User
+            }
+    }
+    
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     func createItemInCategory(category:Category, name:String, shelfLife: NSNumber, tags: NSOrderedSet)
@@ -28,6 +36,21 @@ class GroceryController: NSObject {
         get{
             let fetchRequest = NSFetchRequest(entityName:"Category")
             return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest)) as! [Category]
+        }
+    }
+    
+    var fridges:[Fridge]
+        {
+        get {
+            return user.fridges?.array as! [Fridge]
+        }
+        
+    }
+    
+    var lists: [List]
+        {
+        get {
+            return user.lists?.array as! [List]
         }
     }
     
