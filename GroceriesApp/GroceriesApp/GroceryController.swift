@@ -37,8 +37,10 @@ class GroceryController: NSObject {
     }
     
     func createAList() {
-        NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: appDelegate.managedObjectContext!) as! List
-        
+    let list = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: appDelegate.managedObjectContext!) as! List
+       let mutableUsers = list.users?.mutableCopy()
+        mutableUsers?.addObject(self.user)
+        list.users = mutableUsers as? NSOrderedSet
      save()
        
 }
