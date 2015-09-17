@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fridge View Controller -->
         <scene sceneID="e3k-oM-AsI">
             <objects>
-                <viewController id="sWg-uU-Tzo" sceneMemberID="viewController">
+                <viewController title="Fridge View Controller " id="sWg-uU-Tzo" customClass="FridgeViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RvR-ZN-KPv"/>
                         <viewControllerLayoutGuide type="bottom" id="VDK-Tc-0hQ"/>
@@ -21,11 +21,11 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="edF-90-IUY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="edF-90-IUY">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="edF-90-IUY" id="JMu-Xz-VGh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="2121" y="424"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart List-->
         <scene sceneID="jQv-OS-Nj9">
             <objects>
-                <viewController id="I5U-AM-N02" sceneMemberID="viewController">
+                <viewController title="Cart List" id="I5U-AM-N02" customClass="CartViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HmS-Oc-mhC"/>
                         <viewControllerLayoutGuide type="bottom" id="6G1-2n-6DA"/>
@@ -87,11 +87,11 @@
                                 <rect key="frame" x="0.0" y="138" width="600" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0SU-gf-BKM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="0SU-gf-BKM">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0SU-gf-BKM" id="dvS-Co-Dy1">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="2121" y="-237"/>
         </scene>
-        <!--View Controller-->
+        <!--Shopping List-->
         <scene sceneID="jiT-wa-06x">
             <objects>
-                <viewController id="tRo-Vb-aQV" sceneMemberID="viewController">
+                <viewController title="Shopping List" id="tRo-Vb-aQV" customClass="ShoppingListViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="30R-5K-Rlq"/>
                         <viewControllerLayoutGuide type="bottom" id="jg3-vN-zQF"/>
@@ -208,11 +208,11 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EEf-w2-Bd2" customClass="ItemTableViewCell" customModule="GroceriesApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createItemCell" id="EEf-w2-Bd2" customClass="ItemTableViewCell" customModule="GroceriesApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EEf-w2-Bd2" id="T4N-kd-kGD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4UU-8L-4iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3668" y="35"/>
+            <point key="canvasLocation" x="3531" y="35"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fVP-zy-FyG">

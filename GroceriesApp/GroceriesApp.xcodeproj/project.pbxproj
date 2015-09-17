@@ -29,6 +29,13 @@
 		91738CF71BAA00B8007D7DFE /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CE91BAA00B8007D7DFE /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
 		91738CF81BAA00B8007D7DFE /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CEA1BAA00B8007D7DFE /* User+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		91738CF91BAA00B8007D7DFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CEB1BAA00B8007D7DFE /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		91738D031BAB6F83007D7DFE /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		91738D051BAB7228007D7DFE /* CreateItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		91738D071BAB7243007D7DFE /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +75,13 @@
 		91738CE91BAA00B8007D7DFE /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = ../Tag.swift; sourceTree = "<group>"; };
 		91738CEA1BAA00B8007D7DFE /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		91738CEB1BAA00B8007D7DFE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
+		91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
+		91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateItemTableViewCell.xib; sourceTree = "<group>"; };
+		91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +126,11 @@
 				63B85A1F1BA8980500FC16A6 /* Controllers */,
 				63B859F61BA76DDA00FC16A6 /* Model */,
 				63B859C91BA5FEC700FC16A6 /* AppDelegate.swift */,
-				63B859CB1BA5FEC700FC16A6 /* ViewController.swift */,
 				63B859CD1BA5FEC700FC16A6 /* Main.storyboard */,
+				91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */,
+				91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */,
+				91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */,
+				91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */,
 				63B859D01BA5FEC700FC16A6 /* Images.xcassets */,
 				63B859D21BA5FEC700FC16A6 /* LaunchScreen.xib */,
 				63B859C71BA5FEC700FC16A6 /* Supporting Files */,
@@ -171,6 +188,10 @@
 		63B85A1F1BA8980500FC16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */,
+				91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */,
+				91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */,
+				63B859CB1BA5FEC700FC16A6 /* ViewController.swift */,
 				63B85A201BA8980F00FC16A6 /* Model Controllers */,
 			);
 			name = Controllers;
@@ -268,6 +289,8 @@
 			files = (
 				63B859CF1BA5FEC700FC16A6 /* Main.storyboard in Resources */,
 				63B859D41BA5FEC700FC16A6 /* LaunchScreen.xib in Resources */,
+				91738D051BAB7228007D7DFE /* CreateItemTableViewCell.xib in Resources */,
+				91738D071BAB7243007D7DFE /* ItemTableViewCell.xib in Resources */,
 				63B859D11BA5FEC700FC16A6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91738D031BAB6F83007D7DFE /* ShoppingListViewController.swift in Sources */,
+				91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */,
 				91738CF71BAA00B8007D7DFE /* Tag.swift in Sources */,
 				91738CEE1BAA00B8007D7DFE /* Item+CoreDataProperties.swift in Sources */,
 				91738CF11BAA00B8007D7DFE /* Category.swift in Sources */,
@@ -294,15 +319,18 @@
 				91738CF51BAA00B8007D7DFE /* Fridge.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,
 				91738CF31BAA00B8007D7DFE /* List.swift in Sources */,
+				91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */,
 				63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */,
 				91738CF41BAA00B8007D7DFE /* Fridge+CoreDataProperties.swift in Sources */,
 				91738CEF1BAA00B8007D7DFE /* Item.swift in Sources */,
+				91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */,
 				91738CF21BAA00B8007D7DFE /* List+CoreDataProperties.swift in Sources */,
 				91738CF61BAA00B8007D7DFE /* Tag+CoreDataProperties.swift in Sources */,
 				91738CF81BAA00B8007D7DFE /* User+CoreDataProperties.swift in Sources */,
 				91738CF91BAA00B8007D7DFE /* User.swift in Sources */,
 				91738CED1BAA00B8007D7DFE /* Recipe.swift in Sources */,
 				63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */,
+				91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */,
 				63B859EB1BA765ED00FC16A6 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
