@@ -36,6 +36,7 @@
 		91738D071BAB7243007D7DFE /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemTableViewCell.swift; sourceTree = "<group>"; };
+		91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */,
 				91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */,
 				91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */,
+				91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */,
 				63B859CB1BA5FEC700FC16A6 /* ViewController.swift */,
 				63B85A201BA8980F00FC16A6 /* Model Controllers */,
 			);
@@ -311,6 +314,7 @@
 			files = (
 				91738D031BAB6F83007D7DFE /* ShoppingListViewController.swift in Sources */,
 				91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */,
+				91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */,
 				91738CF71BAA00B8007D7DFE /* Tag.swift in Sources */,
 				91738CEE1BAA00B8007D7DFE /* Item+CoreDataProperties.swift in Sources */,
 				91738CF11BAA00B8007D7DFE /* Category.swift in Sources */,
