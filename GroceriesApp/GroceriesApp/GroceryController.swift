@@ -13,17 +13,16 @@ import Parse
 class GroceryController: NSObject {
     
 
-    func createItemInCategory(category: Category, name: String, shelfLife: NSNumber, tags: NSOrderedSet, image: String, purchase: NSNumber, purchaseDate: NSDate, lists: NSOrderedSet)
+    func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List])
     {
-//        let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext:appDelegate.managedObjectContext!) as! Item
-//        item.name = name
-//        item.category = category
-//        item.shelfLife = shelfLife
-//        item.tags = tags
-//        item.purchaseDate = purchaseDate
-//        item.purchase = purchase
-//        item.lists = lists
-//        item.image = image
+        let item = PFObject(className:"Item") as! Item
+     
+        item.category = category
+        item.name = name
+        item.tags = tags
+        item.icon = icon
+        item.lists = lists
+        item.shelfLife = 7
         
         save()
     }

@@ -11,17 +11,14 @@ import Parse
 
 class Item: PFObject, PFSubclassing {
     
-    @NSManaged var items: [Item]?
-    @NSManaged var title: String?
-    @NSManaged var colorIdentifier: NSNumber?
     @NSManaged var fridges: [Fridge]?
     @NSManaged var category: Category?
     @NSManaged var purchaseDate: NSDate?
     @NSManaged var tags: [Tag]?
     @NSManaged var lists: [List]?
     @NSManaged var shelfLife: NSNumber?
-    @NSManaged var icon: String?
-    
+    @NSManaged var icon: PFFile?
+    @NSManaged var name: String?
     
     class func parseClassName() -> String {
         return "Item"
