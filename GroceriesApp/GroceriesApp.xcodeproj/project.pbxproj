@@ -28,6 +28,8 @@
 		9117E1161BAC9CF600369C4A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1141BAC9CF600369C4A /* libz.1.dylib */; };
 		9117E1181BACA07800369C4A /* Fridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E1171BACA07800369C4A /* Fridge.swift */; settings = {ASSET_TAGS = (); }; };
 		9117E11A1BACA3A700369C4A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E1191BACA3A700369C4A /* Category.swift */; settings = {ASSET_TAGS = (); }; };
+		9117E11C1BACB9AE00369C4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11B1BACB9AE00369C4A /* Item.swift */; settings = {ASSET_TAGS = (); }; };
+		9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11D1BACBA2F00369C4A /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
 		91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		91738D031BAB6F83007D7DFE /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -74,6 +76,8 @@
 		9117E1141BAC9CF600369C4A /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		9117E1171BACA07800369C4A /* Fridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fridge.swift; sourceTree = "<group>"; };
 		9117E1191BACA3A700369C4A /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9117E11B1BACB9AE00369C4A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		9117E11D1BACBA2F00369C4A /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 			children = (
 				9117E1171BACA07800369C4A /* Fridge.swift */,
 				9117E1191BACA3A700369C4A /* Category.swift */,
+				9117E11B1BACB9AE00369C4A /* Item.swift */,
+				9117E11D1BACBA2F00369C4A /* Tag.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 				91738D031BAB6F83007D7DFE /* ShoppingListViewController.swift in Sources */,
 				91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */,
 				91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */,
+				9117E11C1BACB9AE00369C4A /* Item.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,
 				91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */,
 				63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */,
@@ -341,6 +348,7 @@
 				63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */,
 				91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */,
 				9117E11A1BACA3A700369C4A /* Category.swift in Sources */,
+				9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

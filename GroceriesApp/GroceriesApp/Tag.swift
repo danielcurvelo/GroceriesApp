@@ -1,23 +1,22 @@
 //
-//  Fridge.swift
+//  Tag.swift
 //  GroceriesApp
 //
 //  Created by Robert Shepperd on 9/18/15.
 //  Copyright © 2015 DanielCurvelo. All rights reserved.
 //
 
-import Parse
 import UIKit
+import Parse
 
-class Fridge: PFObject, PFSubclassing {
+class Tag: PFObject, PFSubclassing {
 
-    @NSManaged var icon: PFFile?
-    @NSManaged var title: String?
-    @NSManaged var categories: [Category]?
-    @NSManaged var owners: [PFUser]?
+    @NSManaged var tag: String?
+    
     
     class func parseClassName() -> String {
-        return "Fridge";    }
+        return "Tag"
+    }
     
     override class func initialize() {
         struct Static {
@@ -27,5 +26,6 @@ class Fridge: PFObject, PFSubclassing {
             self.registerSubclass()
         }
     }
+    
     
 }
