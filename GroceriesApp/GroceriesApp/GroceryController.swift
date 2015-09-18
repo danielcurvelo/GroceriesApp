@@ -7,51 +7,43 @@
 //
 
 import UIKit
-import CoreData
+import Parse
+
 
 class GroceryController: NSObject {
     
-    var user: User
-    {
-        get{
-            let fetchRequest = NSFetchRequest(entityName: "User")
-            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest).first) as! User
-            }
-    }
-    
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     func createItemInCategory(category: Category, name: String, shelfLife: NSNumber, tags: NSOrderedSet, image: String, purchase: NSNumber, purchaseDate: NSDate, lists: NSOrderedSet)
     {
-        let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext:appDelegate.managedObjectContext!) as! Item
-        item.name = name
-        item.category = category
-        item.shelfLife = shelfLife
-        item.tags = tags
-        item.purchaseDate = purchaseDate
-        item.purchase = purchase
-        item.lists = lists
-        item.image = image
+//        let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext:appDelegate.managedObjectContext!) as! Item
+//        item.name = name
+//        item.category = category
+//        item.shelfLife = shelfLife
+//        item.tags = tags
+//        item.purchaseDate = purchaseDate
+//        item.purchase = purchase
+//        item.lists = lists
+//        item.image = image
         
         save()
     }
     
     func createAList() {
-    let list = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: appDelegate.managedObjectContext!) as! List
-       let mutableUsers = list.users?.mutableCopy()
-        mutableUsers?.addObject(self.user)
-        list.users = mutableUsers as? NSOrderedSet
+//    let list = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: appDelegate.managedObjectContext!) as! List
+//       let mutableUsers = list.users?.mutableCopy()
+//        mutableUsers?.addObject(self.user)
+//        list.users = mutableUsers as? NSOrderedSet
      save()
        
 }
     
-    var categories:[Category]
-    {
-        get{
-            let fetchRequest = NSFetchRequest(entityName:"Category")
-            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest)) as! [Category]
-        }
-    }
+//    var categories:[Category]
+//    {
+//        get{
+////            let fetchRequest = NSFetchRequest(entityName:"Category")
+////            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest)) as! [Category]
+//        }
+//    }
     
     var fridges:[Fridge]
         {
@@ -70,10 +62,6 @@ class GroceryController: NSObject {
     
     func save()
     {
-        do {
-            try appDelegate.managedObjectContext?.save()
-        } catch _ {
-        }
     }
     
    
