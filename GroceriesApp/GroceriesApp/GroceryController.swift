@@ -12,7 +12,8 @@ import Parse
 
 class GroceryController: NSObject {
     
-
+    var fridges:[Fridge]?
+    
     func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List])
     {
         let item = PFObject(className:"Item") as! Item
@@ -24,32 +25,30 @@ class GroceryController: NSObject {
         item.lists = lists
         item.shelfLife = 7
         
-        save()
+        item.saveEventually()
     }
     
-    func createAList() {
-//    let list = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: appDelegate.managedObjectContext!) as! List
-//       let mutableUsers = list.users?.mutableCopy()
-//        mutableUsers?.addObject(self.user)
-//        list.users = mutableUsers as? NSOrderedSet
-     save()
-       
-}
-    
-//    var categories:[Category]
-//    {
-//        get{
-////            let fetchRequest = NSFetchRequest(entityName:"Category")
-////            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest)) as! [Category]
-//        }
-//    }
-    
-    var fridges:[Fridge]
-        {
-        get {
-            return user.fridges?.array as! [Fridge]
-        }
+    func createAList(title: String) {
+
+        let list = PFObject(className: "List") as! List
         
+        list.title = title
+        
+        list.saveEventually()
+        
+    }
+    
+    func downloadFridges()
+    {
+        let query = Fridge.query() as PFQuery?
+
+        if let query = query {
+            query.findObjectsInBackgroundWithBlock({ (fridges :[Fridge]?, error: NSError?) -> Void in
+                if let fridges = fridges{
+                    self.fridges = fridges
+                }
+            })
+        }
     }
     
     var lists: [List]
