@@ -14,8 +14,8 @@
 		63B859D41BA5FEC700FC16A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B859D21BA5FEC700FC16A6 /* LaunchScreen.xib */; };
 		63B859E01BA5FEC700FC16A6 /* GroceriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B859DF1BA5FEC700FC16A6 /* GroceriesAppTests.swift */; };
 		63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */; };
-		9117E1011BAC9BC800369C4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E0FF1BAC9BC800369C4A /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		9117E1021BAC9BC800369C4A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1001BAC9BC800369C4A /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		9117E1011BAC9BC800369C4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E0FF1BAC9BC800369C4A /* Bolts.framework */; };
+		9117E1021BAC9BC800369C4A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1001BAC9BC800369C4A /* Parse.framework */; };
 		9117E1041BAC9BFD00369C4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1031BAC9BFD00369C4A /* AudioToolbox.framework */; };
 		9117E1061BAC9C0600369C4A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1051BAC9C0600369C4A /* CFNetwork.framework */; };
 		9117E10D1BAC9C5900369C4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1071BAC9C5900369C4A /* CoreGraphics.framework */; };
@@ -26,19 +26,20 @@
 		9117E1121BAC9C5900369C4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E10C1BAC9C5900369C4A /* SystemConfiguration.framework */; };
 		9117E1151BAC9CF600369C4A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1131BAC9CF600369C4A /* libsqlite3.dylib */; };
 		9117E1161BAC9CF600369C4A /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1141BAC9CF600369C4A /* libz.1.dylib */; };
-		9117E1181BACA07800369C4A /* Fridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E1171BACA07800369C4A /* Fridge.swift */; settings = {ASSET_TAGS = (); }; };
-		9117E11A1BACA3A700369C4A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E1191BACA3A700369C4A /* Category.swift */; settings = {ASSET_TAGS = (); }; };
-		9117E11C1BACB9AE00369C4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11B1BACB9AE00369C4A /* Item.swift */; settings = {ASSET_TAGS = (); }; };
-		9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11D1BACBA2F00369C4A /* Tag.swift */; settings = {ASSET_TAGS = (); }; };
-		9117E1201BACBD3100369C4A /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11F1BACBD3100369C4A /* List.swift */; settings = {ASSET_TAGS = (); }; };
-		91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		91738D031BAB6F83007D7DFE /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		91738D051BAB7228007D7DFE /* CreateItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		91738D071BAB7243007D7DFE /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9117E1181BACA07800369C4A /* Fridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E1171BACA07800369C4A /* Fridge.swift */; };
+		9117E11A1BACA3A700369C4A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E1191BACA3A700369C4A /* Category.swift */; };
+		9117E11C1BACB9AE00369C4A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11B1BACB9AE00369C4A /* Item.swift */; };
+		9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11D1BACBA2F00369C4A /* Tag.swift */; };
+		9117E1201BACBD3100369C4A /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117E11F1BACBD3100369C4A /* List.swift */; };
+		91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */; };
+		91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */; };
+		91738D051BAB7228007D7DFE /* CreateItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */; };
+		91738D071BAB7243007D7DFE /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */; };
+		91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */; };
+		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; };
+		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; };
+		F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */; };
+		F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,12 +83,13 @@
 		9117E11F1BACBD3100369C4A /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateItemTableViewCell.xib; sourceTree = "<group>"; };
 		91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
+		F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfStockViewController.swift; path = ../OutOfStockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		63B859C61BA5FEC700FC16A6 /* GroceriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */,
 				63B85A1F1BA8980500FC16A6 /* Controllers */,
 				63B859F61BA76DDA00FC16A6 /* Model */,
 				63B859C91BA5FEC700FC16A6 /* AppDelegate.swift */,
@@ -197,8 +200,8 @@
 		63B85A1F1BA8980500FC16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */,
 				91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */,
-				91738D021BAB6F83007D7DFE /* ShoppingListViewController.swift */,
 				91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */,
 				91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */,
 				63B859CB1BA5FEC700FC16A6 /* ViewController.swift */,
@@ -340,15 +343,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9117E1181BACA07800369C4A /* Fridge.swift in Sources */,
-				91738D031BAB6F83007D7DFE /* ShoppingListViewController.swift in Sources */,
 				91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */,
 				91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */,
 				9117E11C1BACB9AE00369C4A /* Item.swift in Sources */,
+				F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,
 				91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */,
 				63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */,
 				91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */,
 				9117E1201BACBD3100369C4A /* List.swift in Sources */,
+				F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */,
 				63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */,
 				91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */,
 				9117E11A1BACA3A700369C4A /* Category.swift in Sources */,

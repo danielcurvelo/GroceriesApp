@@ -31,5 +31,9 @@ extension UIColor {
         return UIColor(red: 0.18, green: 0.77, blue: 0.59, alpha: 1)
     }
     
+    class func beigeColor() -> UIColor {
+        return UIColor(red: 244/255, green: 236/255, blue: 206/255, alpha: 1)
+    }
+    
 }
 
