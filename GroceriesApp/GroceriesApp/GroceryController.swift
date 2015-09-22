@@ -13,6 +13,7 @@ import Parse
 class GroceryController: NSObject {
     
     var fridges:[Fridge]?
+//    var user = PFUser .currentUser()?
     
     func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List])
     {
@@ -27,7 +28,7 @@ class GroceryController: NSObject {
         
         item.saveEventually()
     }
-    
+
     func createAList(title: String) {
 
         let list = PFObject(className: "List") as! List
@@ -38,26 +39,26 @@ class GroceryController: NSObject {
         
     }
     
-    func downloadFridges()
-    {
-        let query = Fridge.query() as PFQuery?
-
-        if let query = query {
-            query.findObjectsInBackgroundWithBlock({ (fridges :[Fridge]?, error: NSError?) -> Void in
-                if let fridges = fridges{
-                    self.fridges = fridges
-                }
-            })
-        }
-    }
+//    func downloadFridges()
+//    {
+//        let query = Fridge.query() as PFQuery?
+//
+//        if let query = query {
+//            query.findObjectsInBackgroundWithBlock({ (fridges :[Fridge]?, error: NSError?) -> Void in
+//                if let fridges = fridges{
+//                    self.fridges = fridges
+//                }
+//            })
+//        }
+//    }
     
-    var lists: [List]
-        {
-        get {
-            return user.lists?.array as! [List]
-        }
-    }
-    
+//    var lists: [List]
+//        {
+//        get {
+//            return user("lists":[List]?) as! [List]
+//        }
+//    }
+//    
     func save()
     {
     }

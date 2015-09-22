@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         let testObject = PFObject(className: "TestObject")
         testObject["foo"] = "bar"
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
+            print("Object has been saved.", terminator: "")
         }
         
     }
