@@ -7,58 +7,48 @@
 //
 
 import UIKit
-import CoreData
+import Parse
+
 
 class GroceryController: NSObject {
     
-    var user: User
-    {
-        get{
-            let fetchRequest = NSFetchRequest(entityName: "User")
-            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest).first) as! User
-            }
-    }
+    var fridges:[Fridge]?
     
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-
-    func createItemInCategory(category: Category, name: String, shelfLife: NSNumber, tags: NSOrderedSet, image: String, purchase: NSNumber, purchaseDate: NSDate, lists: NSOrderedSet)
+    func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List])
     {
-        let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext:appDelegate.managedObjectContext!) as! Item
-        item.name = name
+        let item = PFObject(className:"Item") as! Item
+     
         item.category = category
-        item.shelfLife = shelfLife
+        item.name = name
         item.tags = tags
-        item.purchaseDate = purchaseDate
-        item.purchase = purchase
+        item.icon = icon
         item.lists = lists
-        item.image = image
+        item.shelfLife = 7
         
-        save()
+        item.saveEventually()
     }
     
-    func createAList() {
-    let list = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: appDelegate.managedObjectContext!) as! List
-       let mutableUsers = list.users?.mutableCopy()
-        mutableUsers?.addObject(self.user)
-        list.users = mutableUsers as? NSOrderedSet
-     save()
-       
-}
+    func createAList(title: String) {
+
+        let list = PFObject(className: "List") as! List
+        
+        list.title = title
+        
+        list.saveEventually()
+        
+    }
     
-    var categories:[Category]
+    func downloadFridges()
     {
-        get{
-            let fetchRequest = NSFetchRequest(entityName:"Category")
-            return (try! appDelegate.managedObjectContext?.executeFetchRequest(fetchRequest)) as! [Category]
+        let query = Fridge.query() as PFQuery?
+
+        if let query = query {
+            query.findObjectsInBackgroundWithBlock({ (fridges :[Fridge]?, error: NSError?) -> Void in
+                if let fridges = fridges{
+                    self.fridges = fridges
+                }
+            })
         }
-    }
-    
-    var fridges:[Fridge]
-        {
-        get {
-            return user.fridges?.array as! [Fridge]
-        }
-        
     }
     
     var lists: [List]
@@ -70,10 +60,6 @@ class GroceryController: NSObject {
     
     func save()
     {
-        do {
-            try appDelegate.managedObjectContext?.save()
-        } catch _ {
-        }
     }
     
    
