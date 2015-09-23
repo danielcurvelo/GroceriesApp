@@ -12,11 +12,11 @@ import Parse
 
 class GroceryController: NSObject {
     
-    var fridges:[Fridge]?
-//    var user = PFUser .currentUser()?
+    static let sharedInstance = GroceryController()
     
-    func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List])
-    {
+    var fridges:[Fridge] = []
+    
+    func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List]) {
         let item = PFObject(className:"Item") as! Item
      
         item.category = category
@@ -35,33 +35,30 @@ class GroceryController: NSObject {
         
         list.title = title
         
-        list.saveEventually()
+        list.saveInBackgroundWithBlock{(success,error) -> Void in
+            
+            
+        
+        }
         
     }
     
-//    func downloadFridges()
-//    {
-//        let query = Fridge.query() as PFQuery?
-//
-//        if let query = query {
-//            query.findObjectsInBackgroundWithBlock({ (fridges :[Fridge]?, error: NSError?) -> Void in
-//                if let fridges = fridges{
-//                    self.fridges = fridges
-//                }
-//            })
-//        }
-//    }
+    func downloadFridges() {
     
-//    var lists: [List]
-//        {
-//        get {
-//            return user("lists":[List]?) as! [List]
-//        }
-//    }
-//    
-    func save()
-    {
+        let query = Fridge.query()!
+        query.whereKey("owners", containsString:(PFUser.currentUser()?.objectId))
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+          if error != nil {
+            if let fridgeObjects = objects as? [Fridge] {
+                self.fridges = fridgeObjects
+            }
+            print("Successfully retrieved: \(objects)")
+          } else {
+            print("Error: \(error)")
+          }
+
+        }
+    
     }
-    
    
 }

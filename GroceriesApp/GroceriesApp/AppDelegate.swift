@@ -30,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // [Optional] Track statistics around application opens.
             PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
             
-            UINavigationBar.appearance().barTintColor = UIColor.shamrockColor()
+            UINavigationBar.appearance().barTintColor = .groceryLightGreenColor()
             
-            UINavigationBar.appearance().tintColor = UIColor.amazonColor()
+            UINavigationBar.appearance().tintColor = .groceryDarkGreenColor()
             
-            UITabBar.appearance().barTintColor = UIColor.shamrockColor()
+            UITabBar.appearance().barTintColor = .groceryLightGreenColor()
             
-            UITabBar.appearance().tintColor = UIColor.beigeColor()
+            UITabBar.appearance().tintColor = .groceryBeigeColor()
             
             return true
     }
