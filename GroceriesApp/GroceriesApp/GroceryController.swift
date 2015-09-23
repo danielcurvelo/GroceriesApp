@@ -14,6 +14,11 @@ class GroceryController: NSObject {
     
     static let sharedInstance = GroceryController()
     
+    override init() {
+        super.init()
+        self.downloadFridges()
+    }
+    
     var fridges:[Fridge] = []
     
     func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List]) {
@@ -26,20 +31,64 @@ class GroceryController: NSObject {
         item.lists = lists
         item.shelfLife = 7
         
-        item.saveEventually()
+        item .pinInBackgroundWithBlock{(success,error) -> Void in
+                if success
+                {
+                    item.saveInBackgroundWithBlock{(success,error) -> Void in
+                        
+                        if success
+                        {
+                            print("list has been saved succesfully")
+                        }
+                        else
+                        {
+                            print("There has been an error saving the list object: \(error)")
+                        }
+                    }
+                }
+                else
+                {
+                    print("There was an pining the list to the local datastore")
+                }
+                
+            }
     }
 
     func createAList(title: String) {
-
-        let list = PFObject(className: "List") as! List
-        
-        list.title = title
-        
-        list.saveInBackgroundWithBlock{(success,error) -> Void in
             
+            let list = PFObject(className: "List") as! List
+            list.title = title
             
-        
+            list.pinInBackgroundWithBlock{(success,error) -> Void in
+                    if success
+                    {
+                        list.saveInBackgroundWithBlock{(success,error) -> Void in
+                            
+                            if success
+                            {
+                                print("list has been saved succesfully")
+                            }
+                            else
+                            {
+                                print("There has been an error saving the list object: \(error)")
+                            }
+                        }
+                    }
+                    else
+                    {
+                        print("There was an pining the list to the local datastore")
+                    }
+                }
         }
+                
+    func createInitiaFridge() {
+
+         let fridge = PFObject(className: "Fridge") as! Fridge
+         fridge.title = "My Fridge"
+        
+        var mutableOwners = fridge.owners as [PFUser]?
+        mutableOwners?.append(PFUser.currentUser()!)
+         fridge.owners = mutableOwners as [PFUser]?
         
     }
     
@@ -60,5 +109,5 @@ class GroceryController: NSObject {
         }
     
     }
-   
+    
 }
