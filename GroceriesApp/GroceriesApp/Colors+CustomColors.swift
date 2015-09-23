@@ -11,7 +11,7 @@ import UIKit
 
 extension UIColor {
     
-    class func amazonColor() -> UIColor {
+    class func darkGreenColor() -> UIColor {
         return UIColor(red: 0.17, green: 0.48, blue: 0.36, alpha: 1)
     }
     
@@ -23,7 +23,7 @@ extension UIColor {
         return UIColor(red: 0.99, green: 0.65, blue: 0.22, alpha: 1)
     }
     
-    class func scooterColor() -> UIColor {
+    class func robertsColor() -> UIColor {
         return UIColor(red: 0.18, green: 0.76, blue: 0.82, alpha: 1)
     }
     

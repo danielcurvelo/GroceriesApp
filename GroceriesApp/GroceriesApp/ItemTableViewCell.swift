@@ -9,10 +9,19 @@
 import UIKit
 
 class ItemTableViewCell: UITableViewCell {
+    @IBOutlet weak var iconContainer: UIView!
 
+    @IBOutlet weak var expirationIdentifier: UIView!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        icon.tintColor = UIColor.amazonColor()
+        iconContainer.backgroundColor = UIColor.shamrockColor()
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

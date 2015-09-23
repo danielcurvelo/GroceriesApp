@@ -10,9 +10,12 @@ import UIKit
 
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+    
         // Do any additional setup after loading the view.
     }
 
@@ -31,6 +34,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 1
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 66
+        
+    }
     
 
     /*
