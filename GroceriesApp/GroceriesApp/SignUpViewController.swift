@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UIAlertViewDelegate {
 
     @IBOutlet weak var signUpEmailTextField: UITextField!
     @IBOutlet weak var signUpPasswordTextField: UITextField!
@@ -32,7 +32,9 @@ class SignUpViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
+    
     
     
     @IBAction func signUpTapped(sender: AnyObject) {
@@ -40,16 +42,36 @@ class SignUpViewController: UIViewController {
         if PFUser.currentUser() != nil{
             performSegueWithIdentifier("unwindToCart", sender: nil)
         }
+        //place in an IBAction func
+        let emailAddress = signUpEmailTextField.text
+        let password = signUpPasswordTextField.text
+        let confirmPassword = signUpPasswordConfirmTextField.text
+        
+        if emailAddress != "" && password != "" && confirmPassword != ""  {
+            
+            
+        } else {
+            let alert = UIAlertController(title: "Oops!", message: "Please fill all fields to signup.", preferredStyle: .Alert)
+            
+            
+            let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                print("OK Pressed")
+            }
+            
+            alert.addAction(OKPressed)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            //Make sure to add UIAlertViewDelegate
+        }
+
         
 //        self.dismissViewControllerAnimated(true, completion: nil)
 //        print("done")
     }
     
 
-
-    
-    
-    override func viewWillAppear(animated: Bool) {
+override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         

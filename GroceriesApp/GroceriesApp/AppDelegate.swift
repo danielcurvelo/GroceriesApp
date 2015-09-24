@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let user = PFObject(className: "User")
             user.setObject("john", forKey: "Name")
             user.setObject("fridge#1", forKey: "Fridges")
+            user.setObject("email", forKey: "emailAddress")
                 
             user.saveInBackgroundWithBlock {
                 (succeeded, error) -> Void in
