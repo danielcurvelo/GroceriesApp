@@ -32,11 +32,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UINavigationBar.appearance().barTintColor = UIColor.shamrockColor()
             
-            UINavigationBar.appearance().tintColor = UIColor.amazonColor()
+            UINavigationBar.appearance().tintColor = UIColor.darkGreenColor()
+            
+            UITableView.appearance().backgroundColor = UIColor.beigeColor()
+            
+            UITableViewCell.appearance().backgroundColor = UIColor.beigeColor()
             
             UITabBar.appearance().barTintColor = UIColor.shamrockColor()
             
             UITabBar.appearance().tintColor = UIColor.beigeColor()
+            
+            UITableViewHeaderFooterView.appearance().tintColor = UIColor.pomagranetColor()
+            
+            
+            
+            
+            
             
             return true
     }

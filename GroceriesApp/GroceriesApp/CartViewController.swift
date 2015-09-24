@@ -36,9 +36,43 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 66
-        
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 4
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = UIView.init(frame: CGRectMake(0, 0, tableView.bounds.size.width, 40))
+        let headerTitle = UILabel.init(frame: CGRectMake(headerView.frame.size.width - 140, headerView.frame.size.height - 20, 130, 20))
+        headerTitle.textColor = UIColor.beigeColor()
+        headerView.addSubview(headerTitle)
+        
+        switch (section) {
+        case 0:
+            headerTitle.attributedText = NSAttributedString(string: "", attributes:[NSForegroundColorAttributeName:UIColor.beigeColor()])
+            headerView.backgroundColor = UIColor.darkGreenColor()
+            //return sectionHeaderView
+        case 1:
+            headerTitle.attributedText = NSAttributedString(string: "", attributes:[NSForegroundColorAttributeName:UIColor.beigeColor()])
+            headerView.backgroundColor = UIColor.darkGreenColor()
+            //return sectionHeaderView
+        case 2:
+            headerTitle.attributedText = NSAttributedString(string: "", attributes: [NSForegroundColorAttributeName:UIColor.beigeColor()])
+            headerView.backgroundColor = UIColor.darkGreenColor()
+            //return sectionHeaderView
+        default:
+            headerView.backgroundColor = UIColor.darkGreenColor()
+        }
+        
+        return headerView
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
+        return 30
+    }
+
 
     /*
     // MARK: - Navigation
