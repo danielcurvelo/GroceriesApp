@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Parse
+
 
 class LogInViewController: UIViewController {
+    
+    @IBOutlet weak var loginEmailTextField: UITextField!
+    @IBOutlet weak var loginPasswordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
 
 //    @IBAction func signUpTapped(sender: AnyObject) {
 //        
@@ -23,6 +30,15 @@ class LogInViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+    }
+    
+    
+    @IBAction func logInTapped(sender: AnyObject) {
+        
+        if PFUser.currentUser() != nil{
+            performSegueWithIdentifier("unwindToCart", sender: nil)
+        }
+        
     }
    
 

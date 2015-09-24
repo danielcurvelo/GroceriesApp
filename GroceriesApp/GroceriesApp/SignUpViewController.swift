@@ -12,6 +12,11 @@ import Parse
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var signUpEmailTextField: UITextField!
+    @IBOutlet weak var signUpPasswordTextField: UITextField!
+    @IBOutlet weak var signUpPasswordConfirmTextField: UITextField!
+    @IBOutlet weak var signUpSignUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

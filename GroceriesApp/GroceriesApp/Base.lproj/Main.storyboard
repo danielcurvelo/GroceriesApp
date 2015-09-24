@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ul0-jk-TRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2121" y="424"/>
+            <point key="canvasLocation" x="1851" y="544"/>
         </scene>
         <!--Cart List-->
         <scene sceneID="jQv-OS-Nj9">
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGQ-ge-o6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2075" y="-237"/>
+            <point key="canvasLocation" x="1851" y="-316"/>
         </scene>
         <!--Out of Stock-->
         <scene sceneID="jiT-wa-06x">
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHR-Lg-W44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5213" y="-697"/>
+            <point key="canvasLocation" x="4000" y="-673"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9YM-A9-L1u">
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4UU-8L-4iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3589" y="801"/>
+            <point key="canvasLocation" x="3273" y="1289"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="gln-Cy-OLV">
@@ -354,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZP8-c5-wyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4291" y="27"/>
+            <point key="canvasLocation" x="3995" y="19"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="ilx-mv-ZkB">
@@ -368,22 +368,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-U2-TAn">
-                                <rect key="frame" x="20" y="107" width="560" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42e-Sa-tmc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42e-Sa-tmc">
                                 <rect key="frame" x="20" y="168" width="560" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8E-ic-0nQ">
                                 <rect key="frame" x="279" y="220" width="42" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInTapped:" destination="Kqw-lX-Na3" eventType="touchUpInside" id="lLE-Wh-Z3U"/>
+                                    <segue destination="aif-Vg-1wb" kind="unwind" unwindAction="unwindToCartViewController:" id="1PF-Mz-l3w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWj-uI-IGF">
                                 <rect key="frame" x="271" y="317" width="59" height="30"/>
@@ -393,6 +392,13 @@
                                     <segue destination="QVm-pQ-WHj" kind="show" id="Pu2-WL-cr0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-U2-TAn">
+                                <rect key="frame" x="20" y="107" width="560" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label="Email"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -410,10 +416,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xP6-fQ-zu1"/>
+                    <connections>
+                        <outlet property="loginButton" destination="Z8E-ic-0nQ" id="xKv-f8-bHw"/>
+                        <outlet property="loginEmailTextField" destination="ZGz-U2-TAn" id="s2G-dM-IDJ"/>
+                        <outlet property="loginPasswordTextField" destination="42e-Sa-tmc" id="ryP-Fg-TX4"/>
+                        <outlet property="signUpButton" destination="IWj-uI-IGF" id="lWX-Mm-p2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1P-Ar-g1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aif-Vg-1wb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2673" y="-964"/>
+            <point key="canvasLocation" x="3249" y="-1420"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="eUH-v8-Q4h">
@@ -427,19 +440,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Vb-HL-P0s">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. Groceries@store.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Vb-HL-P0s">
                                 <rect key="frame" x="20" y="111" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhh-K7-I94">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Letters and numbers" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhh-K7-I94">
                                 <rect key="frame" x="20" y="172" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xde-ed-rML">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="One more time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xde-ed-rML">
                                 <rect key="frame" x="20" y="239" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -505,13 +518,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="signUpEmailTextField" destination="6Vb-HL-P0s" id="fFt-V2-OVI"/>
+                        <outlet property="signUpPasswordConfirmTextField" destination="xde-ed-rML" id="agO-bg-FAv"/>
+                        <outlet property="signUpPasswordTextField" destination="xhh-K7-I94" id="YXk-PA-rPG"/>
+                        <outlet property="signUpSignUpButton" destination="Emi-C0-ccZ" id="IPl-gy-Ibf"/>
                         <segue destination="RpQ-90-btr" kind="unwind" identifier="unwindToCart" unwindAction="unwindToCartViewController:" id="sOi-fi-fEw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eER-bM-zHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="RpQ-90-btr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3504" y="-964"/>
+            <point key="canvasLocation" x="4000" y="-1420"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fVP-zy-FyG">
@@ -530,7 +547,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1O-5U-xaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="94"/>
+            <point key="canvasLocation" x="57" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qN5-Bh-OtJ">
@@ -550,7 +567,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGH-ik-ZIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="424"/>
+            <point key="canvasLocation" x="1054" y="544"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MDM-5V-0Ov">
@@ -570,7 +587,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9A-y4-y3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="-108"/>
+            <point key="canvasLocation" x="1062" y="-316"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DOo-ic-dqC">
@@ -589,7 +606,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptY-KV-7DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2910" y="801"/>
+            <point key="canvasLocation" x="2566" y="1289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0J4-RI-fRu">
@@ -608,7 +625,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBt-gF-NT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4534" y="-697"/>
+            <point key="canvasLocation" x="3249" y="-673"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="giR-Ap-FOo">
@@ -627,7 +644,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXu-0L-yms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="-964"/>
+            <point key="canvasLocation" x="2566" y="-1420"/>
         </scene>
     </scenes>
     <resources>
@@ -635,6 +652,6 @@
         <image name="fridge" width="27" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A2j-tQ-8wZ"/>
+        <segue reference="M8Y-82-OvY"/>
     </inferredMetricsTieBreakers>
 </document>
