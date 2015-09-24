@@ -37,6 +37,12 @@ class OutOfStockViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
+    @IBAction func donePressed(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+            print("done")
+        }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

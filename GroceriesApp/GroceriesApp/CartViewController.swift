@@ -9,7 +9,7 @@
 import UIKit
 
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,15 +55,15 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case 0:
             headerTitle.attributedText = NSAttributedString(string: "", attributes:[NSForegroundColorAttributeName:UIColor.groceryBeigeColor()])
             headerView.backgroundColor = UIColor.groceryDarkGreenColor()
-            //return sectionHeaderView
+         
         case 1:
             headerTitle.attributedText = NSAttributedString(string: "", attributes:[NSForegroundColorAttributeName:UIColor.groceryBeigeColor()])
             headerView.backgroundColor = UIColor.groceryDarkGreenColor()
-            //return sectionHeaderView
+            
         case 2:
             headerTitle.attributedText = NSAttributedString(string: "", attributes: [NSForegroundColorAttributeName:UIColor.groceryBeigeColor()])
             headerView.backgroundColor = UIColor.groceryDarkGreenColor()
-            //return sectionHeaderView
+            
         default:
             headerView.backgroundColor = UIColor.groceryDarkGreenColor()
         }
@@ -74,6 +74,16 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
         return 30
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "outOfStock" {
+            _ = segue.destinationViewController as! UINavigationController
+    
+        }
+        
+    }
+    
 
 
     /*
