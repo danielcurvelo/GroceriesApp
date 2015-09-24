@@ -62,24 +62,24 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
         let headerView = UIView.init(frame: CGRectMake(0, 0, tableView.bounds.size.width, 40))
         let headerTitle = UILabel.init(frame: CGRectMake(headerView.frame.size.width - 140, headerView.frame.size.height - 20, 130, 20))
-        headerTitle.textColor = UIColor.beigeColor()
+        headerTitle.textColor = UIColor.groceryBeigeColor()
         headerView.addSubview(headerTitle)
         
         switch (section) {
         case 0:
-            headerTitle.attributedText = NSAttributedString(string: "EXPIRED", attributes:[NSForegroundColorAttributeName:UIColor.beigeColor()])
-            headerView.backgroundColor = UIColor.pomagranetColor()
+            headerTitle.attributedText = NSAttributedString(string: "EXPIRED", attributes:[NSForegroundColorAttributeName:UIColor.groceryBeigeColor()])
+            headerView.backgroundColor = UIColor.groceryRedColor()
             //return sectionHeaderView
         case 1:
-            headerTitle.attributedText = NSAttributedString(string: "REPLACE SOON", attributes:[NSForegroundColorAttributeName:UIColor.beigeColor()])
-            headerView.backgroundColor = UIColor.lightningColor()
+            headerTitle.attributedText = NSAttributedString(string: "REPLACE SOON", attributes:[NSForegroundColorAttributeName:UIColor.groceryBeigeColor()])
+            headerView.backgroundColor = UIColor.groceryYellowColor()
             //return sectionHeaderView
         case 2:
-            headerTitle.attributedText = NSAttributedString(string: "GOOD TO GO", attributes: [NSForegroundColorAttributeName:UIColor.beigeColor()]);
-            headerView.backgroundColor = UIColor.robertsColor()
+            headerTitle.attributedText = NSAttributedString(string: "GOOD TO GO", attributes: [NSForegroundColorAttributeName:UIColor.groceryBeigeColor()]);
+            headerView.backgroundColor = UIColor.groceryBlueColor()
             //return sectionHeaderView
         default:
-            headerView.backgroundColor = UIColor.beigeColor();
+            headerView.backgroundColor = UIColor.groceryBeigeColor();
         }
         
         return headerView
@@ -89,12 +89,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 40
     }
     
-    func sortItemsWithExpiration (currentFridge:[Item]) {
-        if item.shelfLife >= 7 {
-            
-        }
-        
-    }
+
 
     /*
     // MARK: - Navigation

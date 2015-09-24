@@ -9,7 +9,6 @@
 
 import Parse
 import Bolts
-
 import UIKit
 
 
@@ -30,19 +29,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // [Optional] Track statistics around application opens.
             PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
             
-            UINavigationBar.appearance().barTintColor = UIColor.shamrockColor()
+            UINavigationBar.appearance().barTintColor = UIColor.groceryLightGreenColor()
             
-            UINavigationBar.appearance().tintColor = UIColor.darkGreenColor()
+            UINavigationBar.appearance().tintColor = UIColor.groceryDarkGreenColor()
             
-            UITableView.appearance().backgroundColor = UIColor.beigeColor()
+            UITableView.appearance().backgroundColor = UIColor.groceryBeigeColor()
             
-            UITableViewCell.appearance().backgroundColor = UIColor.beigeColor()
+            UITableViewCell.appearance().backgroundColor = UIColor.groceryBeigeColor()
             
-            UITabBar.appearance().barTintColor = UIColor.shamrockColor()
+            UITabBar.appearance().barTintColor = UIColor.groceryLightGreenColor()
             
-            UITabBar.appearance().tintColor = UIColor.beigeColor()
+            UITabBar.appearance().tintColor = UIColor.groceryBeigeColor()
             
-            UITableViewHeaderFooterView.appearance().tintColor = UIColor.pomagranetColor()
+            UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
             
             
             
