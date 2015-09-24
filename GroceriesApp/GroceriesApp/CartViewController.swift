@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -79,12 +80,23 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if segue.identifier == "outOfStock" {
             _ = segue.destinationViewController as! UINavigationController
-    
+            
         }
         
     }
     
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if PFUser.currentUser() == nil {
+            performSegueWithIdentifier("toLogInView", sender: nil)
+        }
+    }
+    
+    @IBAction func unwindToCartViewController(segue:UIStoryboardSegue)
+    {
+        
+    }
 
     /*
     // MARK: - Navigation

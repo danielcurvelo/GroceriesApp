@@ -7,20 +7,49 @@
 //
 
 import UIKit
+import Parse
+
 
 class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func cancelButtonTapped(sender: AnyObject) {
+    
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func signUpTapped(sender: AnyObject) {
+        
+        if PFUser.currentUser() != nil{
+            performSegueWithIdentifier("unwindToCart", sender: nil)
+        }
+        
+//        self.dismissViewControllerAnimated(true, completion: nil)
+//        print("done")
+    }
+    
+
+
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation
