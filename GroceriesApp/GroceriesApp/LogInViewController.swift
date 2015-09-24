@@ -10,11 +10,21 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+//    @IBAction func signUpTapped(sender: AnyObject) {
+//        
+//        performSegueWithIdentifier("toSignUpView", sender: LogInViewController())
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+    }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
