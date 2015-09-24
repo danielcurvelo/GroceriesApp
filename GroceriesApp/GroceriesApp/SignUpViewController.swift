@@ -45,12 +45,13 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
         //place in an IBAction func
         let emailAddress = signUpEmailTextField.text
         let password = signUpPasswordTextField.text
+        let confirmPassword = signUpPasswordConfirmTextField.text
         
-        if emailAddress != "" && password != "" {
+        if emailAddress != "" && password != "" && confirmPassword != ""  {
             
             
         } else {
-            let alert = UIAlertController(title: "Oops", message: "Please fill all fields to signup.", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Oops!", message: "Please fill all fields to signup.", preferredStyle: .Alert)
             
             
             let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
