@@ -88,6 +88,7 @@
 		91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		D23A244E1BB45CBC00C4B7FB /* GroceriesApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceriesApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
 		F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfStockViewController.swift; path = ../OutOfStockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */,
+				D23A244E1BB45CBC00C4B7FB /* GroceriesApp-Bridging-Header.h */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -484,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,6 +496,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danielcurvelo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GroceriesApp/GroceriesApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -500,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -509,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danielcurvelo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GroceriesApp/GroceriesApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

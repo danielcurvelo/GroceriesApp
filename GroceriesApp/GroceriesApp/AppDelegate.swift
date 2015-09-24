@@ -11,13 +11,14 @@ import Parse
 import Bolts
 import UIKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-        func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+            [NSObject: AnyObject]?) -> Bool {
+                
             // [Optional] Power your app with Local Datastore. For more info, go to
             // https://parse.com/docs/ios_guide#localdatastore/iOS
             Parse.enableLocalDatastore()
@@ -43,9 +44,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
             
-            
-            
-            
+            let user = PFObject(className: "User")
+            user.setObject("john", forKey: "Name")
+            user.setObject("fridge#1", forKey: "Fridges")
+                
+            user.saveInBackgroundWithBlock {
+                (succeeded, error) -> Void in
+                
+                if succeeded {
+                print("Object Uploaded")
+                    
+                    } else {
+                    
+                    print("Error: \(error) \(error!.userInfo)")
+            }
+        }
             
             
             return true
