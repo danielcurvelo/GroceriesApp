@@ -15,10 +15,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        GroceryController.sharedInstance.downloadFridges()
+        print("shared instance works")
+        
+    
     }
 
     override func didReceiveMemoryWarning() {

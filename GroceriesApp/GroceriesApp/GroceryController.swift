@@ -12,11 +12,17 @@ import Parse
 
 class GroceryController: NSObject {
     
-    var fridges:[Fridge]?
-//    var user = PFUser .currentUser()?
+    static let sharedInstance = GroceryController()
     
-    func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List])
-    {
+    
+    override init() {
+        super.init()
+        self.downloadFridges()
+    }
+    
+        var fridges:[Fridge] = []
+    
+    func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List]) {
         let item = PFObject(className:"Item") as! Item
      
         item.category = category
@@ -26,42 +32,105 @@ class GroceryController: NSObject {
         item.lists = lists
         item.shelfLife = 7
         
-        item.saveEventually()
+        item .pinInBackgroundWithBlock{(success,error) -> Void in
+                if success
+                {
+                    item.saveInBackgroundWithBlock{(success,error) -> Void in
+                        
+                        if success
+                        {
+                            print("list has been saved succesfully")
+                        }
+                        else
+                        {
+                            print("There has been an error saving the list object: \(error)")
+                        }
+                    }
+                }
+                else
+                {
+                    print("There was an pining the list to the local datastore")
+                }
+                
+            }
     }
 
     func createAList(title: String) {
+            
+            let list = PFObject(className: "List") as! List
+            list.title = title
+            
+            list.pinInBackgroundWithBlock{(success,error) -> Void in
+                    if success
+                    {
+                        list.saveInBackgroundWithBlock{(success,error) -> Void in
+                            
+                            if success
+                            {
+                                print("list has been saved succesfully")
+                            }
+                            else
+                            {
+                                print("There has been an error saving the list object: \(error)")
+                            }
+                        }
+                    }
+                    else
+                    {
+                        print("There was an pining the list to the local datastore")
+                    }
+                }
+        }
+    var lists: [List] = []
+    
+    func downloadListsFromUser() {
+        let query = List.query()
+        query?.whereKey("owners", containsString: PFUser.currentUser()?.objectId)
+        query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
+            
+            if error != nil{
+                
+                if let listsArray = objects as? [List] {
+                    self.lists = listsArray
+                }
+                
+                print("successful download of lists from user")
+            }
+            else {
+                print("There is an error downloading list from user \(error)")
+            }
+        })
+    }
 
-        let list = PFObject(className: "List") as! List
+    
+    func createInitiaFridge() {
+
+        let fridge = PFObject(className: "Fridge") as! Fridge
+        fridge.title = "My Fridge"
         
-        list.title = title
-        
-        list.saveEventually()
+        var mutableOwners = fridge.owners as [PFUser]?
+        mutableOwners?.append(PFUser.currentUser()!)
+        fridge.owners = mutableOwners as [PFUser]?
         
     }
     
-//    func downloadFridges()
-//    {
-//        let query = Fridge.query() as PFQuery?
-//
-//        if let query = query {
-//            query.findObjectsInBackgroundWithBlock({ (fridges :[Fridge]?, error: NSError?) -> Void in
-//                if let fridges = fridges{
-//                    self.fridges = fridges
-//                }
-//            })
-//        }
-//    }
-    
-//    var lists: [List]
-//        {
-//        get {
-//            return user("lists":[List]?) as! [List]
-//        }
-//    }
-//    
-    func save()
-    {
+    func downloadFridges() {
+        
+        let query = Fridge.query()!
+        query.whereKey("owners", containsString:(PFUser.currentUser()?.objectId))
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error != nil {
+                if let fridgeObjects = objects as? [Fridge] {
+                    self.fridges = fridgeObjects
+                }
+                print("Successfully retrieved: \(objects)")
+            } else {
+                print("Error: \(error)")
+            }
+            
+        }
+        
     }
     
-   
+    
 }

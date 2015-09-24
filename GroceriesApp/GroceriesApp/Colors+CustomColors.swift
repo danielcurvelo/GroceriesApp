@@ -11,27 +11,27 @@ import UIKit
 
 extension UIColor {
     
-    class func darkGreenColor() -> UIColor {
+    class func groceryDarkGreenColor() -> UIColor {
         return UIColor(red: 0.17, green: 0.48, blue: 0.36, alpha: 1)
     }
     
-    class func pomagranetColor() -> UIColor {
+    class func groceryRedColor() -> UIColor {
         return UIColor(red: 0.92, green: 0.31, blue: 0.11, alpha: 1)
     }
     
-    class func lightningColor() -> UIColor {
+    class func groceryYellowColor() -> UIColor {
         return UIColor(red: 0.99, green: 0.65, blue: 0.22, alpha: 1)
     }
     
-    class func robertsColor() -> UIColor {
+    class func groceryBlueColor() -> UIColor {
         return UIColor(red: 0.18, green: 0.76, blue: 0.82, alpha: 1)
     }
     
-    class func shamrockColor() -> UIColor {
+    class func groceryLightGreenColor() -> UIColor {
         return UIColor(red: 0.18, green: 0.77, blue: 0.59, alpha: 1)
     }
     
-    class func beigeColor() -> UIColor {
+    class func groceryBeigeColor() -> UIColor {
         return UIColor(red: 244/255, green: 236/255, blue: 206/255, alpha: 1)
     }
     
