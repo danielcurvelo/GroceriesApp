@@ -14,6 +14,8 @@
 		63B859D41BA5FEC700FC16A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B859D21BA5FEC700FC16A6 /* LaunchScreen.xib */; };
 		63B859E01BA5FEC700FC16A6 /* GroceriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B859DF1BA5FEC700FC16A6 /* GroceriesAppTests.swift */; };
 		63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */; };
+		8C0C10C11BB46A9C00E3EB14 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		9117E1011BAC9BC800369C4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E0FF1BAC9BC800369C4A /* Bolts.framework */; };
 		9117E1021BAC9BC800369C4A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1001BAC9BC800369C4A /* Parse.framework */; };
 		9117E1041BAC9BFD00369C4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1031BAC9BFD00369C4A /* AudioToolbox.framework */; };
@@ -64,6 +66,8 @@
 		63B859DE1BA5FEC700FC16A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B859DF1BA5FEC700FC16A6 /* GroceriesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesAppTests.swift; sourceTree = "<group>"; };
 		63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryController.swift; sourceTree = "<group>"; };
+		8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9117E0FF1BAC9BC800369C4A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		9117E1001BAC9BC800369C4A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9117E1031BAC9BFD00369C4A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -203,6 +207,8 @@
 				F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */,
 				91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */,
 				91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */,
+				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
+				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */,
 				63B859CB1BA5FEC700FC16A6 /* ViewController.swift */,
 				63B85A201BA8980F00FC16A6 /* Model Controllers */,
@@ -347,6 +353,7 @@
 				91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */,
 				9117E11C1BACB9AE00369C4A /* Item.swift in Sources */,
 				F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */,
+				8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,
 				91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */,
 				63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */,
@@ -354,6 +361,7 @@
 				9117E1201BACBD3100369C4A /* List.swift in Sources */,
 				F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */,
 				63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */,
+				8C0C10C11BB46A9C00E3EB14 /* LogInViewController.swift in Sources */,
 				91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */,
 				9117E11A1BACA3A700369C4A /* Category.swift in Sources */,
 				9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */,
