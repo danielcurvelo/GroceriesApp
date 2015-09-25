@@ -42,13 +42,41 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
         if PFUser.currentUser() != nil{
             performSegueWithIdentifier("unwindToCart", sender: nil)
         }
+        
         //place in an IBAction func
         let emailAddress = signUpEmailTextField.text
         let password = signUpPasswordTextField.text
         let confirmPassword = signUpPasswordConfirmTextField.text
+
         
+        let user = PFUser()
+        
+        user.username = emailAddress
+        user.password = password
+        
+        //2
         if emailAddress != "" && password != "" && confirmPassword != ""  {
-            
+            user.signUpInBackgroundWithBlock {
+                (succeeded, error) -> Void in
+                if error == nil {
+                    // Hooray! Let them use the app now.
+                } else {
+                    
+                    let alert = UIAlertController(title: "Oops!", message: "There's been an error while signing up.", preferredStyle: .Alert)
+                    
+                    
+                    let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                        UIAlertAction in
+                        print("OK Pressed")
+                    }
+                    
+                    alert.addAction(OKPressed)
+                    
+                    self.presentViewController(alert, animated: true, completion: nil)
+
+                    // Show the errorString somewhere and let the user try again.
+                }
+            }
             
         } else {
             let alert = UIAlertController(title: "Oops!", message: "Please fill all fields to signup.", preferredStyle: .Alert)
@@ -64,11 +92,18 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
             //Make sure to add UIAlertViewDelegate
         }
+        
+        
+        //        self.dismissViewControllerAnimated(true, completion: nil)
+        //        print("done")
+    }
 
         
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//        print("done")
-    }
+
+
+        
+        
+
     
 
 override func viewWillAppear(animated: Bool) {
