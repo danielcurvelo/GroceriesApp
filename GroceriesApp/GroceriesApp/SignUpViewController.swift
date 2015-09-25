@@ -48,6 +48,7 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
         let user = PFUser()
         
         user.email = emailAddress
+        user.username = emailAddress
         user.password = password
         
         //2
