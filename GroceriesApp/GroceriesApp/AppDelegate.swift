@@ -45,24 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().tintColor = UIColor.groceryBeigeColor()
             
             UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
-            
-            let user = PFObject(className: "User")
-            user.setObject("john", forKey: "Name")
-            user.setObject("fridge#1", forKey: "Fridges")
-            user.setObject("email", forKey: "emailAddress")
-                
-            user.saveInBackgroundWithBlock {
-                (succeeded, error) -> Void in
-                
-                if succeeded {
-                print("Object Uploaded")
-                    
-                    } else {
-                    
-                    print("Error: \(error) \(error!.userInfo)")
-            }
-        }
-            
+                        
             
             return true
     }

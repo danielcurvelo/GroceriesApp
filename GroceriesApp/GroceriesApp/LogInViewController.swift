@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UIAlertViewDelegate {
     
     @IBOutlet weak var loginEmailTextField: UITextField!
     @IBOutlet weak var loginPasswordTextField: UITextField!
@@ -34,10 +34,53 @@ class LogInViewController: UIViewController {
     
     
     @IBAction func logInTapped(sender: AnyObject) {
+                
+        PFUser.logInWithUsernameInBackground(self.loginEmailTextField.text!, password: self.loginPasswordTextField.text!) { (user, error) -> Void in
+            
+            if user != nil{
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            else {
+                
+                let alert = UIAlertController(title: "Opps!", message: "Email and Password do not match.", preferredStyle: .Alert)
+                
+                
+                let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                    UIAlertAction in
+                    print("OK Pressed")
+                }
+                
+                alert.addAction(OKPressed)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+                //Make sure to add UIAlertViewDelegate
+            }
+            
+            
+            }
+            
         
-        if PFUser.currentUser() != nil{
-            performSegueWithIdentifier("unwindToCart", sender: nil)
-        }
+//        user?.username = self.loginEmailTextField.text
+//        user?.password = self.loginPasswordTextField.text
+//        
+//        
+//        
+//        user.setObject("fridge#1", forKey: "Fridges")
+//        user.setObject("email", forKey: "emailAddress")
+//        
+//        user.saveInBackgroundWithBlock {
+//            (succeeded, error) -> Void in
+//            
+//            if succeeded {
+//                print("Object Uploaded")
+//                
+//            } else {
+//                
+//                print("Error: \(error) \(error!.userInfo)")
+//            }
+//        if PFUser.currentUser() != nil{
+//            performSegueWithIdentifier("unwindToCart", sender: nil)
+//        }
         
     }
    
