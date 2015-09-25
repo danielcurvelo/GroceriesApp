@@ -102,8 +102,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        let detailVC = ItemDetailViewController()
-        self.navigationController!.pushViewController(detailVC, animated: true)
+        let detailItem = self.storyboard?.instantiateViewControllerWithIdentifier("itemDetail")
+        self.navigationController?.pushViewController(detailItem!, animated: true)
         
     }
 
