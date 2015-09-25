@@ -87,12 +87,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        if PFUser.currentUser() == nil {
-//            performSegueWithIdentifier("toLogInView", sender: nil)
-//        }
-//    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if PFUser.currentUser() == nil {
+            performSegueWithIdentifier("toLogInView", sender: nil)
+        }
+    }
     
     @IBAction func unwindToCartViewController(segue:UIStoryboardSegue)
     {

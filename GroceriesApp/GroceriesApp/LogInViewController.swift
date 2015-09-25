@@ -60,28 +60,6 @@ class LogInViewController: UIViewController, UIAlertViewDelegate {
             }
             
         
-//        user?.username = self.loginEmailTextField.text
-//        user?.password = self.loginPasswordTextField.text
-//        
-//        
-//        
-//        user.setObject("fridge#1", forKey: "Fridges")
-//        user.setObject("email", forKey: "emailAddress")
-//        
-//        user.saveInBackgroundWithBlock {
-//            (succeeded, error) -> Void in
-//            
-//            if succeeded {
-//                print("Object Uploaded")
-//                
-//            } else {
-//                
-//                print("Error: \(error) \(error!.userInfo)")
-//            }
-//        if PFUser.currentUser() != nil{
-//            performSegueWithIdentifier("unwindToCart", sender: nil)
-//        }
-        
     }
    
 

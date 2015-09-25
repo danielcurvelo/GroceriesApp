@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
     
     
     @IBAction func signUpTapped(sender: AnyObject) {
-                
+        
         //place in an IBAction func
         let emailAddress = signUpEmailTextField.text
         let password = signUpPasswordTextField.text
