@@ -33,7 +33,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="lBA-0W-7ea" kind="show" identifier="toDetailView" id="mQ5-3m-pb6"/>
+                                            <segue destination="lBA-0W-7ea" kind="show" identifier="toDetailView" id="6ky-ck-j3B"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="rw4-ZM-97M" customClass="SectionHeaderTableViewCell" customModule="GroceriesApp" customModuleProvider="target">
@@ -144,7 +144,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="lBA-0W-7ea" kind="show" identifier="detailView" id="M8Y-82-OvY"/>
+                                            <segue destination="lBA-0W-7ea" kind="show" identifier="cartToDetail" id="799-dW-sSl"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="oS0-qM-Vjy" customClass="SectionHeaderTableViewCell" customModule="GroceriesApp" customModuleProvider="target">
@@ -197,12 +197,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="A9C-iA-9Pc" id="W32-7c-5U4"/>
-                        <segue destination="j0b-2x-7Sd" kind="show" identifier="toLogInView" id="6nc-Y5-EGm"/>
+                        <segue destination="j0b-2x-7Sd" kind="presentation" identifier="toLogInView" id="6nc-Y5-EGm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGQ-ge-o6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="-212"/>
+            <point key="canvasLocation" x="1851" y="-200"/>
         </scene>
         <!--Out of Stock-->
         <scene sceneID="jiT-wa-06x">
@@ -287,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHR-Lg-W44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3443" y="-212"/>
+            <point key="canvasLocation" x="3443" y="-200"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9YM-A9-L1u">
@@ -342,7 +342,7 @@
         <!--Item Details-->
         <scene sceneID="gln-Cy-OLV">
             <objects>
-                <viewController title="Item Details" id="lBA-0W-7ea" customClass="ItemDetailViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itemDetail" title="Item Details" id="lBA-0W-7ea" customClass="ItemDetailViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OBj-5V-yOj"/>
                         <viewControllerLayoutGuide type="bottom" id="bII-qZ-zaH"/>
@@ -351,37 +351,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKC-Gs-2h3">
-                                <rect key="frame" x="249" y="81" width="103" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKC-Gs-2h3">
+                                <rect key="frame" x="259" y="83" width="83" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration in?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A94-aZ-mBg">
-                                <rect key="frame" x="250" y="139" width="102" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expires in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A94-aZ-mBg">
+                                <rect key="frame" x="263" y="246" width="74" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-rn-a9t">
-                                <rect key="frame" x="242" y="168" width="118" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeH-K3-b3a">
+                                <rect key="frame" x="279" y="313" width="42" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="V3n-Jv-0xB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-rn-a9t">
+                                <rect key="frame" x="18" y="275" width="564" height="31"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="z0q-0U-wsm"/>
                                 </constraints>
                             </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. &quot;Apples&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05K-ke-wlC">
+                                <rect key="frame" x="20" y="112" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ1-tG-ePB">
+                                <rect key="frame" x="265" y="158" width="71" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. &quot;Produce&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPS-BJ-DgW">
+                                <rect key="frame" x="20" y="187" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A94-aZ-mBg" firstAttribute="centerX" secondItem="OKC-Gs-2h3" secondAttribute="centerX" id="4D5-3k-V4y"/>
-                            <constraint firstItem="A94-aZ-mBg" firstAttribute="top" secondItem="OKC-Gs-2h3" secondAttribute="bottom" constant="37" id="GJt-4W-u7w"/>
-                            <constraint firstItem="OKC-Gs-2h3" firstAttribute="trailing" secondItem="A94-aZ-mBg" secondAttribute="trailing" id="RHT-yd-zLv"/>
+                            <constraint firstItem="iJ1-tG-ePB" firstAttribute="centerX" secondItem="XPS-BJ-DgW" secondAttribute="centerX" id="7mN-uU-kb6"/>
+                            <constraint firstItem="XPS-BJ-DgW" firstAttribute="leading" secondItem="05K-ke-wlC" secondAttribute="leading" id="Ei3-Dk-Kh4"/>
+                            <constraint firstItem="A94-aZ-mBg" firstAttribute="top" secondItem="OKC-Gs-2h3" secondAttribute="bottom" constant="142" id="GJt-4W-u7w"/>
+                            <constraint firstItem="05K-ke-wlC" firstAttribute="trailing" secondItem="XPS-BJ-DgW" secondAttribute="trailing" id="MwZ-Jc-jPw"/>
+                            <constraint firstItem="05K-ke-wlC" firstAttribute="top" secondItem="OKC-Gs-2h3" secondAttribute="bottom" constant="8" symbolic="YES" id="N9t-K6-qma"/>
+                            <constraint firstItem="OKC-Gs-2h3" firstAttribute="trailing" secondItem="A94-aZ-mBg" secondAttribute="trailing" constant="5" id="RHT-yd-zLv"/>
                             <constraint firstItem="ODU-rn-a9t" firstAttribute="centerX" secondItem="A94-aZ-mBg" secondAttribute="centerX" id="ca9-yQ-0rM"/>
+                            <constraint firstItem="XPS-BJ-DgW" firstAttribute="leading" secondItem="ODU-rn-a9t" secondAttribute="leading" id="d03-qh-zbQ"/>
+                            <constraint firstItem="EeH-K3-b3a" firstAttribute="top" secondItem="ODU-rn-a9t" secondAttribute="bottom" constant="8" symbolic="YES" id="f1Y-Ir-DVX"/>
+                            <constraint firstItem="EeH-K3-b3a" firstAttribute="centerX" secondItem="ODU-rn-a9t" secondAttribute="centerX" id="g2M-Mx-Dcu"/>
+                            <constraint firstItem="iJ1-tG-ePB" firstAttribute="top" secondItem="05K-ke-wlC" secondAttribute="bottom" constant="16" id="o1K-2W-OVA"/>
                             <constraint firstItem="ODU-rn-a9t" firstAttribute="top" secondItem="A94-aZ-mBg" secondAttribute="bottom" constant="8" symbolic="YES" id="pJD-SR-HyH"/>
                             <constraint firstItem="OKC-Gs-2h3" firstAttribute="centerX" secondItem="t1f-I4-2Cr" secondAttribute="centerX" id="qno-Uc-QTy"/>
+                            <constraint firstItem="XPS-BJ-DgW" firstAttribute="trailing" secondItem="ODU-rn-a9t" secondAttribute="trailing" id="xqZ-cp-rtr"/>
+                            <constraint firstItem="XPS-BJ-DgW" firstAttribute="top" secondItem="iJ1-tG-ePB" secondAttribute="bottom" constant="8" symbolic="YES" id="yVX-qZ-LCs"/>
                             <constraint firstItem="OKC-Gs-2h3" firstAttribute="top" secondItem="OBj-5V-yOj" secondAttribute="bottom" constant="17" id="z8j-6Z-hlr"/>
                         </constraints>
                     </view>
@@ -621,7 +660,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9A-y4-y3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="-212"/>
+            <point key="canvasLocation" x="1054" y="-200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DOo-ic-dqC">
@@ -659,7 +698,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBt-gF-NT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2566" y="-212"/>
+            <point key="canvasLocation" x="2566" y="-200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="giR-Ap-FOo">
