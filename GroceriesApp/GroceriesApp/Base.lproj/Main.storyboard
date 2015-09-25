@@ -417,7 +417,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeH-K3-b3a">
-                                <rect key="frame" x="299" y="341" width="42" height="21"/>
+                                <rect key="frame" x="296" y="341" width="42" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="V3n-Jv-0xB"/>
@@ -427,10 +427,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdB-i8-pEO">
-                                <rect key="frame" x="259" y="341" width="42" height="21"/>
+                                <rect key="frame" x="262" y="341" width="36" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="Ja6-Ys-V8k"/>
+                                    <constraint firstAttribute="width" constant="36" id="Ja6-Ys-V8k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -459,7 +459,7 @@
                             <constraint firstItem="XPS-BJ-DgW" firstAttribute="top" secondItem="tYh-VY-Wkj" secondAttribute="bottom" constant="13" id="d7e-xr-rCG"/>
                             <constraint firstItem="bII-qZ-zaH" firstAttribute="top" secondItem="awB-HB-SP2" secondAttribute="bottom" constant="76" id="daN-5i-BHf"/>
                             <constraint firstItem="EeH-K3-b3a" firstAttribute="top" secondItem="ODU-rn-a9t" secondAttribute="bottom" constant="8" symbolic="YES" id="f1Y-Ir-DVX"/>
-                            <constraint firstItem="EeH-K3-b3a" firstAttribute="centerX" secondItem="ODU-rn-a9t" secondAttribute="centerX" constant="20" id="g2M-Mx-Dcu"/>
+                            <constraint firstItem="EeH-K3-b3a" firstAttribute="centerX" secondItem="ODU-rn-a9t" secondAttribute="centerX" constant="17" id="g2M-Mx-Dcu"/>
                             <constraint firstItem="awB-HB-SP2" firstAttribute="trailing" secondItem="ODU-rn-a9t" secondAttribute="trailing" id="jvS-tg-aFW"/>
                             <constraint firstItem="tYh-VY-Wkj" firstAttribute="leading" secondItem="XPS-BJ-DgW" secondAttribute="leading" id="ngn-yb-ibj"/>
                             <constraint firstItem="tYh-VY-Wkj" firstAttribute="leading" secondItem="t1f-I4-2Cr" secondAttribute="leading" constant="20" id="nxY-ZU-Rlp"/>
