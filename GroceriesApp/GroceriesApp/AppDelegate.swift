@@ -46,30 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
             
-//                let item = PFObject(className: "Item")
-//                
-//                item.setObject("Apple", forKey: "name")
-//                item.setObject("Fruit", forKey: "category")
-//                item.setObject("100000", forKey: "purchaseDate")
-//                item.setObject("Good Stuff", forKey: "tags")
-                
-                
-            let user = PFObject(className: "User")
-            user.setObject("john", forKey: "Name")
-            user.setObject("fridge#1", forKey: "Fridges")
-            user.setObject("email", forKey: "emailAddress")
-                
-            user.saveInBackgroundWithBlock {
-                (succeeded, error) -> Void in
-                
-                if succeeded {
-                print("Object Uploaded")
-                    
-                    } else {
-                    
-                    print("Error: \(error) \(error!.userInfo)")
-            }
-        }
             
             
             return true
