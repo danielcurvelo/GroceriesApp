@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
         if PFUser.currentUser() != nil{
             performSegueWithIdentifier("unwindToCart", sender: nil)
         }
-        //place in an IBAction func
+        
         let emailAddress = signUpEmailTextField.text
         let password = signUpPasswordTextField.text
         let confirmPassword = signUpPasswordConfirmTextField.text
@@ -51,8 +51,8 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
             
             
         } else {
-            let alert = UIAlertController(title: "Oops!", message: "Please fill all fields to signup.", preferredStyle: .Alert)
             
+            let alert = UIAlertController(title: "Oops!", message: "Please fill all fields to signup.", preferredStyle: .Alert)
             
             let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
                 UIAlertAction in
@@ -62,16 +62,32 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
             alert.addAction(OKPressed)
             
             self.presentViewController(alert, animated: true, completion: nil)
-            //Make sure to add UIAlertViewDelegate
+            
         }
-
         
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//        print("done")
+        if password == confirmPassword {
+            
+        } else {
+            
+            let alert = UIAlertController(title: "Double Check!", message: "Please make sure both passwords match", preferredStyle: .Alert)
+            
+            let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                print("OK Pressed")
+            }
+            
+            alert.addAction(OKPressed)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
+        
+        //        self.dismissViewControllerAnimated(true, completion: nil)
+        //        print("done")
     }
     
-
-override func viewWillAppear(animated: Bool) {
+    
+    override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         
