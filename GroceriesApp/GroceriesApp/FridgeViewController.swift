@@ -11,6 +11,7 @@ import UIKit
 class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
+    
 //    let sectionHeaderTitles = ["Expired", "Replace Soon", "Good"]
 
     override func viewDidLoad() {
@@ -89,7 +90,15 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 40
     }
     
-
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let detailVC = ItemDetailViewController()
+        self.navigationController!.pushViewController(detailVC, animated: true)
+        
+    }
+    
 
     /*
     // MARK: - Navigation

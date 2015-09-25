@@ -97,6 +97,15 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let detailVC = ItemDetailViewController()
+        self.navigationController!.pushViewController(detailVC, animated: true)
+        
+    }
 
     /*
     // MARK: - Navigation

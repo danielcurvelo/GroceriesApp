@@ -49,6 +49,15 @@ class OutOfStockViewController: UIViewController, UITableViewDelegate, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let detailVC = ItemDetailViewController()
+        self.navigationController!.pushViewController(detailVC, animated: true)
+        
+    }
+    
 
     /*
     // MARK: - Navigation
