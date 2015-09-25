@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ItemDetailViewController: UIViewController  {
+class ItemDetailViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailItemNameTextField: UITextField!
@@ -21,7 +21,10 @@ class ItemDetailViewController: UIViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+         detailItemNameTextField.delegate = self
+         detailItemCategoryTextField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
@@ -48,6 +51,11 @@ class ItemDetailViewController: UIViewController  {
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
     
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     /*

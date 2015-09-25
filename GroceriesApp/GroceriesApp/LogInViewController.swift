@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class LogInViewController: UIViewController, UIAlertViewDelegate {
+class LogInViewController: UIViewController, UIAlertViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var loginEmailTextField: UITextField!
     @IBOutlet weak var loginPasswordTextField: UITextField!
@@ -25,7 +25,9 @@ class LogInViewController: UIViewController, UIAlertViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        loginEmailTextField.delegate = self
+        loginPasswordTextField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
@@ -60,6 +62,11 @@ class LogInViewController: UIViewController, UIAlertViewDelegate {
             }
             
         
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
    
 
