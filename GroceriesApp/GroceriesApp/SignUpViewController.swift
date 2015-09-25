@@ -47,7 +47,7 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
         
         let user = PFUser()
         
-        user.username = emailAddress
+        user.email = emailAddress
         user.password = password
         
         //2
@@ -56,6 +56,8 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
                 (succeeded, error) -> Void in
                 if error == nil {
                     // Hooray! Let them use the app now.
+                    self.performSegueWithIdentifier("unwindToCart", sender: nil)
+                    
                 } else {
                     
                     let alert = UIAlertController(title: "Oops!", message: "There's been an error while signing up.", preferredStyle: .Alert)
