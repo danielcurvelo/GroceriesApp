@@ -64,6 +64,24 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
             //Make sure to add UIAlertViewDelegate
         }
+        
+        if password == confirmPassword {
+            
+        } else {
+            
+            let alert = UIAlertController(title: "Double Check!", message: "Please make sure both passwords match", preferredStyle: .Alert)
+            
+            
+            let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                print("OK Pressed")
+            }
+            
+            alert.addAction(OKPressed)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+
+            }
 
         
 //        self.dismissViewControllerAnimated(true, completion: nil)

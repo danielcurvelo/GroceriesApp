@@ -208,11 +208,11 @@
 		63B85A1F1BA8980500FC16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
+				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */,
 				91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */,
 				91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */,
-				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
-				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */,
 				63B859CB1BA5FEC700FC16A6 /* ViewController.swift */,
 				63B85A201BA8980F00FC16A6 /* Model Controllers */,
