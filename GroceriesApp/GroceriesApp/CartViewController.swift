@@ -83,7 +83,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "outOfStock" {
             _ = segue.destinationViewController as! UINavigationController
         }
-        
+        //Something
     }
 
     override func viewWillAppear(animated: Bool) {
