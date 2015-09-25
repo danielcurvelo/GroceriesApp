@@ -28,10 +28,10 @@ class ExpirationController: NSObject {
             let purchaseDate = (NSTimeIntervalSince1970 - daysSincePurchase) as Double
             let daysLeft = todaysDateInterval - (purchaseDate + shelfLifeDays)
             
-            if daysLeft < 1 {
+            if daysLeft <= 1 {
                 replace.append(item)
                 
-            } else if daysLeft < 4 {
+            } else if daysLeft <= 4 {
                 replaceSoon.append(item)
                 
             } else {
@@ -46,6 +46,18 @@ class ExpirationController: NSObject {
                     print("days left\(daysLeft) has been saved to item")
                 }
             })
+            
+            
+            let arrayOfArrays:NSMutableArray = []
+            
+            
+            if item == items.last {
+                arrayOfArrays.addObject(replace)
+                arrayOfArrays.addObject(replaceSoon)
+                arrayOfArrays.addObject(good)
+            }
+            
         }
     }
 }
+
