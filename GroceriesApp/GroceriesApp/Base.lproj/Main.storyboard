@@ -33,7 +33,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="lBA-0W-7ea" kind="show" identifier="toDetailView" id="6ky-ck-j3B"/>
+                                            <segue destination="gWZ-r0-lQi" kind="show" identifier="toDetailView" id="6ky-ck-j3B"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="rw4-ZM-97M" customClass="SectionHeaderTableViewCell" customModule="GroceriesApp" customModuleProvider="target">
@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="FRIDGE" id="ds4-fZ-ypi">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Dbr-Yg-IpP">
                             <connections>
-                                <segue destination="tq5-gx-edM" kind="show" identifier="addToFridge" id="iMf-bc-BoL"/>
+                                <segue destination="j9o-Qj-zQh" kind="presentation" identifier="addToFridge" id="HQJ-YQ-Ur0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -144,7 +144,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="lBA-0W-7ea" kind="show" identifier="cartToDetail" id="799-dW-sSl"/>
+                                            <segue destination="gWZ-r0-lQi" kind="show" identifier="cartToDetail" id="799-dW-sSl"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="oS0-qM-Vjy" customClass="SectionHeaderTableViewCell" customModule="GroceriesApp" customModuleProvider="target">
@@ -291,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHR-Lg-W44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4529" y="544"/>
+            <point key="canvasLocation" x="5341" y="544"/>
         </scene>
         <!--Item List-->
         <scene sceneID="9YM-A9-L1u">
@@ -320,7 +320,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <segue destination="lBA-0W-7ea" kind="show" identifier="detailView" id="T4V-vf-gyk"/>
+                                            <segue destination="gWZ-r0-lQi" kind="show" identifier="detailView" id="T4V-vf-gyk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -347,7 +347,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4UU-8L-4iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2Ey-E0-mix" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2327" y="2798"/>
+            <point key="canvasLocation" x="2327" y="2004"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="gln-Cy-OLV">
@@ -456,6 +456,13 @@
                             <constraint firstItem="OKC-Gs-2h3" firstAttribute="top" secondItem="OBj-5V-yOj" secondAttribute="bottom" constant="33" id="z8j-6Z-hlr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Yw9-z5-bPK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="3F6-J1-c6W">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="lBA-0W-7ea" id="YTt-4t-Opt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailImageView" destination="tYh-VY-Wkj" id="msU-5D-r7f"/>
                         <outlet property="detailItemCategoryTextField" destination="XPS-BJ-DgW" id="h3w-uP-6R8"/>
@@ -466,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZP8-c5-wyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3027" y="544"/>
+            <point key="canvasLocation" x="3839" y="544"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="ilx-mv-ZkB">
@@ -700,25 +707,6 @@
             <point key="canvasLocation" x="1026" y="-328"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="DOo-ic-dqC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tq5-gx-edM" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="icw-as-CAM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="j9o-Qj-zQh" kind="relationship" relationship="rootViewController" id="KBw-vG-7wg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ptY-KV-7DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1699" y="1309"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="0J4-RI-fRu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m7k-ZT-Odp" sceneMemberID="viewController">
@@ -735,7 +723,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBt-gF-NT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3742" y="544"/>
+            <point key="canvasLocation" x="4554" y="544"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="giR-Ap-FOo">
@@ -774,7 +762,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ks2-Ir-bDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2327" y="2057"/>
+            <point key="canvasLocation" x="2327" y="1292"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EYk-Ui-iSW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWZ-r0-lQi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hof-mH-3B9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lBA-0W-7ea" kind="relationship" relationship="rootViewController" id="Bom-Q6-KoJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clt-dJ-13U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3044" y="544"/>
         </scene>
     </scenes>
     <resources>
@@ -783,7 +790,7 @@
         <image name="fridge" width="27" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6ky-ck-j3B"/>
-        <segue reference="CTW-ZQ-a2x"/>
+        <segue reference="HQJ-YQ-Ur0"/>
+        <segue reference="T4V-vf-gyk"/>
     </inferredMetricsTieBreakers>
 </document>

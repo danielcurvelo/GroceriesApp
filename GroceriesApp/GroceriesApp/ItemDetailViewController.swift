@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ItemDetailViewController: UIViewController {
     
@@ -28,6 +29,19 @@ class ItemDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let detailItem = self.storyboard?.instantiateViewControllerWithIdentifier("itemDetail")
+        self.navigationController?.pushViewController(detailItem!, animated: true)
+    }
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        
+    
+    }
 
     /*
     // MARK: - Navigation
