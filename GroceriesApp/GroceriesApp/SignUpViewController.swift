@@ -38,11 +38,7 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
     
     
     @IBAction func signUpTapped(sender: AnyObject) {
-        
-        if PFUser.currentUser() != nil{
-            performSegueWithIdentifier("unwindToCart", sender: nil)
-        }
-        
+                
         //place in an IBAction func
         let emailAddress = signUpEmailTextField.text
         let password = signUpPasswordTextField.text
