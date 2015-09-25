@@ -9,6 +9,13 @@
 import UIKit
 
 class ItemDetailViewController: UIViewController {
+    
+    @IBOutlet weak var detailImageView: UIImageView!
+    @IBOutlet weak var detailItemNameTextField: UITextField!
+    @IBOutlet weak var detailItemCategoryTextField: UITextField!
+    @IBOutlet weak var detailItemExpirationSlider: UISlider!
+    @IBOutlet weak var detailItemNotesTextView: UITextView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

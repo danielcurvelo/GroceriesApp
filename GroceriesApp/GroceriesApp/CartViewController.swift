@@ -18,6 +18,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
         GroceryController.sharedInstance.downloadListsFromUser()
         print("list shared instance works")
+        
+        
     
         // Do any additional setup after loading the view.
     }
@@ -80,18 +82,17 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if segue.identifier == "outOfStock" {
             _ = segue.destinationViewController as! UINavigationController
-            
         }
         
     }
     
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        if PFUser.currentUser() == nil {
-            performSegueWithIdentifier("toLogInView", sender: nil)
-        }
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        if PFUser.currentUser() == nil {
+//            performSegueWithIdentifier("toLogInView", sender: nil)
+//        }
+//    }
     
     @IBAction func unwindToCartViewController(segue:UIStoryboardSegue)
     {
@@ -104,8 +105,9 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let detailItem = self.storyboard?.instantiateViewControllerWithIdentifier("itemDetail")
         self.navigationController?.pushViewController(detailItem!, animated: true)
-        
     }
+    
+
 
     /*
     // MARK: - Navigation

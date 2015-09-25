@@ -19,7 +19,11 @@ class ViewController: UIViewController {
             print("Object has been saved.", terminator: "")
         }
 
+    }
+    
+    @IBAction func cancelButtonTapped(sender: AnyObject) {
         
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {

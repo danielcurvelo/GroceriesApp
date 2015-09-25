@@ -40,6 +40,7 @@
 		91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */; };
 		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; };
 		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; };
+		917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22531BB5B114001CB0FD /* ExpirationController.swift */; settings = {ASSET_TAGS = (); }; };
 		F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */; };
 		F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,8 @@
 		91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		917A22531BB5B114001CB0FD /* ExpirationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationController.swift; sourceTree = "<group>"; };
+		917A22551BB5B13A001CB0FD /* Practice .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Practice .playground"; sourceTree = "<group>"; };
 		D23A244E1BB45CBC00C4B7FB /* GroceriesApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceriesApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
 		F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfStockViewController.swift; path = ../OutOfStockViewController.swift; sourceTree = "<group>"; };
@@ -205,11 +208,11 @@
 		63B85A1F1BA8980500FC16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
+				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */,
 				91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */,
 				91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */,
-				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
-				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */,
 				63B859CB1BA5FEC700FC16A6 /* ViewController.swift */,
 				63B85A201BA8980F00FC16A6 /* Model Controllers */,
@@ -222,6 +225,8 @@
 			children = (
 				63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */,
 				D23A244E1BB45CBC00C4B7FB /* GroceriesApp-Bridging-Header.h */,
+				917A22531BB5B114001CB0FD /* ExpirationController.swift */,
+				917A22551BB5B13A001CB0FD /* Practice .playground */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */,
 				91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */,
 				9117E11C1BACB9AE00369C4A /* Item.swift in Sources */,
+				917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */,
 				F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */,
 				8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,

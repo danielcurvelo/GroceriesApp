@@ -20,11 +20,11 @@ class GroceryController: NSObject {
         self.downloadFridges()
     }
     
-        var fridges:[Fridge] = []
+    var fridges:[Fridge] = []
     
     func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List]) {
         let item = PFObject(className:"Item") as! Item
-     
+        
         item.category = category
         item.name = name
         item.tags = tags
@@ -33,54 +33,51 @@ class GroceryController: NSObject {
         item.shelfLife = 7
         
         item .pinInBackgroundWithBlock{(success,error) -> Void in
-                if success
-                {
-                    item.saveInBackgroundWithBlock{(success,error) -> Void in
+            if success {
+                
+                item.saveInBackgroundWithBlock{(success,error) -> Void in
+                    
+                    if success {
                         
-                        if success
-                        {
-                            print("list has been saved succesfully")
-                        }
-                        else
-                        {
-                            print("There has been an error saving the list object: \(error)")
-                        }
+                        print("list has been saved succesfully")
+                    } else {
+                        print("There has been an error saving the list object: \(error)")
                     }
-                }
-                else
-                {
-                    print("There was an pining the list to the local datastore")
                 }
                 
+            } else {
+                
+                print("There was an pining the list to the local datastore")
             }
+            
+        }
     }
-
+    
     func createAList(title: String) {
-            
-            let list = PFObject(className: "List") as! List
-            list.title = title
-            
-            list.pinInBackgroundWithBlock{(success,error) -> Void in
-                    if success
-                    {
-                        list.saveInBackgroundWithBlock{(success,error) -> Void in
-                            
-                            if success
-                            {
-                                print("list has been saved succesfully")
-                            }
-                            else
-                            {
-                                print("There has been an error saving the list object: \(error)")
-                            }
-                        }
-                    }
-                    else
-                    {
-                        print("There was an pining the list to the local datastore")
+        
+        let list = PFObject(className: "List") as! List
+        list.title = title
+        
+        list.pinInBackgroundWithBlock{(success,error) -> Void in
+            if success {
+                
+                list.saveInBackgroundWithBlock{(success,error) -> Void in
+                    
+                    if success {
+                        
+                        print("list has been saved succesfully")
+                        
+                    } else {
+                        
+                        print("There has been an error saving the list object: \(error)")
                     }
                 }
+            } else {
+                
+                print("There was an pining the list to the local datastore")
+            }
         }
+    }
     var lists: [List] = []
     
     func downloadListsFromUser() {
@@ -95,16 +92,17 @@ class GroceryController: NSObject {
                 }
                 
                 print("successful download of lists from user")
-            }
-            else {
+                
+            } else {
+                
                 print("There is an error downloading list from user \(error)")
             }
         })
     }
-
+    
     
     func createInitiaFridge() {
-
+        
         let fridge = PFObject(className: "Fridge") as! Fridge
         fridge.title = "My Fridge"
         
