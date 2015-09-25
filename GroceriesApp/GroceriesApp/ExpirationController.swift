@@ -13,14 +13,14 @@ class ExpirationController: NSObject {
 
    
     
-    func changeDatesToDays(items:[Item])
-    {
+    func changeDatesToDays(items:[Item]) {
+        
         var replace = [Item]()
         var replaceSoon = [Item]()
         var good = [Item]()
         
-        for item in items
-        {
+        for item in items {
+            
             let todaysDate = NSDate.init()
             let todaysDateInterval = NSTimeIntervalSince1970
             let shelfLifeDays = item.shelfLife as! Double / (60 * 60 * 24);
@@ -38,7 +38,6 @@ class ExpirationController: NSObject {
                 good.append(item)
                 
             }
-            
             
             item.setObject(daysLeft, forKey: "daysLeft")
             

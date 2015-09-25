@@ -46,6 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
             
+//                let item = PFObject(className: "Item")
+//                
+//                item.setObject("Apple", forKey: "name")
+//                item.setObject("Fruit", forKey: "category")
+//                item.setObject("100000", forKey: "purchaseDate")
+//                item.setObject("Good Stuff", forKey: "tags")
+                
+                
             let user = PFObject(className: "User")
             user.setObject("john", forKey: "Name")
             user.setObject("fridge#1", forKey: "Fridges")
