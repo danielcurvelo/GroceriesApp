@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ItemDetailViewController: UIViewController {
+class ItemDetailViewController: UIViewController  {
     
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailItemNameTextField: UITextField!
@@ -17,6 +17,7 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var detailItemExpirationSlider: UISlider!
     @IBOutlet weak var detailItemNotesTextView: UITextView!
 
+    @IBOutlet weak var sliderLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,12 @@ class ItemDetailViewController: UIViewController {
     }
     
     
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        
+        let currentValue = Int(sender.value)
+        sliderLabel.text = "\(currentValue)"
+        
+    }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
