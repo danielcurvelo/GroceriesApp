@@ -50,7 +50,8 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate  {
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
-    
+    print("Save button tapped in detail view")
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

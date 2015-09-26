@@ -44,7 +44,7 @@ class LogInViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
             }
             else {
                 
-                let alert = UIAlertController(title: "Opps!", message: "Email and Password do not match.", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "Oops!", message: "Email and Password do not match.", preferredStyle: .Alert)
                 
                 
                 let OKPressed = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
