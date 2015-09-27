@@ -28,6 +28,15 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         
         // Do any additional setup after loading the view.
     }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            detailItemNotesTextView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
