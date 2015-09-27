@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ItemDetailViewController: UIViewController, UITextFieldDelegate  {
+class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate  {
     
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailItemNameTextField: UITextField!
@@ -24,6 +24,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate  {
        
          detailItemNameTextField.delegate = self
          detailItemCategoryTextField.delegate = self
+         detailItemNotesTextView.delegate = self
         
         // Do any additional setup after loading the view.
     }
