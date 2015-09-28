@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ItemDetailViewController: UIViewController {
+class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate  {
     
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailItemNameTextField: UITextField!
@@ -17,12 +17,26 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var detailItemExpirationSlider: UISlider!
     @IBOutlet weak var detailItemNotesTextView: UITextView!
 
+    @IBOutlet weak var sliderLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+         detailItemNameTextField.delegate = self
+         detailItemCategoryTextField.delegate = self
+         detailItemNotesTextView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            detailItemNotesTextView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,6 +44,12 @@ class ItemDetailViewController: UIViewController {
     }
     
     
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        
+        let currentValue = Int(sender.value)
+        sliderLabel.text = "\(currentValue)"
+        
+    }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -40,7 +60,13 @@ class ItemDetailViewController: UIViewController {
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
+    print("Save button tapped in detail view")
+        
+    }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     /*

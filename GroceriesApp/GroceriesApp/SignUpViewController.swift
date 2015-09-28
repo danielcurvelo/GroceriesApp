@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class SignUpViewController: UIViewController, UIAlertViewDelegate {
+class SignUpViewController: UIViewController, UIAlertViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var signUpEmailTextField: UITextField!
     @IBOutlet weak var signUpPasswordTextField: UITextField!
@@ -19,9 +19,16 @@ class SignUpViewController: UIViewController, UIAlertViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        signUpEmailTextField.delegate = self
+        signUpPasswordConfirmTextField.delegate = self
+        signUpPasswordTextField.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     @IBAction func cancelButtonTapped(sender: AnyObject) {
