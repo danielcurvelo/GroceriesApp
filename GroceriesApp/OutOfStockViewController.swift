@@ -16,7 +16,7 @@ class OutOfStockViewController: UIViewController, UITableViewDelegate, UITableVi
 
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
         
-        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         // Do any additional setup after loading the view.
     }
     

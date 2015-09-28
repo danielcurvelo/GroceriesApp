@@ -16,11 +16,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        
         GroceryController.sharedInstance.downloadListsFromUser()
         print("list shared instance works")
         
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-    
         // Do any additional setup after loading the view.
     }
 
@@ -36,7 +37,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

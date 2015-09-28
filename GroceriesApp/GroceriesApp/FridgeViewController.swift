@@ -21,6 +21,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         GroceryController.sharedInstance.downloadFridges()
         print("shared instance works")
         
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
     
     }
 
@@ -41,7 +43,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
