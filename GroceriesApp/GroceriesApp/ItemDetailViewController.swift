@@ -11,20 +11,20 @@ import Parse
 
 class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate  {
     
-    @IBOutlet weak var detailImageView: UIImageView!
-    @IBOutlet weak var detailItemNameTextField: UITextField!
-    @IBOutlet weak var detailItemCategoryTextField: UITextField!
-    @IBOutlet weak var detailItemExpirationSlider: UISlider!
-    @IBOutlet weak var detailItemNotesTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var expirationSlider: UISlider!
+    @IBOutlet weak var notesTextView: UITextView!
 
     @IBOutlet weak var sliderLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
        
-         detailItemNameTextField.delegate = self
-         detailItemCategoryTextField.delegate = self
-         detailItemNotesTextView.delegate = self
+         nameTextField.delegate = self
+         categoryTextField.delegate = self
+         notesTextView.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -52,7 +52,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         if(text == "\n") {
-            detailItemNotesTextView.resignFirstResponder()
+            notesTextView.resignFirstResponder()
             return false
         }
         return true
@@ -60,7 +60,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     @IBAction func saveButtonTapped(sender: UIBarButtonItem) {
         
-    var item = PFObject.init(className: "Item")
+//    var item = PFObject.init(className: "Item")
     
         
         

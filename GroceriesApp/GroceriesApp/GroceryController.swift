@@ -19,6 +19,8 @@ class GroceryController: NSObject {
     
     }
     
+    var categories:[Category] = []
+    
     var fridges:[Fridge] = []
     
     func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List]) {
@@ -99,12 +101,12 @@ class GroceryController: NSObject {
         })
     }
     
-    var categories:[Category] = []
+    
     
     func downloadCategories() {
         
         let query = Category.query()!
-        query.whereKey("owners", containsString:(PFUser.currentUser()?.objectId))
+//        query.whereKey("owners", containsString:(PFUser.currentUser()?.objectId))
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error != nil {
                 if let categoryObjects = objects as? [Category] {
