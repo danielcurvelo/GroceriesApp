@@ -16,24 +16,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-Y1-Atg">
-                        <rect key="frame" x="0.0" y="0.0" width="55" height="66"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" highlightedImage="apple" translatesAutoresizingMaskIntoConstraints="NO" id="EVH-zo-scw">
-                                <rect key="frame" x="7" y="8" width="40" height="49"/>
-                                <animations/>
-                            </imageView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="EVH-zo-scw" firstAttribute="trailing" secondItem="1OJ-Y1-Atg" secondAttribute="trailingMargin" id="4Gb-5u-tQT"/>
-                            <constraint firstItem="EVH-zo-scw" firstAttribute="top" secondItem="1OJ-Y1-Atg" secondAttribute="topMargin" id="4cr-Pu-Mgg"/>
-                            <constraint firstItem="EVH-zo-scw" firstAttribute="centerY" secondItem="1OJ-Y1-Atg" secondAttribute="centerY" id="TDG-gi-inF"/>
-                            <constraint firstAttribute="width" secondItem="1OJ-Y1-Atg" secondAttribute="height" multiplier="54:65" id="dFB-Ns-KcI"/>
-                            <constraint firstAttribute="width" constant="55" id="zeJ-OE-9DX"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xz-Ro-MbC">
                         <rect key="frame" x="306" y="0.0" width="14" height="65.5"/>
                         <animations/>
@@ -59,6 +41,23 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-Y1-Atg">
+                        <rect key="frame" x="0.0" y="0.0" width="67" height="66"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJf-lc-rtH">
+                                <rect key="frame" x="12" y="11" width="43" height="43"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.9137254901960784" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="1OJ-Y1-Atg" secondAttribute="height" multiplier="54:65" constant="12.169230769230765" id="dFB-Ns-KcI"/>
+                            <constraint firstAttribute="width" constant="67" id="zeJ-OE-9DX"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <animations/>
                 <constraints>
@@ -66,7 +65,7 @@
                     <constraint firstItem="1OJ-Y1-Atg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gd1-WW-5WB"/>
                     <constraint firstItem="znA-H7-1aW" firstAttribute="top" secondItem="TjO-or-0pQ" secondAttribute="bottom" constant="-3" id="JNl-0O-Say"/>
                     <constraint firstItem="2xz-Ro-MbC" firstAttribute="bottom" secondItem="1OJ-Y1-Atg" secondAttribute="bottom" id="L4j-3t-9UF"/>
-                    <constraint firstItem="znA-H7-1aW" firstAttribute="leading" secondItem="1OJ-Y1-Atg" secondAttribute="trailing" constant="20" id="LPu-ct-kL5"/>
+                    <constraint firstItem="znA-H7-1aW" firstAttribute="leading" secondItem="1OJ-Y1-Atg" secondAttribute="trailing" constant="8" id="LPu-ct-kL5"/>
                     <constraint firstItem="2xz-Ro-MbC" firstAttribute="top" secondItem="1OJ-Y1-Atg" secondAttribute="top" id="R1R-5D-wg6"/>
                     <constraint firstItem="2xz-Ro-MbC" firstAttribute="leading" secondItem="znA-H7-1aW" secondAttribute="trailing" constant="8" symbolic="YES" id="Wcq-5i-fNt"/>
                     <constraint firstItem="TjO-or-0pQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="ZP0-sr-QeU"/>
@@ -74,7 +73,8 @@
                     <constraint firstAttribute="trailingMargin" secondItem="2xz-Ro-MbC" secondAttribute="trailing" constant="-8" id="hio-A6-c9t"/>
                     <constraint firstItem="2xz-Ro-MbC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="iuu-iT-htm"/>
                     <constraint firstItem="2xz-Ro-MbC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="306" id="kZC-dH-0YW"/>
-                    <constraint firstItem="TjO-or-0pQ" firstAttribute="leading" secondItem="1OJ-Y1-Atg" secondAttribute="trailing" constant="20" id="qNM-rf-iyD"/>
+                    <constraint firstItem="TjO-or-0pQ" firstAttribute="leading" secondItem="1OJ-Y1-Atg" secondAttribute="trailing" constant="8" id="qNM-rf-iyD"/>
+                    <constraint firstItem="2xz-Ro-MbC" firstAttribute="leading" secondItem="znA-H7-1aW" secondAttribute="trailing" constant="8" id="utP-ar-S9g"/>
                     <constraint firstAttribute="bottomMargin" secondItem="2xz-Ro-MbC" secondAttribute="bottom" constant="-8" id="x8u-1w-8gN"/>
                     <constraint firstItem="2xz-Ro-MbC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yzn-lo-hBu"/>
                     <constraint firstAttribute="trailing" secondItem="2xz-Ro-MbC" secondAttribute="trailing" id="zmq-f6-JD2"/>
@@ -84,14 +84,10 @@
             <connections>
                 <outlet property="category" destination="znA-H7-1aW" id="9UZ-eK-UfU"/>
                 <outlet property="expirationIdentifier" destination="2xz-Ro-MbC" id="zF3-uy-sZZ"/>
-                <outlet property="icon" destination="EVH-zo-scw" id="Wl0-tY-9sX"/>
                 <outlet property="iconContainer" destination="1OJ-Y1-Atg" id="00M-vL-O0e"/>
                 <outlet property="title" destination="TjO-or-0pQ" id="Cnd-if-kFe"/>
             </connections>
             <point key="canvasLocation" x="673" y="495"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="apple" width="40" height="49"/>
-    </resources>
 </document>
