@@ -486,11 +486,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="detailImageView" destination="tYh-VY-Wkj" id="msU-5D-r7f"/>
-                        <outlet property="detailItemCategoryTextField" destination="XPS-BJ-DgW" id="h3w-uP-6R8"/>
-                        <outlet property="detailItemExpirationSlider" destination="ODU-rn-a9t" id="vqt-Hu-hMk"/>
-                        <outlet property="detailItemNameTextField" destination="05K-ke-wlC" id="FKk-wR-Qm0"/>
-                        <outlet property="detailItemNotesTextView" destination="awB-HB-SP2" id="1Yx-1W-KFS"/>
+                        <outlet property="categoryTextField" destination="XPS-BJ-DgW" id="k0P-mg-sBf"/>
+                        <outlet property="expirationSlider" destination="ODU-rn-a9t" id="61F-le-2IS"/>
+                        <outlet property="imageView" destination="tYh-VY-Wkj" id="UBf-1R-UVf"/>
+                        <outlet property="nameTextField" destination="05K-ke-wlC" id="1MM-Ha-gdN"/>
+                        <outlet property="notesTextView" destination="awB-HB-SP2" id="Rw6-xz-wZm"/>
                         <outlet property="sliderLabel" destination="xdB-i8-pEO" id="ydZ-fZ-JwB"/>
                     </connections>
                 </viewController>
