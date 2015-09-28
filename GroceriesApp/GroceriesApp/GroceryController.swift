@@ -14,10 +14,9 @@ class GroceryController: NSObject {
     
     static let sharedInstance = GroceryController()
     
-    
     override init() {
         super.init()
-        self.downloadFridges()
+    
     }
     
     var fridges:[Fridge] = []
@@ -100,26 +99,16 @@ class GroceryController: NSObject {
         })
     }
     
+    var categories:[Category] = []
     
-    func createInitiaFridge() {
+    func downloadCategories() {
         
-        let fridge = PFObject(className: "Fridge") as! Fridge
-        fridge.title = "My Fridge"
-        
-        var mutableOwners = fridge.owners as [PFUser]?
-        mutableOwners?.append(PFUser.currentUser()!)
-        fridge.owners = mutableOwners as [PFUser]?
-        
-    }
-    
-    func downloadFridges() {
-        
-        let query = Fridge.query()!
+        let query = Category.query()!
         query.whereKey("owners", containsString:(PFUser.currentUser()?.objectId))
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error != nil {
-                if let fridgeObjects = objects as? [Fridge] {
-                    self.fridges = fridgeObjects
+                if let categoryObjects = objects as? [Category] {
+                    self.categories = categoryObjects
                 }
                 print("Successfully retrieved: \(objects)")
             } else {
@@ -129,6 +118,9 @@ class GroceryController: NSObject {
         }
         
     }
+
+    
+    
     
     
 }

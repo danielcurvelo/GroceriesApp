@@ -12,13 +12,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet var tableView: UITableView!
     
-//    let sectionHeaderTitles = ["Expired", "Replace Soon", "Good"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
-        GroceryController.sharedInstance.downloadFridges()
+        GroceryController.sharedInstance.downloadCategories()
         print("shared instance works")
         
     
@@ -54,10 +53,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 3
     }
     
-//     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        
-//        return self.sectionHeaderTitles[section]
-//    }
+
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     

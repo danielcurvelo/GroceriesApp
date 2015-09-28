@@ -29,15 +29,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         // Do any additional setup after loading the view.
     }
     
-    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        if(text == "\n") {
-            detailItemNotesTextView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
-
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -58,7 +50,19 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         self.navigationController?.pushViewController(detailItem!, animated: true)
     }
     
-    @IBAction func saveButtonTapped(sender: AnyObject) {
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            detailItemNotesTextView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    @IBAction func saveButtonTapped(sender: UIBarButtonItem) {
+        
+    var item = PFObject.init(className: "Item")
+    
+        
         
     print("Save button tapped in detail view")
         
