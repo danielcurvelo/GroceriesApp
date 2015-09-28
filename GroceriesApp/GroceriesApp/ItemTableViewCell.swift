@@ -19,6 +19,8 @@ class ItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        
+        
         icon.tintColor = UIColor.groceryLightGreenColor()
         iconContainer.backgroundColor = UIColor.groceryDarkGreenColor()
         
