@@ -19,7 +19,7 @@ class GroceryController: NSObject {
     
     }
     
-    var categories:[Category] = []
+    
     
     var fridges:[Fridge] = []
     var categories:[Category] = []

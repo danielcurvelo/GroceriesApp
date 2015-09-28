@@ -17,7 +17,6 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
-        GroceryController.sharedInstance.downloadFridges()
         print("shared instance works")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
