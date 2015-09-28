@@ -17,6 +17,7 @@ class List: PFObject, PFSubclassing {
     @NSManaged var items: [Item]?
     @NSManaged var title: String?
     @NSManaged var tags: [Tag]?
+    @NSManaged var categories: [Category]?
 
     class func parseClassName() -> String {
         return "List"
