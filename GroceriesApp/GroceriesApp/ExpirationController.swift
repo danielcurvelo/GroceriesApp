@@ -10,8 +10,10 @@ import UIKit
 import Parse
 
 class ExpirationController: NSObject {
+    
+    static let sharedInstance = ExpirationController()
 
-   
+    var expirationArrays = []
     
     func changeDatesToDays(items:[Item]) {
         
@@ -47,16 +49,14 @@ class ExpirationController: NSObject {
                 }
             })
             
-            
             let arrayOfArrays:NSMutableArray = []
-            
             
             if item == items.last {
                 arrayOfArrays.addObject(replace)
                 arrayOfArrays.addObject(replaceSoon)
                 arrayOfArrays.addObject(good)
+                expirationArrays = arrayOfArrays
             }
-            
         }
     }
 }

@@ -21,6 +21,7 @@ class GroceryController: NSObject {
     }
     
     var fridges:[Fridge] = []
+    var categories:[Category] = []
     
     func createItemInCategory(category: Category, name: String, tags: [Tag], icon: PFFile, lists: [List]) {
         let item = PFObject(className:"Item") as! Item

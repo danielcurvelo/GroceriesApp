@@ -12,7 +12,6 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet var tableView: UITableView!
     
-//    let sectionHeaderTitles = ["Expired", "Replace Soon", "Good"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +33,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath)
+        let category = GroceryController.sharedInstance.categories
+        
         
         return cell
         
@@ -53,11 +54,6 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return 3
     }
-    
-//     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        
-//        return self.sectionHeaderTitles[section]
-//    }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     
