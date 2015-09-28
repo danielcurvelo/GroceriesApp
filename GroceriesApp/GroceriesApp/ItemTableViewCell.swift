@@ -22,7 +22,7 @@ class ItemTableViewCell: UITableViewCell {
         
         
 //        icon.tintColor = UIColor.groceryLightGreenColor()
-        iconContainer.backgroundColor = UIColor.groceryDarkGreenColor()
+//        iconContainer.backgroundColor = UIColor.groceryDarkGreenColor()
         
     }
 
