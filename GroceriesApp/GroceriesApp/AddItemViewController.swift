@@ -35,12 +35,12 @@ class AddItemViewController: UIViewController {
     
     
     func show(){
-        UIView.animateWithDuration(2) { () -> Void in
+        UIView.animateWithDuration(1) { () -> Void in
             self.alertViewBackground.alpha = 1.0
         }
         
         let snapBehavior = UISnapBehavior.init(item: self.alertViewBackground, snapToPoint: self.view.center)
-        snapBehavior.damping = 3.0
+        snapBehavior.damping = 0.50
         self.animator?.addBehavior(snapBehavior)
         
     }

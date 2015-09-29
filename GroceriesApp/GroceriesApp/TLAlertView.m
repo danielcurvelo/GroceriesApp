@@ -11,15 +11,15 @@
 static const CGFloat animationDuration = 0.4f;
 static const CGFloat alertViewWidth = 270.0f;
 static const CGFloat buttonHeight = 44.0f;
-static const CGFloat marginInnerView    = 10.0f;
-static const CGFloat separatorEachEle   = 10.0f;
+static const CGFloat marginInnerView = 10.0f;
+static const CGFloat separatorEachEle = 10.0f;
 
 @interface TLAlertView ()
 
-@property (nonatomic, strong) NSString  *title;
-@property (nonatomic, strong) NSString  *message;
-@property (nonatomic, strong) NSString  *buttonTitle;
-@property (nonatomic, strong) UIView    *customAlertView;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSString *buttonTitle;
+@property (nonatomic, strong) UIView *customAlertView;
 
 @property (nonatomic, copy) TLAlertViewHandler handler;
 @property (nonatomic, strong) TLAlertView *retainedSelf;
@@ -39,16 +39,19 @@ static const CGFloat separatorEachEle   = 10.0f;
 #pragma mark - Initializers
 
 -(instancetype)initWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle {
+    
     return [self initWithTitle:title message:message buttonTitle:buttonTitle handler:nil];
+    
 }
 
--(instancetype)initWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle outsideClose: (BOOL)tap2close
-{
+-(instancetype)initWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle outsideClose: (BOOL)tap2close {
+    
     self.tap2close = tap2close;
     return [self initWithTitle:title message:message buttonTitle:buttonTitle handler:nil];
 }
 
 -(instancetype)initWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle handler:(TLAlertViewHandler)handler {
+    
     if (!(self = [super init])) return nil;
     
     self.title = title;
@@ -61,19 +64,19 @@ static const CGFloat separatorEachEle   = 10.0f;
     return self;
 }
 
--(instancetype)initWithView:(UIView *)view
-{
+-(instancetype)initWithView:(UIView *)view {
+    
     return [self initWithView:view handler:nil];
 }
 
--(instancetype)initWithView:(UIView *)view outsideClose: (BOOL)tap2close
-{
+-(instancetype)initWithView:(UIView *)view outsideClose: (BOOL)tap2close {
+    
     self.tap2close = tap2close;
     return [self initWithView:view handler:nil];
 }
 
--(instancetype)initWithView:(UIView *)view handler:(TLAlertViewHandler)handler
-{
+-(instancetype)initWithView:(UIView *)view handler:(TLAlertViewHandler)handler {
+    
     if (!(self = [super init])) return nil;
     
     self.title = nil;
@@ -89,16 +92,16 @@ static const CGFloat separatorEachEle   = 10.0f;
 
 #pragma mark - Private Methods
 
-- (void)setupCustomView
-{
+- (void)setupCustomView {
+    
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     
     self.frame = keyWindow.bounds;
     
     // Set up our subviews
-    self.backgroundView                 = [[UIView alloc] initWithFrame:keyWindow.bounds];
+    self.backgroundView = [[UIView alloc] initWithFrame:keyWindow.bounds];
     self.backgroundView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f]; // Determined empirically
-    self.backgroundView.alpha           = 0.0f;
+    self.backgroundView.alpha = 0.0f;
     [self addSubview:self.backgroundView];
     
     //////////////////////////////////////////
@@ -142,20 +145,22 @@ static const CGFloat separatorEachEle   = 10.0f;
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
     
     // add custom gestures.
-    if(self.tap2close == YES){
+    if(self.tap2close == YES) {
+        
         [self setupGestures];
     }
 }
 
 -(void)setup {
+    
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     
     self.frame = keyWindow.bounds;
     
     // Set up our subviews
-    self.backgroundView                 = [[UIView alloc] initWithFrame:keyWindow.bounds];
+    self.backgroundView = [[UIView alloc] initWithFrame:keyWindow.bounds];
     self.backgroundView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.4f]; // Determined empirically
-    self.backgroundView.alpha           = 0.0f;
+    self.backgroundView.alpha = 0.0f;
     [self addSubview:self.backgroundView];
     
     //////////////////////////////////////////
@@ -261,17 +266,17 @@ static const CGFloat separatorEachEle   = 10.0f;
 
 #pragma mark - UI stuff
 
-- (UIView *)returnUIForCustomView
-{
+- (UIView *)returnUIForCustomView {
+    
     return self.customAlertView;
 }
 
-- (CALayer *)subLayerLine
-{
+- (CALayer *)subLayerLine {
+    
     CGRect lastFrame = [self frameForLastSettedView];
     
     CGFloat posYLine = lastFrame.origin.y;
-    if(nil == self.customAlertView){
+    if(nil == self.customAlertView) {
         posYLine += separatorEachEle;
     }
     
@@ -286,46 +291,45 @@ static const CGFloat separatorEachEle   = 10.0f;
     return keylineLayer;
 }
 
-- (UIView *)returnUIForTitle
-{
-    UILabel *titleLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, (alertViewWidth-marginInnerView*2), 44.0f)];
-    titleLabel.text             = self.title;
-    titleLabel.backgroundColor  = [UIColor clearColor];
-    titleLabel.textColor        = [UIColor blackColor];
-    titleLabel.font             = [UIFont boldSystemFontOfSize:17];
-    titleLabel.textAlignment    = NSTextAlignmentCenter;
-    titleLabel.lineBreakMode    = NSLineBreakByWordWrapping;
-    titleLabel.numberOfLines    = 0;
+- (UIView *)returnUIForTitle {
     
-    titleLabel.frame            = [self adjustLabelFrame:titleLabel];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, (alertViewWidth-marginInnerView*2), 44.0f)];
+    titleLabel.text = self.title;
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.textColor = [UIColor blackColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:17];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    titleLabel.numberOfLines = 0;
+    
+    titleLabel.frame = [self adjustLabelFrame:titleLabel];
     
     return titleLabel;
 }
 
-- (UIView *)returnUIForMessage
-{
-    CGRect lastFrame                = [self frameForLastSettedView];
-    UILabel *messageLabel           = [[UILabel alloc] initWithFrame:CGRectMake(
-                                                                                lastFrame.origin.x,
-                                                                                lastFrame.origin.y + lastFrame.size.height + separatorEachEle,
-                                                                                (alertViewWidth-marginInnerView*2),
-                                                                                44.0f)];
+- (UIView *)returnUIForMessage {
     
-    messageLabel.text               = self.message;
-    messageLabel.backgroundColor    = [UIColor clearColor];
-    messageLabel.textColor          = [UIColor blackColor];
-    messageLabel.font               = [UIFont systemFontOfSize:15];
-    messageLabel.textAlignment      = NSTextAlignmentCenter;
-    messageLabel.lineBreakMode      = NSLineBreakByWordWrapping;
-    messageLabel.numberOfLines      = 0;
+    CGRect lastFrame = [self frameForLastSettedView];
+    UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(
+                                                                      lastFrame.origin.x,
+                                                                      lastFrame.origin.y + lastFrame.size.height + separatorEachEle,
+                                                                      (alertViewWidth-marginInnerView*2),
+                                                                      44.0f)];
+    
+    messageLabel.text = self.message;
+    messageLabel.backgroundColor = [UIColor clearColor];
+    messageLabel.textColor = [UIColor blackColor];
+    messageLabel.font = [UIFont systemFontOfSize:15];
+    messageLabel.textAlignment = NSTextAlignmentCenter;
+    messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    messageLabel.numberOfLines = 0;
     
     messageLabel.frame = [self adjustLabelFrame:messageLabel];
     
     return messageLabel;
 }
 
-- (UIView *)returnUIForButton
-{
+- (UIView *)returnUIForButton {
     CGRect lastFrame = [self frameForLastSettedView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -341,8 +345,7 @@ static const CGFloat separatorEachEle   = 10.0f;
     return button;
 }
 
-- (CGRect )adjustLabelFrame: (UILabel *)label
-{
+- (CGRect )adjustLabelFrame: (UILabel *)label {
     //Calculate the expected size based on the font and linebreak mode of your label
     // FLT_MAX here simply means no constraint in height
     NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -358,8 +361,7 @@ static const CGFloat separatorEachEle   = 10.0f;
     return CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width, text_size.size.height);
 }
 
-- (CGRect)frameForLastSettedView
-{
+- (CGRect)frameForLastSettedView {
     CGRect frame;
     NSArray *subviews = [self.innerView subviews];
     if([subviews count] > 0){
@@ -370,19 +372,18 @@ static const CGFloat separatorEachEle   = 10.0f;
     return frame;
 }
 
-- (void)AMResizeViews
-{
+- (void)AMResizeViews {
     CGFloat totalHeight = 0.0f;
     
     // GET ALL SUBVIEWS (height)
-    for(UIView *i_views in [self.innerView subviews]){
+    for(UIView *i_views in [self.innerView subviews]) {
         totalHeight += i_views.frame.size.height;
     }
     
     // ADD separatorEachEle to totalHeight value
     totalHeight+=separatorEachEle;
     
-    if(totalHeight>0){
+    if(totalHeight>0) {
         // Finally, calculate frame of AlertView
         [self.alertView setFrame:CGRectMake(
                                             self.alertView.frame.origin.x,
@@ -404,8 +405,7 @@ static const CGFloat separatorEachEle   = 10.0f;
     
 }
 
-- (void)AMResizeViewsWithCustomView
-{
+- (void)AMResizeViewsWithCustomView {
     CGRect frameCustomAlert = self.customAlertView.frame;
     
     [self.alertView setFrame:CGRectMake(0,//self.alertView.frame.origin.x,
@@ -424,14 +424,14 @@ static const CGFloat separatorEachEle   = 10.0f;
     CGFloat totalHeight = 0.0f;
     
     // GET ALL SUBVIEWS (height)
-    for(UIView *i_views in [self.innerView subviews]){
+    for(UIView *i_views in [self.innerView subviews]) {
         totalHeight += i_views.frame.size.height;
     }
     
     // ADD separatorEachEle to totalHeight value
     totalHeight+=separatorEachEle;
     
-    if(totalHeight>0){
+    if(totalHeight>0) {
         // Finally, calculate frame of AlertView
         [self.alertView setFrame:CGRectMake(
                                             self.alertView.frame.origin.x,
@@ -449,8 +449,7 @@ static const CGFloat separatorEachEle   = 10.0f;
 
 #pragma mark - gesture actions
 
-- (void)setupGestures
-{
+- (void)setupGestures {
     // Add lister main view to close if tapped
     UITapGestureRecognizer *tap2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeTapBlurArea:)];
     [tap2 setNumberOfTapsRequired:1];
@@ -459,19 +458,17 @@ static const CGFloat separatorEachEle   = 10.0f;
     [self.backgroundView addGestureRecognizer:tap2];
 }
 
--(void)closeTapBlurArea:(UITapGestureRecognizer *)sender
-{
+-(void)closeTapBlurArea:(UITapGestureRecognizer *)sender {
     UIView *senderview = sender.view;
     
     UIView *childView = nil;
-    for(UIView *child in [senderview subviews]){
-        if([child isKindOfClass:[self class]]){
+    for(UIView *child in [senderview subviews]) {
+        if([child isKindOfClass:[self class]]) {
             childView = child;
         }
     }
     
-    if(sender.state == UIGestureRecognizerStateEnded)
-    {
+    if(sender.state == UIGestureRecognizerStateEnded) {
         
         CGPoint location = [sender locationInView:senderview.superview];
         BOOL closeSuperView = [self isTappedOutsideRegion:childView withLocation: location];
@@ -482,17 +479,16 @@ static const CGFloat separatorEachEle   = 10.0f;
     }
 }
 
-- (BOOL)isTappedOutsideRegion:(UIView *)view withLocation : (CGPoint)location
-{
+- (BOOL)isTappedOutsideRegion:(UIView *)view withLocation : (CGPoint)location {
     CGFloat endX = (view.frame.origin.x + view.frame.size.width);
     CGFloat endY = (view.frame.origin.y + view.frame.size.height);
     BOOL isValid;
     if(
        (location.x < view.frame.origin.x || location.y < view.frame.origin.y) ||
        (location.x > endX || location.y > endY)
-       ){
+       ) {
         isValid = YES;
-    }else{
+    } else {
         isValid = NO;
     }
     
