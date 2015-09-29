@@ -12,9 +12,27 @@ import Foundation
 //let daysLeft = expiration - NSTimeIntervalSince1970
 //let days = daysLeft / (60*60*24)
 
+var categories = ["1","2","3"]
+
+var anotherArray = ["4","5","6"]
 
 
 
+    categories += anotherArray
+
+
+class object {
+    var values = [object(),object()]
+}
+
+let categoriesOther = [object](count: 7, repeatedValue: object())
+
+var items:[object] = []
+
+    for item in categoriesOther
+    {
+        items = items += item.values
+    }
 
 
 

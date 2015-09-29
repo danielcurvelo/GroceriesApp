@@ -16,6 +16,8 @@
 		63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */; };
 		8C0C10C11BB46A9C00E3EB14 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */; };
 		8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */; };
+		8CFC77671BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC77651BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		8CFC77681BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC77661BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		9117E1011BAC9BC800369C4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E0FF1BAC9BC800369C4A /* Bolts.framework */; };
 		9117E1021BAC9BC800369C4A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1001BAC9BC800369C4A /* Parse.framework */; };
 		9117E1041BAC9BFD00369C4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1031BAC9BFD00369C4A /* AudioToolbox.framework */; };
@@ -70,6 +72,8 @@
 		63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryController.swift; sourceTree = "<group>"; };
 		8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8CFC77651BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeTableViewCell.swift; sourceTree = "<group>"; };
+		8CFC77661BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FridgeTableViewCell.xib; sourceTree = "<group>"; };
 		9117E0FF1BAC9BC800369C4A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		9117E1001BAC9BC800369C4A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9117E1031BAC9BFD00369C4A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -163,6 +167,8 @@
 				91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */,
 				91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */,
 				91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */,
+				8CFC77651BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift */,
+				8CFC77661BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib */,
 				63B859D01BA5FEC700FC16A6 /* Images.xcassets */,
 				63B859D21BA5FEC700FC16A6 /* LaunchScreen.xib */,
 				63B859C71BA5FEC700FC16A6 /* Supporting Files */,
@@ -305,7 +311,6 @@
 				TargetAttributes = {
 					63B859C31BA5FEC700FC16A6 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 9FW2H5V3G5;
 					};
 					63B859D81BA5FEC700FC16A6 = {
 						CreatedOnToolsVersion = 6.4;
@@ -337,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFC77681BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib in Resources */,
 				63B859CF1BA5FEC700FC16A6 /* Main.storyboard in Resources */,
 				63B859D41BA5FEC700FC16A6 /* LaunchScreen.xib in Resources */,
 				91738D051BAB7228007D7DFE /* CreateItemTableViewCell.xib in Resources */,
@@ -375,6 +381,7 @@
 				F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */,
 				63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */,
 				8C0C10C11BB46A9C00E3EB14 /* LogInViewController.swift in Sources */,
+				8CFC77671BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift in Sources */,
 				91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */,
 				9117E11A1BACA3A700369C4A /* Category.swift in Sources */,
 				9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */,

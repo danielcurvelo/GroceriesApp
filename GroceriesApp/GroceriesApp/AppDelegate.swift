@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions:
             [NSObject: AnyObject]?) -> Bool {
                 
+            Item.registerSubclass()
+                
             // [Optional] Power your app with Local Datastore. For more info, go to
             // https://parse.com/docs/ios_guide#localdatastore/iOS
             Parse.enableLocalDatastore()
@@ -48,10 +50,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UITabBar.appearance().tintColor = UIColor.groceryBeigeColor()
             
+            UITabBar.appearance().selectionIndicatorImage = UIImage.imageFromColor(UIColor.groceryDarkGreenColor(), size:CGSizeMake((window?.rootViewController?.view.frame.size.width)!/2, 49))
+            
             UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
-            
-            
-            
+                
+            let category = Category()
+                category.title = "Fruit"
+                category.saveInBackgroundWithBlock { (succeded, error) -> Void in
+                    if error == nil
+                    {
+                        GroceryController.sharedInstance.createItemInCategory(category, name: "Apple")
+
+                    }
+                }
+                
             return true
     }
 
