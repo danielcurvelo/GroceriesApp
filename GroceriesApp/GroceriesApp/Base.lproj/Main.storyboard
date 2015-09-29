@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ahJ-5P-gAl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ahJ-5P-gAl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -212,7 +212,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CART" id="dk2-Py-HY7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="I9h-Xb-1E5"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="I9h-Xb-1E5">
+                            <connections>
+                                <segue destination="j9o-Qj-zQh" kind="presentation" id="qb1-e3-CHQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="A9C-iA-9Pc" id="W32-7c-5U4"/>
@@ -400,7 +404,7 @@
                                         <rect key="frame" x="247" y="46" width="66" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -455,13 +459,13 @@
                                     <action selector="sliderValueChanged:" destination="lBA-0W-7ea" eventType="valueChanged" id="uBS-1W-DGN"/>
                                 </connections>
                             </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. &quot;Apples&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05K-ke-wlC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. &quot;Apples&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05K-ke-wlC">
                                 <rect key="frame" x="181" y="125" width="349" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ1-tG-ePB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ1-tG-ePB">
                                 <rect key="frame" x="265" y="185" width="71" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -876,6 +880,7 @@
         <image name="fridge" width="27" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="799-dW-sSl"/>
+        <segue reference="qb1-e3-CHQ"/>
+        <segue reference="T4V-vf-gyk"/>
     </inferredMetricsTieBreakers>
 </document>
