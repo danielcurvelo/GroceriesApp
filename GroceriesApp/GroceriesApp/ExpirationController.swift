@@ -15,7 +15,7 @@ class ExpirationController: NSObject {
 
     var expirationArrays = []
     
-    func changeDatesToDays(items:[Item]) {
+    func seperateItemsByExpiration(items:[Item], completion:()-> Void) {
         
         var replace = [Item]()
         var replaceSoon = [Item]()
@@ -49,13 +49,14 @@ class ExpirationController: NSObject {
                 }
             })
             
-            let arrayOfArrays:NSMutableArray = []
+            var arrayOfArrays = [[Item]]()
             
             if item == items.last {
-                arrayOfArrays.addObject(replace)
-                arrayOfArrays.addObject(replaceSoon)
-                arrayOfArrays.addObject(good)
+                arrayOfArrays.append(replace)
+                arrayOfArrays.append(replaceSoon)
+                arrayOfArrays.append(good)
                 expirationArrays = arrayOfArrays
+                completion()
             }
         }
     }
