@@ -20,7 +20,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         GroceryController.sharedInstance.downloadListsFromUser()
         print("list shared instance works")
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched
         
         // Do any additional setup after loading the view.
     }
