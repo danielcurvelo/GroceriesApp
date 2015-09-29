@@ -16,7 +16,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        tableView.registerNib(UINib.init(nibName: "FridgeTableViewCell", bundle: nil), forCellReuseIdentifier: "fridgeCell")
         print("shared instance works")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
@@ -33,7 +33,9 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("fridgeCell", forIndexPath: indexPath) as! FridgeTableViewCell
+        
+        
        
         
         
