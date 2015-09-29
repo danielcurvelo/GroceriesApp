@@ -41,8 +41,6 @@
 		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; };
 		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; };
 		917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22531BB5B114001CB0FD /* ExpirationController.swift */; };
-		D23A24A31BBB39DA00C4B7FB /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23A24A21BBB39DA00C4B7FB /* login.storyboard */; settings = {ASSET_TAGS = (); }; };
-		F85B0FA51BB9FCC1001640BB /* TLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA41BB9FCC1001640BB /* TLAlertView.m */; };
 		F85B0FA71BBAE871001640BB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA61BBAE871001640BB /* AddItemViewController.swift */; };
 		F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */; };
 		F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */; };
@@ -99,9 +97,6 @@
 		917A22531BB5B114001CB0FD /* ExpirationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationController.swift; sourceTree = "<group>"; };
 		917A22551BB5B13A001CB0FD /* Practice .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Practice .playground"; sourceTree = "<group>"; };
 		91872B901BB9BB6700C18DBD /* FutureVersions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FutureVersions.playground; sourceTree = "<group>"; };
-		D23A24A21BBB39DA00C4B7FB /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
-		F85B0FA31BB9FCC1001640BB /* TLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAlertView.h; sourceTree = "<group>"; };
-		F85B0FA41BB9FCC1001640BB /* TLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLAlertView.m; sourceTree = "<group>"; };
 		F85B0FA61BBAE871001640BB /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
 		F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfStockViewController.swift; path = ../OutOfStockViewController.swift; sourceTree = "<group>"; };
@@ -164,13 +159,10 @@
 				63B859F61BA76DDA00FC16A6 /* Model */,
 				63B859C91BA5FEC700FC16A6 /* AppDelegate.swift */,
 				63B859CD1BA5FEC700FC16A6 /* Main.storyboard */,
-				D23A24A21BBB39DA00C4B7FB /* login.storyboard */,
 				91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */,
 				91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */,
 				91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */,
 				91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */,
-				F85B0FA31BB9FCC1001640BB /* TLAlertView.h */,
-				F85B0FA41BB9FCC1001640BB /* TLAlertView.m */,
 				63B859D01BA5FEC700FC16A6 /* Images.xcassets */,
 				63B859D21BA5FEC700FC16A6 /* LaunchScreen.xib */,
 				63B859C71BA5FEC700FC16A6 /* Supporting Files */,
@@ -387,7 +379,6 @@
 				91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */,
 				9117E11A1BACA3A700369C4A /* Category.swift in Sources */,
 				9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */,
-				F85B0FA51BB9FCC1001640BB /* TLAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
