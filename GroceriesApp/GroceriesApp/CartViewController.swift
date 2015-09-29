@@ -17,7 +17,6 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
         
-        GroceryController.sharedInstance.downloadListsFromUser()
         print("list shared instance works")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched
