@@ -102,8 +102,6 @@ class GroceryController: NSObject {
         })
     }
     
-    
-    
     func downloadCategories() {
         
         let query = Category.query()!
@@ -122,8 +120,4 @@ class GroceryController: NSObject {
         
     }
 
-    
-    
-    
-    
 }
