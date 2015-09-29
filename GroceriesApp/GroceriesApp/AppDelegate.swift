@@ -37,12 +37,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().barTintColor = UIColor.groceryLightGreenColor()
             
             UINavigationBar.appearance().tintColor = UIColor.groceryDarkGreenColor()
+                
+            UINavigationBar.appearance().translucent = false
             
             UITableView.appearance().backgroundColor = UIColor.groceryBeigeColor()
             
             UITableViewCell.appearance().backgroundColor = UIColor.groceryBeigeColor()
             
             UITabBar.appearance().barTintColor = UIColor.groceryLightGreenColor()
+                
+            UITabBar.appearance().translucent = false
             
             UITabBar.appearance().tintColor = UIColor.groceryBeigeColor()
             

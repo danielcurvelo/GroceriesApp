@@ -14,15 +14,20 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var expirationIdentifier: UIView!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var icon: UIImageView!
+//    @IBOutlet weak var icon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         
         
-        icon.tintColor = UIColor.groceryLightGreenColor()
-        iconContainer.backgroundColor = UIColor.groceryDarkGreenColor()
+//        icon.tintColor = UIColor.groceryLightGreenColor()
+//        iconContainer.backgroundColor = UIColor.groceryDarkGreenColor()
+        
+    }
+    @IBAction func buttonChecked(sender: UIButton) {
+        
+        sender.selected = !sender.selected
         
     }
 

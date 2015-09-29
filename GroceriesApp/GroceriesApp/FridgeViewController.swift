@@ -11,41 +11,18 @@ import UIKit
 class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
-        
-    var items:[Item] = []
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.tableView.reloadData()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GroceryController.sharedInstance.downloadCategories(){
-                self.tableView.reloadData()
-        }
-        
-        tableView.registerNib(UINib.init(nibName:"ItemTableViewCell", bundle: nil), forCellReuseIdentifier:"itemCell")
+        tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        GroceryController.sharedInstance.downloadFridges()
+        print("shared instance works")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-        for category in GroceryController.sharedInstance.categories
-        {
-            if let unwrappedItems = category.items{
-            self.items = self.items + unwrappedItems
-            }
-            print(" amount of items: \(self.items)")
-            
-            if category == GroceryController.sharedInstance.categories.last
-            {
-                ExpirationController.sharedInstance.seperateItemsByExpiration(self.items){
-                    self.tableView.reloadData()
-                }
-            }
-        }
-
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,13 +34,9 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ItemTableViewCell
-        let group = ExpirationController.sharedInstance.expirationArrays[indexPath.section] as? [Item]
+        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath)
+        let category = GroceryController.sharedInstance.categories
         
-        if let item = group?[indexPath.row]{
-            cell.title.text = item.name
-            cell.category.text = item.category?.title
-        }
         
         return cell
         
@@ -71,14 +44,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let group = ExpirationController.sharedInstance.expirationArrays[section]
-        if let count = group.count{
-        return count
-        }
-        else
-        {
-        return 0 as Int
-        }
+        return 2
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -88,7 +54,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return ExpirationController.sharedInstance.expirationArrays.count
+        return 3
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

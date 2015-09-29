@@ -59,18 +59,14 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     }
     
     @IBAction func saveButtonTapped(sender: UIBarButtonItem) {
-        
-//    var item = PFObject.init(className: "Item")
-    
-        
-        
+ 
     print("Save button tapped in detail view")
         
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        return false
+        return true
     }
 
     /*
