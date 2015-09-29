@@ -305,7 +305,7 @@
 				TargetAttributes = {
 					63B859C31BA5FEC700FC16A6 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 2Y46SW9SR2;
+						DevelopmentTeam = 9FW2H5V3G5;
 					};
 					63B859D81BA5FEC700FC16A6 = {
 						CreatedOnToolsVersion = 6.4;
@@ -337,7 +337,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23A24A31BBB39DA00C4B7FB /* login.storyboard in Resources */,
 				63B859CF1BA5FEC700FC16A6 /* Main.storyboard in Resources */,
 				63B859D41BA5FEC700FC16A6 /* LaunchScreen.xib in Resources */,
 				91738D051BAB7228007D7DFE /* CreateItemTableViewCell.xib in Resources */,
