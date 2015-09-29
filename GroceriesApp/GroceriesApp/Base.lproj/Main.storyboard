@@ -137,7 +137,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="left" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="0SU-gf-BKM">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0SU-gf-BKM" id="dvS-Co-Dy1">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -150,7 +150,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="oS0-qM-Vjy" customClass="SectionHeaderTableViewCell" customModule="GroceriesApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oS0-qM-Vjy" id="3wI-J9-Ypb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -168,7 +168,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-Sj-WFK">
                                 <rect key="frame" x="0.0" y="64" width="600" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.30980392159999998" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="30" id="FWl-Ax-jbc"/>
                                     <constraint firstAttribute="height" constant="43" id="fB3-Zr-tum"/>
@@ -470,7 +470,7 @@
                                 <rect key="frame" x="20" y="72" width="130" height="129"/>
                                 <animations/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add any Pertinent Details to your item. Ex. &quot;Gluten Free for Johnny's Diet&quot;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="awB-HB-SP2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Add any Pertinent Details to your item. Ex. &quot;Gluten Free for Johnny's Diet&quot;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="awB-HB-SP2">
                                 <rect key="frame" x="20" y="394" width="560" height="130"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.23529411764705882" green="0.77254901960784317" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
