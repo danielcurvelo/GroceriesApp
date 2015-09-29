@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -13,10 +13,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2xz-Ro-MbC">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xz-Ro-MbC">
                         <rect key="frame" x="306" y="0.0" width="14" height="66"/>
                         <animations/>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.58823529409999997" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,14 +41,22 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-Y1-Atg">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-Y1-Atg">
                         <rect key="frame" x="0.0" y="0.0" width="67" height="66"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJf-lc-rtH">
-                                <rect key="frame" x="12" y="11" width="43" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJf-lc-rtH">
+                                <rect key="frame" x="-1" y="-1" width="69" height="67"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.94509803921568625" green="0.9137254901960784" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.77254901960784317" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.94509803920000002" green="0.91372549020000005" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Icon-Spotlight-41"/>
+                                <state key="selected" image="Icon-Spotlight-40">
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonChecked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Q4V-dV-Wfx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -90,4 +98,8 @@
             <point key="canvasLocation" x="673" y="495"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Icon-Spotlight-40" width="40" height="40"/>
+        <image name="Icon-Spotlight-41" width="40" height="40"/>
+    </resources>
 </document>

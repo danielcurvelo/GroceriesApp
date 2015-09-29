@@ -25,6 +25,11 @@ class ItemTableViewCell: UITableViewCell {
 //        iconContainer.backgroundColor = UIColor.groceryDarkGreenColor()
         
     }
+    @IBAction func buttonChecked(sender: UIButton) {
+        
+        sender.selected = !sender.selected
+        
+    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
