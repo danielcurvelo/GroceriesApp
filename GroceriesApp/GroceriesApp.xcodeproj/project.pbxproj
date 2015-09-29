@@ -14,8 +14,8 @@
 		63B859D41BA5FEC700FC16A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B859D21BA5FEC700FC16A6 /* LaunchScreen.xib */; };
 		63B859E01BA5FEC700FC16A6 /* GroceriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B859DF1BA5FEC700FC16A6 /* GroceriesAppTests.swift */; };
 		63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */; };
-		8C0C10C11BB46A9C00E3EB14 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8C0C10C11BB46A9C00E3EB14 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */; };
+		8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */; };
 		9117E1011BAC9BC800369C4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E0FF1BAC9BC800369C4A /* Bolts.framework */; };
 		9117E1021BAC9BC800369C4A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1001BAC9BC800369C4A /* Parse.framework */; };
 		9117E1041BAC9BFD00369C4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1031BAC9BFD00369C4A /* AudioToolbox.framework */; };
@@ -40,7 +40,9 @@
 		91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */; };
 		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; };
 		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; };
-		917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22531BB5B114001CB0FD /* ExpirationController.swift */; settings = {ASSET_TAGS = (); }; };
+		917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22531BB5B114001CB0FD /* ExpirationController.swift */; };
+		F85B0FA51BB9FCC1001640BB /* TLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA41BB9FCC1001640BB /* TLAlertView.m */; };
+		F85B0FA71BBAE871001640BB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA61BBAE871001640BB /* AddItemViewController.swift */; };
 		F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */; };
 		F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */; };
 /* End PBXBuildFile section */
@@ -96,7 +98,9 @@
 		917A22531BB5B114001CB0FD /* ExpirationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationController.swift; sourceTree = "<group>"; };
 		917A22551BB5B13A001CB0FD /* Practice .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Practice .playground"; sourceTree = "<group>"; };
 		91872B901BB9BB6700C18DBD /* FutureVersions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FutureVersions.playground; sourceTree = "<group>"; };
-		D23A244E1BB45CBC00C4B7FB /* GroceriesApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceriesApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		F85B0FA31BB9FCC1001640BB /* TLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAlertView.h; sourceTree = "<group>"; };
+		F85B0FA41BB9FCC1001640BB /* TLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLAlertView.m; sourceTree = "<group>"; };
+		F85B0FA61BBAE871001640BB /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
 		F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfStockViewController.swift; path = ../OutOfStockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +166,8 @@
 				91738D041BAB7228007D7DFE /* CreateItemTableViewCell.xib */,
 				91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */,
 				91738D061BAB7243007D7DFE /* ItemTableViewCell.xib */,
+				F85B0FA31BB9FCC1001640BB /* TLAlertView.h */,
+				F85B0FA41BB9FCC1001640BB /* TLAlertView.m */,
 				63B859D01BA5FEC700FC16A6 /* Images.xcassets */,
 				63B859D21BA5FEC700FC16A6 /* LaunchScreen.xib */,
 				63B859C71BA5FEC700FC16A6 /* Supporting Files */,
@@ -209,6 +215,7 @@
 		63B85A1F1BA8980500FC16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F85B0FA61BBAE871001640BB /* AddItemViewController.swift */,
 				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
 				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */,
@@ -226,7 +233,6 @@
 			children = (
 				63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */,
 				91872B901BB9BB6700C18DBD /* FutureVersions.playground */,
-				D23A244E1BB45CBC00C4B7FB /* GroceriesApp-Bridging-Header.h */,
 				917A22531BB5B114001CB0FD /* ExpirationController.swift */,
 				917A22551BB5B13A001CB0FD /* Practice .playground */,
 			);
@@ -362,6 +368,7 @@
 				91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */,
 				9117E11C1BACB9AE00369C4A /* Item.swift in Sources */,
 				917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */,
+				F85B0FA71BBAE871001640BB /* AddItemViewController.swift in Sources */,
 				F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */,
 				8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,
@@ -375,6 +382,7 @@
 				91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */,
 				9117E11A1BACA3A700369C4A /* Category.swift in Sources */,
 				9117E11E1BACBA2F00369C4A /* Tag.swift in Sources */,
+				F85B0FA51BB9FCC1001640BB /* TLAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danielcurvelo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GroceriesApp/GroceriesApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -531,7 +539,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.danielcurvelo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GroceriesApp/GroceriesApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

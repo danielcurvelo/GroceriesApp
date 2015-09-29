@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ahJ-5P-gAl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ahJ-5P-gAl">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -100,6 +100,25 @@
             </objects>
             <point key="canvasLocation" x="1699" y="544"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="V4j-nK-JAW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Azf-SF-gOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="wGN-sg-3LS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bnl-qr-mla"/>
+                        <viewControllerLayoutGuide type="bottom" id="rSD-eJ-Cpd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zWb-Qy-yPA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2327" y="-1025"/>
+        </scene>
         <!--Cart List-->
         <scene sceneID="jQv-OS-Nj9">
             <objects>
@@ -193,11 +212,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CART" id="dk2-Py-HY7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="I9h-Xb-1E5">
-                            <connections>
-                                <segue destination="j9o-Qj-zQh" kind="presentation" identifier="addToCart" id="CTW-ZQ-a2x"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="I9h-Xb-1E5"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="A9C-iA-9Pc" id="W32-7c-5U4"/>
@@ -345,7 +360,11 @@
                                 <segue destination="2Ey-E0-mix" kind="unwind" unwindAction="unwindToCartViewController:" id="odZ-bQ-a9x"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hUi-50-t6N"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hUi-50-t6N">
+                            <connections>
+                                <segue destination="jMl-vw-biB" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="T8h-Jc-FbV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gcl-8N-R6L" id="rmo-wu-N7p"/>
@@ -355,6 +374,50 @@
                 <exit id="2Ey-E0-mix" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2327" y="2004"/>
+        </scene>
+        <!--Add Item View Controller-->
+        <scene sceneID="tRT-12-Bz3">
+            <objects>
+                <viewController id="jMl-vw-biB" customClass="AddItemViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xJk-62-2zL"/>
+                        <viewControllerLayoutGuide type="bottom" id="wCS-jB-seB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="im7-30-VAm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eC5-mb-5Dr">
+                                <rect key="frame" x="20" y="-166" width="560" height="199"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of food" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q14-cH-ApF">
+                                        <rect key="frame" x="8" y="8" width="544" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expires in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRH-WG-fC3">
+                                        <rect key="frame" x="247" y="46" width="66" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.57273262290000004" green="1" blue="0.24143399530000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertViewBackground" destination="eC5-mb-5Dr" id="2IL-o1-OSo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASX-kD-4pU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3063" y="2004"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="gln-Cy-OLV">
@@ -813,7 +876,6 @@
         <image name="fridge" width="27" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CTW-ZQ-a2x"/>
         <segue reference="T4V-vf-gyk"/>
     </inferredMetricsTieBreakers>
 </document>
