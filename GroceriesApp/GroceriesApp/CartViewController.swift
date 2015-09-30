@@ -19,7 +19,8 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         print("list shared instance works")
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched
+//        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+//        self.tableView.separatorColor = UIColor.groceryLightGreenColor()
         
         // Do any additional setup after loading the view.
     }
@@ -106,7 +107,12 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.pushViewController(detailItem!, animated: true)
     }
     
-    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if cell.respondsToSelector("separatorInset"){
+            cell.separatorInset = UIEdgeInsetsZero
+        }
+    }
 
 
     /*
