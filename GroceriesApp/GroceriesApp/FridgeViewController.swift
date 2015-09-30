@@ -97,6 +97,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController?.pushViewController(detailItem!, animated: true)
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if cell.respondsToSelector("separatorInset"){
+            cell.separatorInset = UIEdgeInsetsZero
+        }
+    }
     
 
     /*
