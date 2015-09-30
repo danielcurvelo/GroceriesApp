@@ -29,6 +29,7 @@ class GroceryController: NSObject {
 //        item.category = category
         item.name = name
         item.shelfLife = 7
+        item.purchaseDate = NSDate.init(timeIntervalSinceNow: 1)
         if var items = category.items{
                 items.append(item)
             }

@@ -13,7 +13,7 @@ class ExpirationController: NSObject {
     
     static let sharedInstance = ExpirationController()
 
-    var expirationArrays = []
+    var expirationArrays = [[Item]]()
     
     func seperateItemsByExpiration(items:[Item]?, completion:()-> Void) {
         
@@ -27,28 +27,43 @@ class ExpirationController: NSObject {
             let todaysDate = NSDate.init()
             let todaysDateInterval = NSTimeIntervalSince1970
             let shelfLifeDays = item.shelfLife as! Double / (60 * 60 * 24);
-            let daysSincePurchase = todaysDate.timeIntervalSinceDate(item.purchaseDate!) as Double
-            let purchaseDate = (NSTimeIntervalSince1970 - daysSincePurchase) as Double
-            let daysLeft = todaysDateInterval - (purchaseDate + shelfLifeDays)
-            
-            if daysLeft <= 1 {
-                replace.append(item)
+            if let unwrappedPurchaseDate = item.purchaseDate{
+                let daysSincePurchase = todaysDate.timeIntervalSinceDate(unwrappedPurchaseDate) as Double
+                let purchaseDate = (NSTimeIntervalSince1970 - daysSincePurchase) as Double
+                let daysLeft = todaysDateInterval - (purchaseDate + shelfLifeDays)
+                if daysLeft <= 1 {
+                    replace.append(item)
+                    
+                } else if daysLeft <= 4 {
+                    replaceSoon.append(item)
+                    
+                } else {
+                    good.append(item)
+                    
+                }
+                item.setObject(daysLeft, forKey: "daysLeft")
                 
-            } else if daysLeft <= 4 {
-                replaceSoon.append(item)
+                item.saveInBackgroundWithBlock({ (sucess, error) -> Void in
+                    if error != nil{
+                        print("days left\(daysLeft) has been saved to item")
+                    }
+                })
+
+            }
+            else
+            {
+                let daysLeft = 0
+                item.setObject(daysLeft, forKey: "daysLeft")
                 
-            } else {
-                good.append(item)
-                
+                item.saveInBackgroundWithBlock({ (sucess, error) -> Void in
+                    if error != nil{
+                        print("days left\(daysLeft) has been saved to item")
+                    }
+                })
+
             }
             
-            item.setObject(daysLeft, forKey: "daysLeft")
             
-            item.saveInBackgroundWithBlock({ (sucess, error) -> Void in
-                if error != nil{
-                    print("days left\(daysLeft) has been saved to item")
-                }
-            })
             
             var arrayOfArrays = [[Item]]()
             
