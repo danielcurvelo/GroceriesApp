@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import Parse
 
 
@@ -19,9 +20,6 @@ class GroceryController: NSObject {
 //        self.downloadFridge { () -> Void in
 //        
 //        }
-        self.downloadCategories { () -> Void in
-            
-        }
     }
     
     var fridge: Fridge?
@@ -152,7 +150,38 @@ class GroceryController: NSObject {
             }
             
         }
+    
+    }
+    
+    func uploadCategories(){
+    
+
         
+        if let filePath = (NSBundle.mainBundle()).pathForResource("SmartCart", ofType: "json"){
+            
+            do {
+                let jsonData = try NSData(contentsOfFile: filePath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let jsonDict = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                // use input
+                
+                for dict in jsonDict[""]
+            }
+            catch
+            {
+                fatalError("Error parsing the JSON")
+            }
+
+        }
+        
+        
+        
+        
+        
+        
+//        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"example" ofType:@"json"];
+//        NSData *data = [NSData dataWithContentsOfFile:filePath];
+//        NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+
     }
 
 }

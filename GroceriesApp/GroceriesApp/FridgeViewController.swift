@@ -43,11 +43,6 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         
-//        GroceryController.sharedInstance.downloadCategories { () -> Void in
-//            self.tableView.reloadData()
-//        }
-        print("shared instance works")
-        
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
     }

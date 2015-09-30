@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,8 +31,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    func tableView(numberOfSectionsInTableView:UITableView) -> Int {
-        return GroceryController.sharedInstance.categories.count
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        GroceryController.sharedInstance.downloadCategories { () -> Void in
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let category = GroceryController.sharedInstance.categories[section]
+        return category.title
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -49,9 +62,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return GroceryController.sharedInstance.categories.count
     }
-    
-    
-    
     
     @IBAction func cancelButtonTapped(sender: AnyObject) {
         
