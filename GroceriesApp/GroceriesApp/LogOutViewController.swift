@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LogOutViewController: UIViewController {
     
@@ -41,9 +42,10 @@ class LogOutViewController: UIViewController {
         self.animator?.addBehavior(snapBehavior)
         
     }
-    
-    
-    
+    @IBAction func logOutButtonTapped(sender: AnyObject) {
+        PFUser.logOut()
+        
+    }
     
     
     /*
