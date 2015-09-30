@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
             
             UINavigationBar.appearance().barTintColor = UIColor.groceryLightGreenColor()
+                
+                UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.groceryBeigeColor()]
             
             UINavigationBar.appearance().tintColor = UIColor.groceryDarkGreenColor()
                 
