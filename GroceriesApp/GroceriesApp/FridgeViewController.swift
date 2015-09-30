@@ -12,17 +12,31 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet var tableView: UITableView!
     
-
+    var items:[Item]?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
-        GroceryController.sharedInstance.downloadFridges()
+        GroceryController.sharedInstance.downloadFridge { () -> Void in
+            
+            if let fridge = GroceryController.sharedInstance.fridge{
+                ExpirationController.sharedInstance.seperateItemsByExpiration(fridge.items, completion: { () -> Void in
+                    if let itemsUnwrapped = fridge.items
+                    {
+                        self.items = itemsUnwrapped
+                        self.tableView.reloadData()
+                    }
+                })
+            }
+        }
+        
+//        GroceryController.sharedInstance.downloadCategories { () -> Void in
+//            self.tableView.reloadData()
+//        }
         print("shared instance works")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,17 +48,25 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath)
-        let category = GroceryController.sharedInstance.categories
+        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ItemTableViewCell
+//        let category = GroceryController.sharedInstance.categories[indexPath.section]
         
-        
+        if let item = self.items?[indexPath.row]{
+            cell.title.text = item.name
+            cell.category.text = item.category?.title
+        }
         return cell
         
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 2
+        if let count = self.items?.count{
+            return count
+        }
+        else
+        {
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -96,8 +118,13 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController?.pushViewController(detailItem!, animated: true)
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if cell.respondsToSelector("separatorInset"){
+            cell.separatorInset = UIEdgeInsetsZero
+        }
+    }
     
-
     /*
     // MARK: - Navigation
 

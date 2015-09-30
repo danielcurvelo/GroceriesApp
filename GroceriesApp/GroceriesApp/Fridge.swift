@@ -14,6 +14,7 @@ class Fridge: PFObject, PFSubclassing {
     @NSManaged var icon: PFFile?
     @NSManaged var title: String?
     @NSManaged var categories: [Category]?
+    @NSManaged var items: [Item]?
     @NSManaged var owners: [PFUser]?
     
     class func parseClassName() -> String {

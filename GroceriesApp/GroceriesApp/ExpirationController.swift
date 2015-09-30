@@ -15,12 +15,13 @@ class ExpirationController: NSObject {
 
     var expirationArrays = []
     
-    func seperateItemsByExpiration(items:[Item], completion:()-> Void) {
+    func seperateItemsByExpiration(items:[Item]?, completion:()-> Void) {
         
         var replace = [Item]()
         var replaceSoon = [Item]()
         var good = [Item]()
         
+        if let items = items{
         for item in items {
             
             let todaysDate = NSDate.init()
@@ -59,6 +60,7 @@ class ExpirationController: NSObject {
                 completion()
             }
         }
+    }
     }
 }
 

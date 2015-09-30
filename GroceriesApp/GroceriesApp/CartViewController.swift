@@ -15,6 +15,13 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for barItem in (self.tabBarController?.tabBar.items)!
+        {
+            barItem.image = barItem.image?.imageWithColor(UIColor.groceryDarkGreenColor())
+            barItem.image = barItem.image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        }
+
+        
         tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
         
         print("list shared instance works")
