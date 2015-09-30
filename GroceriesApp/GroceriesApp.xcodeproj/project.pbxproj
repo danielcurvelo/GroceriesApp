@@ -45,6 +45,7 @@
 		91738D091BAB7252007D7DFE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */; };
 		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; };
 		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; };
+		9175A9801BBC5D3F008D93B5 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175A97F1BBC5D3F008D93B5 /* ContactUsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22531BB5B114001CB0FD /* ExpirationController.swift */; };
 		F84E58241BBC51CF00A5F9D7 /* SmartCart.json in Resources */ = {isa = PBXBuildFile; fileRef = F84E58231BBC51CF00A5F9D7 /* SmartCart.json */; };
 		F85B0FA71BBAE871001640BB /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA61BBAE871001640BB /* LogOutViewController.swift */; };
@@ -105,6 +106,7 @@
 		91738D081BAB7252007D7DFE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemTableViewCell.swift; sourceTree = "<group>"; };
 		91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		9175A97F1BBC5D3F008D93B5 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		917A22531BB5B114001CB0FD /* ExpirationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationController.swift; sourceTree = "<group>"; };
 		917A22551BB5B13A001CB0FD /* Practice .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Practice .playground"; sourceTree = "<group>"; };
 		91872B901BB9BB6700C18DBD /* FutureVersions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FutureVersions.playground; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
 				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */,
+				9175A97F1BBC5D3F008D93B5 /* ContactUsViewController.swift */,
 				91738CFA1BAB6CD0007D7DFE /* FridgeViewController.swift */,
 				91738CFC1BAB6CF0007D7DFE /* CartViewController.swift */,
 				91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */,
@@ -391,6 +394,7 @@
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,
 				91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */,
 				638647491BBB69780081A39C /* UIImage+CustomImage.swift in Sources */,
+				9175A9801BBC5D3F008D93B5 /* ContactUsViewController.swift in Sources */,
 				63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */,
 				91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */,
 				9117E1201BACBD3100369C4A /* List.swift in Sources */,

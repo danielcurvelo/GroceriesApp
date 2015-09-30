@@ -46,6 +46,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return GroceryController.sharedInstance.categories.count
+    }
+    
+    
+    
     
     @IBAction func cancelButtonTapped(sender: AnyObject) {
         

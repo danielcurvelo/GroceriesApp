@@ -11,6 +11,7 @@ import Parse
 
 class LogOutViewController: UIViewController {
     
+    @IBOutlet weak var contactUsView: UIView!
 
 
     @IBOutlet var alertViewBackground: UIView!
@@ -34,7 +35,7 @@ class LogOutViewController: UIViewController {
     func show() {
         
         UIView.animateWithDuration(1) { () -> Void in
-            self.alertViewBackground.alpha = 1.0
+            self.alertViewBackground.alpha = 0.95
         }
         
         let snapBehavior = UISnapBehavior.init(item: self.alertViewBackground, snapToPoint: self.view.center)
@@ -47,9 +48,7 @@ class LogOutViewController: UIViewController {
         PFUser.logOut()
         
     }
-    
-    
-    /*
+      /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

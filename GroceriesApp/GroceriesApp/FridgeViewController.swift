@@ -62,23 +62,18 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("fridgeCell", forIndexPath: indexPath) as! FridgeTableViewCell
-//        let category = GroceryController.sharedInstance.categories[indexPath.section]
-        if let item = self.items?[indexPath.row]{
+        let arrayOfItems = ExpirationController.sharedInstance.expirationArrays[indexPath.section]
+        let item = arrayOfItems[indexPath.row]
             cell.title.text = item.name
             cell.category.text = item.category?.title
-        }
+        
         return cell
         
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.items?.count{
-            return count
-        }
-        else
-        {
-            return 0
-        }
+        let arrayOfItems = ExpirationController.sharedInstance.expirationArrays[section]
+        return arrayOfItems.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -88,7 +83,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return 3
+        return ExpirationController.sharedInstance.expirationArrays.count
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
