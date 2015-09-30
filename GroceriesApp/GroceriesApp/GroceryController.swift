@@ -19,6 +19,9 @@ class GroceryController: NSObject {
 //        self.downloadFridge { () -> Void in
 //        
 //        }
+        self.downloadCategories { () -> Void in
+            
+        }
     }
     
     var fridge: Fridge?
