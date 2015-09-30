@@ -42,6 +42,7 @@ class LogOutViewController: UIViewController {
         self.animator?.addBehavior(snapBehavior)
         
     }
+    
     @IBAction func logOutButtonTapped(sender: AnyObject) {
         PFUser.logOut()
         

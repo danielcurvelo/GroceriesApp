@@ -57,15 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
                 
-            let category = Category()
-                category.title = "Fruit"
-                category.saveInBackgroundWithBlock { (succeded, error) -> Void in
-                    if error == nil
-                    {
-                        GroceryController.sharedInstance.createItemInCategory(category, name: "Apple")
-
-                    }
-                }
                 
             return true
     }
