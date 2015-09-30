@@ -16,7 +16,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        tableView.registerNib(UINib.init(nibName: "FridgeTableViewCell", bundle: nil), forCellReuseIdentifier: "fridgeCell")
         GroceryController.sharedInstance.downloadFridge { () -> Void in
             
             if let fridge = GroceryController.sharedInstance.fridge{
@@ -26,6 +26,19 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.items = itemsUnwrapped
                         self.tableView.reloadData()
                     }
+                })
+            }
+            else
+            {
+                GroceryController.sharedInstance.downloadFridge({ () -> Void in
+                    ExpirationController.sharedInstance.seperateItemsByExpiration(GroceryController.sharedInstance.fridge!.items, completion: { () -> Void in
+                        if let itemsUnwrapped = GroceryController.sharedInstance.fridge!.items
+                        {
+                            self.items = itemsUnwrapped
+                            self.tableView.reloadData()
+                        }
+                    })
+
                 })
             }
         }
@@ -48,9 +61,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ItemTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("fridgeCell", forIndexPath: indexPath) as! FridgeTableViewCell
 //        let category = GroceryController.sharedInstance.categories[indexPath.section]
-        
         if let item = self.items?[indexPath.row]{
             cell.title.text = item.name
             cell.category.text = item.category?.title
