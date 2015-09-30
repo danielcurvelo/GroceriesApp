@@ -13,7 +13,7 @@ class ExpirationController: NSObject {
     
     static let sharedInstance = ExpirationController()
 
-    var expirationArrays = []
+    var expirationArrays = [[Item]]()
     
     func seperateItemsByExpiration(items:[Item]?, completion:()-> Void) {
         
