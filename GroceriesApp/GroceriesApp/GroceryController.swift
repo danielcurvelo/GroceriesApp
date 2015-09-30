@@ -54,7 +54,7 @@ class GroceryController: NSObject {
             if success
             {
                 print("list has been saved succesfully")
-                self.addItemToFridge(item)
+//                self.addItemToFridge(item)
             }
             else
             {
@@ -63,45 +63,45 @@ class GroceryController: NSObject {
         }
     }
     
-    func addItemToFridge(item:Item){
-        let acl = PFACL.init(user: PFUser.currentUser()!)
-
-        if let fridge = self.fridge{
-            fridge.ACL = acl
-            fridge.items?.append(item)
-            fridge.saveInBackgroundWithBlock({ (succeded, error) -> Void in
-                if error == nil{
-                    print("item has been saved to the fridge succesfully")
-                }
-                else
-                {
-                    print("There's been an error saving the item to the fridge")
-                }
-            })
-        }
-        else
-        {
-            self.fridge = Fridge()
-            self.fridge!.ACL = acl
-            if var items = self.fridge!.items{
-                items.append(item)
-            }
-            else
-            {
-                self.fridge!.items = [Item]()
-                self.fridge!.items?.append(item)
-            }
-            self.fridge!.saveInBackgroundWithBlock({ (succeded, error) -> Void in
-                if error == nil{
-                    print("item has been saved to the fridge succesfully")
-                }
-                else
-                {
-                    print("There's been an error saving the item to the fridge")
-                }
-            })
-        }
-    }
+//    func addItemToFridge(item:Item){
+//        let acl = PFACL.init(user: PFUser.currentUser()!)
+//
+//        if let fridge = self.fridge{
+//            fridge.ACL = acl
+//            fridge.items?.append(item)
+//            fridge.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+//                if error == nil{
+//                    print("item has been saved to the fridge succesfully")
+//                }
+//                else
+//                {
+//                    print("There's been an error saving the item to the fridge")
+//                }
+//            })
+//        }
+//        else
+//        {
+//            self.fridge = Fridge()
+//            self.fridge!.ACL = acl
+//            if var items = self.fridge!.items{
+//                items.append(item)
+//            }
+//            else
+//            {
+//                self.fridge!.items = [Item]()
+//                self.fridge!.items?.append(item)
+//            }
+//            self.fridge!.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+//                if error == nil{
+//                    print("item has been saved to the fridge succesfully")
+//                }
+//                else
+//                {
+//                    print("There's been an error saving the item to the fridge")
+//                }
+//            })
+//        }
+//    }
     
     func downloadFridge(completion:()->Void)
     {

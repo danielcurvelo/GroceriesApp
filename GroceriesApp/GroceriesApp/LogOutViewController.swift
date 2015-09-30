@@ -11,7 +11,6 @@ import Parse
 
 class LogOutViewController: UIViewController {
     
-    @IBOutlet weak var contactUsView: UIView!
 
 
     @IBOutlet var alertViewBackground: UIView!
@@ -46,6 +45,7 @@ class LogOutViewController: UIViewController {
     
     @IBAction func logOutButtonTapped(sender: AnyObject) {
         PFUser.logOut()
+        self.dismissViewControllerAnimated(true, completion: nil)
         
     }
       /*

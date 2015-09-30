@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource  {
+class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var categoriesArray = ["Produce", "Dairy", "Meat", "Condiments", "Misc", "Baby Items", "Pet Items", "Toiletries"]
     
@@ -51,12 +51,12 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         categoryTextField.inputAccessoryView = toolbar
     }
     
-    func donePicker(){
+    func donePicker() {
         categoryTextField.resignFirstResponder()
  
     }
     
-    func cancelPicker(){
+    func cancelPicker() {
         categoryTextField.text = ""
         categoryTextField.resignFirstResponder()
  

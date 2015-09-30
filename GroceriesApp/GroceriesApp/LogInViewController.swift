@@ -12,10 +12,10 @@ import Parse
 
 class LogInViewController: UIViewController, UIAlertViewDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var loginEmailTextField: UITextField!
-    @IBOutlet weak var loginPasswordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet  var loginEmailTextField: UITextField!
+    @IBOutlet  var loginPasswordTextField: UITextField!
+    @IBOutlet  var loginButton: UIButton!
+    @IBOutlet  var signUpButton: UIButton!
 
 //    @IBAction func signUpTapped(sender: AnyObject) {
 //        

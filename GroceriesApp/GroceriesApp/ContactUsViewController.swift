@@ -9,13 +9,13 @@
 import UIKit
 
 class ContactUsViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
-    
+
     var animator:UIDynamicAnimator?
     
-    @IBOutlet weak var emailAddressText: UITextField!
-    @IBOutlet weak var subjectText: UITextField!
-    @IBOutlet weak var reasonTextView: UITextView!
-    @IBOutlet weak var contactUsView: UIView!
+    @IBOutlet  var emailAddressText: UITextField!
+    @IBOutlet  var subjectText: UITextField!
+    @IBOutlet  var reasonTextView: UITextView!
+    @IBOutlet  var contactUsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,11 @@ class ContactUsViewController: UIViewController, UITextFieldDelegate, UITextView
         
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func userDidCancel(sender: UIBarButtonItem) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
