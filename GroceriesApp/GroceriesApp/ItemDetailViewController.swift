@@ -42,14 +42,24 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "canclePicker")
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPicker")
         
         toolbar.setItems([cancelButton, spaceButton, doneButton], animated: true)
         toolbar.userInteractionEnabled = true
         
         categoryTextField.inputView = categoryPickerView
         categoryTextField.inputAccessoryView = toolbar
+    }
+    
+    func donePicker(){
         categoryTextField.resignFirstResponder()
+ 
+    }
+    
+    func cancelPicker(){
+        categoryTextField.text = ""
+        categoryTextField.resignFirstResponder()
+ 
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
