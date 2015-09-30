@@ -14,7 +14,7 @@ class OutOfStockViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.registerNib(UINib.init(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        tableView.registerNib(UINib.init(nibName: "ExpiredTableViewCell", bundle: nil), forCellReuseIdentifier: "expiredCell")
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         // Do any additional setup after loading the view.
@@ -26,7 +26,7 @@ class OutOfStockViewController: UIViewController, UITableViewDelegate, UITableVi
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("expiredCell", forIndexPath: indexPath)
         
         return cell
     }

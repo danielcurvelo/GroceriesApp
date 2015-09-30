@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("createItemCell", forIndexPath: indexPath) as! ItemTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("fridgeCell", forIndexPath: indexPath) as! ItemTableViewCell
         let category = GroceryController.sharedInstance.categories[indexPath.section]
         let item = category.items?[indexPath.row]
         if let actualItem = item {

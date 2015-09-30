@@ -9,9 +9,10 @@
 import UIKit
 import Parse
 
-class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate  {
+class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource  {
     
-    @IBOutlet weak var imageView: UIImageView!
+    var categoriesArray = ["Produce", "Dairy", "Meat", "Condiments", "Misc", "Baby Items", "Pet Items", "Toiletries"]
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var expirationSlider: UISlider!
@@ -22,18 +23,37 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        let categoryPickerView = UIPickerView()
+        
+        categoryPickerView.delegate = self
+        
+        categoryTextField.inputView = categoryPickerView
+        
+        
          nameTextField.delegate = self
          categoryTextField.delegate = self
          notesTextView.delegate = self
         
         // Do any additional setup after loading the view.
     }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categoriesArray.count
     }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categoriesArray[row]
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        categoryTextField.text = categoriesArray[row]
+    }
+    
+
+    
     
     
     @IBAction func sliderValueChanged(sender: UISlider) {
