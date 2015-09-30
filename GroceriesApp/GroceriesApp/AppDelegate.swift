@@ -50,7 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UITabBar.appearance().tintColor = UIColor.groceryBeigeColor()
             
-//            UITabBar.appearance().selectionIndicatorImage = UIImage.imageFromColor(UIColor.groceryDarkGreenColor(), size:CGSizeMake((window?.rootViewController?.view.frame.size.width)!/2, 49))
+            UITabBar.appearance().selectionIndicatorImage = UIImage.imageFromColor(UIColor.groceryDarkGreenColor(), size:CGSizeMake((window?.rootViewController?.view.frame.size.width)!/2, 49))
+                
             
             UITableViewHeaderFooterView.appearance().tintColor = UIColor.groceryRedColor()
                 
@@ -66,8 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             return true
     }
-    
-  
 
     
     

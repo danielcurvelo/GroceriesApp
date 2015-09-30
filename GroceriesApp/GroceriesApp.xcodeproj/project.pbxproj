@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		638647491BBB69780081A39C /* UIImage+CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638647481BBB69780081A39C /* UIImage+CustomImage.swift */; settings = {ASSET_TAGS = (); }; };
 		63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B859C91BA5FEC700FC16A6 /* AppDelegate.swift */; };
 		63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B859CB1BA5FEC700FC16A6 /* ViewController.swift */; };
 		63B859CF1BA5FEC700FC16A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B859CD1BA5FEC700FC16A6 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		638647481BBB69780081A39C /* UIImage+CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CustomImage.swift"; sourceTree = "<group>"; };
 		63B859C41BA5FEC700FC16A6 /* GroceriesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceriesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B859C81BA5FEC700FC16A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B859C91BA5FEC700FC16A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */,
+				638647481BBB69780081A39C /* UIImage+CustomImage.swift */,
 				63B85A1F1BA8980500FC16A6 /* Controllers */,
 				63B859F61BA76DDA00FC16A6 /* Model */,
 				63B859C91BA5FEC700FC16A6 /* AppDelegate.swift */,
@@ -383,6 +386,7 @@
 				8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,
 				91738CFB1BAB6CD0007D7DFE /* FridgeViewController.swift in Sources */,
+				638647491BBB69780081A39C /* UIImage+CustomImage.swift in Sources */,
 				63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */,
 				91738CFD1BAB6CF0007D7DFE /* CartViewController.swift in Sources */,
 				9117E1201BACBD3100369C4A /* List.swift in Sources */,
