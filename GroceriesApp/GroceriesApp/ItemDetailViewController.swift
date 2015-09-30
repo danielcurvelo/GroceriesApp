@@ -26,16 +26,32 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         let categoryPickerView = UIPickerView()
         
         categoryPickerView.delegate = self
+        categoryTextField.inputView = categoryPickerView
+        nameTextField.delegate = self
+        categoryTextField.delegate = self
+        notesTextView.delegate = self
+        categoryPickerView.backgroundColor = UIColor .groceryLightGreenColor()
+        
+        let toolbar = UIToolbar()
+        
+        toolbar.barStyle = UIBarStyle.Default
+        toolbar.translucent = true
+        toolbar.tintColor = UIColor .groceryLightGreenColor()
+        toolbar.sizeToFit()
+        toolbar.backgroundColor = UIColor .groceryLightGreenColor()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "canclePicker")
+        
+        toolbar.setItems([cancelButton, spaceButton, doneButton], animated: true)
+        toolbar.userInteractionEnabled = true
         
         categoryTextField.inputView = categoryPickerView
-        
-        
-         nameTextField.delegate = self
-         categoryTextField.delegate = self
-         notesTextView.delegate = self
-        
-        // Do any additional setup after loading the view.
+        categoryTextField.inputAccessoryView = toolbar
+        categoryTextField.resignFirstResponder()
     }
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return categoriesArray.count
     }
@@ -50,7 +66,9 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         categoryTextField.text = categoriesArray[row]
+       
     }
+  
     
 
     
@@ -62,6 +80,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         sliderLabel.text = "\(currentValue)"
         
     }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -75,6 +94,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
             notesTextView.resignFirstResponder()
             return false
         }
+        
         return true
     }
     
@@ -84,10 +104,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return true
-    }
+
 
     /*
     // MARK: - Navigation
