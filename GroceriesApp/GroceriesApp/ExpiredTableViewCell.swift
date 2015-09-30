@@ -9,6 +9,9 @@
 import UIKit
 
 class ExpiredTableViewCell: UITableViewCell {
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var expirationIdentifier: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
