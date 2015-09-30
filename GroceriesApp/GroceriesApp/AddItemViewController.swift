@@ -10,36 +10,38 @@ import UIKit
 
 class AddItemViewController: UIViewController {
     
-    @IBOutlet var alertViewBackground: UIView!
-    var animator:UIDynamicAnimator?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        self.animator = UIDynamicAnimator.init(referenceView: self.view)
-        //    // Use UIKit Dynamics to make the alertView appear.
-        self.show()
 
-    }
-
-    func show() {
-        
-        UIView.animateWithDuration(1) { () -> Void in
-            self.alertViewBackground.alpha = 1.0
-        }
-        
-        let snapBehavior = UISnapBehavior.init(item: self.alertViewBackground, snapToPoint: self.view.center)
-        snapBehavior.damping = 0.50
-        self.animator?.addBehavior(snapBehavior)
-        
-    }
-    
+//    @IBOutlet var alertViewBackground: UIView!
+//    var animator:UIDynamicAnimator?
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Do any additional setup after loading the view.
+//    }
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        self.animator = UIDynamicAnimator.init(referenceView: self.view)
+//        //    // Use UIKit Dynamics to make the alertView appear.
+//        self.show()
+//
+//    }
+//
+//    func show() {
+//        
+//        UIView.animateWithDuration(1) { () -> Void in
+//            self.alertViewBackground.alpha = 1.0
+//        }
+//        
+//        let snapBehavior = UISnapBehavior.init(item: self.alertViewBackground, snapToPoint: self.view.center)
+//        snapBehavior.damping = 0.50
+//        self.animator?.addBehavior(snapBehavior)
+//        
+//    }
+//    
     
     
     
