@@ -46,7 +46,7 @@
 		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; };
 		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; };
 		917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22531BB5B114001CB0FD /* ExpirationController.swift */; };
-		F85B0FA71BBAE871001640BB /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA61BBAE871001640BB /* AddItemViewController.swift */; };
+		F85B0FA71BBAE871001640BB /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA61BBAE871001640BB /* LogOutViewController.swift */; };
 		F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */; };
 		F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */; };
 /* End PBXBuildFile section */
@@ -107,7 +107,7 @@
 		917A22531BB5B114001CB0FD /* ExpirationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationController.swift; sourceTree = "<group>"; };
 		917A22551BB5B13A001CB0FD /* Practice .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Practice .playground"; sourceTree = "<group>"; };
 		91872B901BB9BB6700C18DBD /* FutureVersions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FutureVersions.playground; sourceTree = "<group>"; };
-		F85B0FA61BBAE871001640BB /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		F85B0FA61BBAE871001640BB /* LogOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
 		F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfStockViewController.swift; path = ../OutOfStockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,7 +225,7 @@
 		63B85A1F1BA8980500FC16A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F85B0FA61BBAE871001640BB /* AddItemViewController.swift */,
+				F85B0FA61BBAE871001640BB /* LogOutViewController.swift */,
 				8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */,
 				8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */,
 				F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */,
@@ -381,7 +381,7 @@
 				8CFC776B1BBB5D7D00D5D2B4 /* ExpiredTableViewCell.swift in Sources */,
 				9117E11C1BACB9AE00369C4A /* Item.swift in Sources */,
 				917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */,
-				F85B0FA71BBAE871001640BB /* AddItemViewController.swift in Sources */,
+				F85B0FA71BBAE871001640BB /* LogOutViewController.swift in Sources */,
 				F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */,
 				8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */,
 				63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */,

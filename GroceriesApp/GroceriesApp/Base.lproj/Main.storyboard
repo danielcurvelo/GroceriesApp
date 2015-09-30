@@ -201,6 +201,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CART" id="dk2-Py-HY7">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="IrV-E5-XfC">
+                            <connections>
+                                <segue destination="jMl-vw-biB" kind="presentation" id="b2t-4W-yF1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="addCircle" id="I9h-Xb-1E5">
                             <connections>
                                 <segue destination="j9o-Qj-zQh" kind="presentation" id="qb1-e3-CHQ"/>
@@ -369,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="2327" y="2004"/>
         </scene>
-        <!--Add Item View Controller-->
+        <!--Log Out View Controller-->
         <scene sceneID="tRT-12-Bz3">
             <objects>
-                <viewController id="jMl-vw-biB" customClass="AddItemViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jMl-vw-biB" customClass="LogOutViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xJk-62-2zL"/>
                         <viewControllerLayoutGuide type="bottom" id="wCS-jB-seB"/>
@@ -381,29 +386,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eC5-mb-5Dr">
-                                <rect key="frame" x="20" y="-253" width="560" height="199"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eC5-mb-5Dr">
+                                <rect key="frame" x="0.0" y="-565" width="600" height="536"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of food" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q14-cH-ApF">
-                                        <rect key="frame" x="8" y="8" width="544" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pH-hF-CLf">
+                                        <rect key="frame" x="226" y="155" width="149" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expires in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRH-WG-fC3">
-                                        <rect key="frame" x="247" y="46" width="66" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="149" id="9B5-lR-BvK"/>
+                                        </constraints>
+                                        <state key="normal" title="Contact Us"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIH-Bn-pDn">
+                                        <rect key="frame" x="226" y="221" width="149" height="30"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Log Out"/>
+                                    </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.57273262290000004" green="1" blue="0.24143399530000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.92549019610000005" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OIH-Bn-pDn" firstAttribute="leading" secondItem="5pH-hF-CLf" secondAttribute="leading" id="IS5-9D-8Jd"/>
+                                    <constraint firstItem="5pH-hF-CLf" firstAttribute="trailing" secondItem="OIH-Bn-pDn" secondAttribute="trailing" id="Tgp-wb-eaB"/>
+                                    <constraint firstItem="5pH-hF-CLf" firstAttribute="top" secondItem="eC5-mb-5Dr" secondAttribute="top" constant="155" id="YE3-gL-HRt"/>
+                                    <constraint firstItem="5pH-hF-CLf" firstAttribute="centerX" secondItem="eC5-mb-5Dr" secondAttribute="centerX" id="dig-Pa-EnP"/>
+                                    <constraint firstItem="OIH-Bn-pDn" firstAttribute="top" secondItem="5pH-hF-CLf" secondAttribute="bottom" constant="36" id="fJF-Gt-18M"/>
+                                </constraints>
                             </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgu-hg-chR">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.76862745099999996" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="F59-dV-cS8">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="apg-dF-Ods"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rgu-hg-chR" firstAttribute="leading" secondItem="eC5-mb-5Dr" secondAttribute="leading" id="11Y-2d-AaK"/>
+                            <constraint firstItem="wCS-jB-seB" firstAttribute="top" secondItem="eC5-mb-5Dr" secondAttribute="bottom" constant="629" id="BC6-4G-OR6"/>
+                            <constraint firstItem="Rgu-hg-chR" firstAttribute="trailing" secondItem="eC5-mb-5Dr" secondAttribute="trailing" id="N9p-1G-G6J"/>
+                            <constraint firstItem="Rgu-hg-chR" firstAttribute="top" secondItem="xJk-62-2zL" secondAttribute="bottom" id="Rt0-8h-GCd"/>
+                            <constraint firstItem="eC5-mb-5Dr" firstAttribute="top" secondItem="xJk-62-2zL" secondAttribute="bottom" constant="-585" id="aDc-rH-ggF"/>
+                            <constraint firstItem="eC5-mb-5Dr" firstAttribute="leading" secondItem="im7-30-VAm" secondAttribute="leadingMargin" constant="-20" id="bFW-QT-qQi"/>
+                            <constraint firstItem="eC5-mb-5Dr" firstAttribute="trailing" secondItem="im7-30-VAm" secondAttribute="trailingMargin" constant="20" id="fOA-yL-UZ2"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="alertViewBackground" destination="eC5-mb-5Dr" id="2IL-o1-OSo"/>
@@ -411,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASX-kD-4pU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3063" y="2004"/>
+            <point key="canvasLocation" x="2327" y="-992"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="gln-Cy-OLV">
@@ -581,7 +612,7 @@
                                 <animations/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWj-uI-IGF">
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
@@ -681,7 +712,7 @@
                                     <constraint firstAttribute="height" constant="30" id="vtr-fR-21S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="One more time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xde-ed-rML">
                                 <rect key="frame" x="20" y="239" width="559" height="30"/>
@@ -690,7 +721,7 @@
                                     <constraint firstAttribute="height" constant="30" id="e66-UD-Ndh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6e-p1-ESK">
                                 <rect key="frame" x="42" y="88" width="41" height="21"/>
@@ -919,7 +950,7 @@
         <image name="fridge" width="27" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HQJ-YQ-Ur0"/>
-        <segue reference="6ky-ck-j3B"/>
+        <segue reference="799-dW-sSl"/>
+        <segue reference="qb1-e3-CHQ"/>
     </inferredMetricsTieBreakers>
 </document>
