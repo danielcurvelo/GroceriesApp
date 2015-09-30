@@ -153,26 +153,26 @@ class GroceryController: NSObject {
     
     }
     
-    func uploadCategories(){
+//    func uploadCategories(){
+//    
+//
+//        
+//        if let filePath = (NSBundle.mainBundle()).pathForResource("SmartCart", ofType: "json") {
+//            
+//            do {
+//                let jsonData = try NSData(contentsOfFile: filePath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+//                let jsonDict = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+//                // use input
+//                
+//                for dict in jsonDict[""]
+//            }
+//            catch
+//            {
+//                fatalError("Error parsing the JSON")
+//            }
+
+//        }
     
-
-        
-        if let filePath = (NSBundle.mainBundle()).pathForResource("SmartCart", ofType: "json"){
-            
-            do {
-                let jsonData = try NSData(contentsOfFile: filePath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
-                let jsonDict = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                // use input
-                
-                for dict in jsonDict[""]
-            }
-            catch
-            {
-                fatalError("Error parsing the JSON")
-            }
-
-        }
-        
         
         
         
@@ -182,6 +182,6 @@ class GroceryController: NSObject {
 //        NSData *data = [NSData dataWithContentsOfFile:filePath];
 //        NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 
-    }
+//    }
 
 }

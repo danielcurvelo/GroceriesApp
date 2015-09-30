@@ -19,7 +19,12 @@ class ContactUsViewController: UIViewController, UITextFieldDelegate, UITextView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        reasonTextView.delegate = self
+        emailAddressText.delegate = self
+        subjectText.delegate = self
+        reasonTextView.delegate = self
+        
         self.animator = UIDynamicAnimator.init(referenceView: self.view)
         
             let snapBehavior = UISnapBehavior.init(item: self.contactUsView, snapToPoint: self.view.center)
@@ -40,6 +45,20 @@ class ContactUsViewController: UIViewController, UITextFieldDelegate, UITextView
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            reasonTextView.resignFirstResponder()
+            return false
+        }
+        
+        return true
+    }
+
     
     /*
     // MARK: - Navigation
