@@ -83,11 +83,7 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
     }
   
     
-
-    
-    
-    
-    @IBAction func sliderValueChanged(sender: UISlider) {
+@IBAction func sliderValueChanged(sender: UISlider) {
         
         let currentValue = Int(sender.value)
         sliderLabel.text = "\(currentValue)"
@@ -117,6 +113,11 @@ class ItemDetailViewController: UIViewController, UITextFieldDelegate, UITextVie
         
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+       nameTextField.resignFirstResponder()
+        return true
+        
+    }
 
 
     /*
