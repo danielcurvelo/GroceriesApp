@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		638647491BBB69780081A39C /* UIImage+CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638647481BBB69780081A39C /* UIImage+CustomImage.swift */; settings = {ASSET_TAGS = (); }; };
+		638647491BBB69780081A39C /* UIImage+CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638647481BBB69780081A39C /* UIImage+CustomImage.swift */; };
 		63B859CA1BA5FEC700FC16A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B859C91BA5FEC700FC16A6 /* AppDelegate.swift */; };
 		63B859CC1BA5FEC700FC16A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B859CB1BA5FEC700FC16A6 /* ViewController.swift */; };
 		63B859CF1BA5FEC700FC16A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B859CD1BA5FEC700FC16A6 /* Main.storyboard */; };
@@ -17,10 +17,10 @@
 		63B85A1E1BA87A8E00FC16A6 /* GroceryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B85A1D1BA87A8E00FC16A6 /* GroceryController.swift */; };
 		8C0C10C11BB46A9C00E3EB14 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C01BB46A9C00E3EB14 /* LogInViewController.swift */; };
 		8C0C10C31BB46AFD00E3EB14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C10C21BB46AFD00E3EB14 /* SignUpViewController.swift */; };
-		8CFC77671BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC77651BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		8CFC77681BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC77661BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		8CFC776B1BBB5D7D00D5D2B4 /* ExpiredTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC77691BBB5D7D00D5D2B4 /* ExpiredTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		8CFC776C1BBB5D7D00D5D2B4 /* ExpiredTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC776A1BBB5D7D00D5D2B4 /* ExpiredTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		8CFC77671BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC77651BBB4CDF00D5D2B4 /* FridgeTableViewCell.swift */; };
+		8CFC77681BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC77661BBB4CDF00D5D2B4 /* FridgeTableViewCell.xib */; };
+		8CFC776B1BBB5D7D00D5D2B4 /* ExpiredTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC77691BBB5D7D00D5D2B4 /* ExpiredTableViewCell.swift */; };
+		8CFC776C1BBB5D7D00D5D2B4 /* ExpiredTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC776A1BBB5D7D00D5D2B4 /* ExpiredTableViewCell.xib */; };
 		9117E1011BAC9BC800369C4A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E0FF1BAC9BC800369C4A /* Bolts.framework */; };
 		9117E1021BAC9BC800369C4A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1001BAC9BC800369C4A /* Parse.framework */; };
 		9117E1041BAC9BFD00369C4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9117E1031BAC9BFD00369C4A /* AudioToolbox.framework */; };
@@ -46,6 +46,7 @@
 		91738D0B1BAB7260007D7DFE /* CreateItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0A1BAB7260007D7DFE /* CreateItemTableViewCell.swift */; };
 		91738D0D1BAB7428007D7DFE /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91738D0C1BAB7428007D7DFE /* ItemDetailViewController.swift */; };
 		917A22541BB5B114001CB0FD /* ExpirationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A22531BB5B114001CB0FD /* ExpirationController.swift */; };
+		F84E58241BBC51CF00A5F9D7 /* SmartCart.json in Resources */ = {isa = PBXBuildFile; fileRef = F84E58231BBC51CF00A5F9D7 /* SmartCart.json */; };
 		F85B0FA71BBAE871001640BB /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B0FA61BBAE871001640BB /* LogOutViewController.swift */; };
 		F85E4F791BB1FE310006023A /* Colors+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */; };
 		F85E4F7B1BB210EA0006023A /* OutOfStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */; };
@@ -107,6 +108,7 @@
 		917A22531BB5B114001CB0FD /* ExpirationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationController.swift; sourceTree = "<group>"; };
 		917A22551BB5B13A001CB0FD /* Practice .playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Practice .playground"; sourceTree = "<group>"; };
 		91872B901BB9BB6700C18DBD /* FutureVersions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FutureVersions.playground; sourceTree = "<group>"; };
+		F84E58231BBC51CF00A5F9D7 /* SmartCart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SmartCart.json; sourceTree = "<group>"; };
 		F85B0FA61BBAE871001640BB /* LogOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		F85E4F781BB1FE310006023A /* Colors+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+CustomColors.swift"; sourceTree = "<group>"; };
 		F85E4F7A1BB210EA0006023A /* OutOfStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfStockViewController.swift; path = ../OutOfStockViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		63B859F61BA76DDA00FC16A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F84E58231BBC51CF00A5F9D7 /* SmartCart.json */,
 				9117E1171BACA07800369C4A /* Fridge.swift */,
 				9117E1191BACA3A700369C4A /* Category.swift */,
 				9117E11B1BACB9AE00369C4A /* Item.swift */,
@@ -358,6 +361,7 @@
 				91738D051BAB7228007D7DFE /* CreateItemTableViewCell.xib in Resources */,
 				91738D071BAB7243007D7DFE /* ItemTableViewCell.xib in Resources */,
 				63B859D11BA5FEC700FC16A6 /* Images.xcassets in Resources */,
+				F84E58241BBC51CF00A5F9D7 /* SmartCart.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
