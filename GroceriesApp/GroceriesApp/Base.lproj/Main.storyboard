@@ -146,7 +146,7 @@
                                     <color key="titleColor" red="0.94509803920000002" green="0.91372549020000005" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-iA-9Pc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-iA-9Pc">
                                 <rect key="frame" x="0.0" y="93" width="600" height="413"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1101,6 +1101,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qb1-e3-CHQ"/>
-        <segue reference="T4V-vf-gyk"/>
+        <segue reference="799-dW-sSl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,7 +17,9 @@ class GroceryController: NSObject {
     
     override init() {
         super.init()
-      self.uploadCategories()
+//      self.uploadCategories { (category) -> Void in
+//
+//        }
     }
     
     var fridge: Fridge?
@@ -147,59 +149,64 @@ class GroceryController: NSObject {
     
     }
     
-    func uploadCategories(){
+    func uploadCategories(completion:Category ->Void){
         
         if let filePath = (NSBundle.mainBundle()).pathForResource("SmartCart", ofType: "json") {
             
             do {
                 let jsonData = try NSData(contentsOfFile: filePath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 let jsonDict = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                 for dict in jsonDict["results"] as! NSArray
-                 {
+                for dict in jsonDict["results"] as! NSArray
+                {
                     let category = Category()
                     category.title = dict["Category"] as? String
+                    category.items = []
+                    let arrayOfItems = dict["Items"] as? NSArray
                     
-//                    let arrayOfItems = dict["items"] as NSArray
-//                    
-//                    for itemDict in arrayOfItems
-//                    {
-//                        let item = Item() as Item
-//                        item.name = itemDict["name"] as? String
-//                        
-//                        item.saveInBackgroundWithBlock({ (succeded, error) -> Void in
-//                            print("item has been saved from JSON")
-//                            
-////                            if var categoryItems = category.items as [Item]!{
-//////                                 categoryItems = category.items.append(item)
-////                            }
-//                            
-//                            if (itemDict as! NSDictionary) == arrayOfItems.lastObject as! NSDictionary
-//                            {
-//                                print("All Items have been saved from JSON")
-//                            }
-//                        })
-//                        
-//
-//                    }
-//                    category.items = category.items.map{dict["items"] as? [Item]}
-                    category.items = dict["items"] as? [Item]
-                    category.saveInBackgroundWithBlock({ (succeded, error) -> Void in
-                        if error == nil{
-                            print("category from JSON has been saved")
-                        }
-                        else
+                    if let arrayOfItems = arrayOfItems
+                    {
+                        for itemDict in arrayOfItems
                         {
-                            print("there has been an error while saving the category from JSON: \(error)")
+                            let item = Item()
+                            item.name = itemDict["name"] as? String
+                            item.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+                                print("item has been saved from JSON")
+                                
+                                if error == nil{
+                                
+                                if var categoryItems = category.items{
+                                    category.items!.append(item)
+                                    print("the item:\(item)")
+                                    if (itemDict as! NSDictionary) == arrayOfItems.lastObject as! NSDictionary
+                                    {
+                                        print("All Items have been saved from JSON")
+                                        category.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+                                            if error == nil{
+                                                print("category has been saved from JSON:\(category)")
+                                            }else
+                                            {
+                                                print("error while saving category from JSON: \(error)")
+                                            }
+                                        })
+                                        completion(category)
+
+                                     }
+                                    }
+                                    else
+                                    {
+                                        print("error saving items to category: \(error)")
+                                    }
+                                }
+                            })
                         }
-                    })
-                 }
-                
+                    }
+                }
             }
             catch
             {
                 fatalError("Error parsing the JSON")
             }
-
+            
         }
     }
 }

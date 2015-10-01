@@ -21,14 +21,14 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             barItem.image = barItem.image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         }
         
-        let category = Category()
-        category.title = "Fruit"
-        //                category.saveInBackgroundWithBlock { (succeded, error) -> Void in
-        //                    if error == nil
-        //                    {
-        GroceryController.sharedInstance.createItemInCategory(category, name: "Apple")
-        //                    }
-        //                }
+//        let category = Category()
+//        category.title = "Fruit"
+//        //                category.saveInBackgroundWithBlock { (succeded, error) -> Void in
+//        //                    if error == nil
+//        //                    {
+//        GroceryController.sharedInstance.createItemInCategory(category, name: "Apple")
+//        //                    }
+//        //                }
 
 
         

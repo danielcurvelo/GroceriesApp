@@ -54,21 +54,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("fridgeCell", forIndexPath: indexPath) as! FridgeTableViewCell
         let category = GroceryController.sharedInstance.categories[indexPath.section]
         let item = category.items?[indexPath.row]
-        item?.fetchIfNeededInBackgroundWithBlock({ (objects, error) -> Void in
             if let actualItem = item {
-                cell.title.text = actualItem.name
-                cell.category.text = actualItem.category
-                return cell
+                print("name:\(actualItem.name)")
+                if let name = actualItem.name{
+                    cell.title.text = name
+                }
+                
+                if let title = actualItem.category{
+                    print("category name: \(title) and Items:\(category.items)")
+                    
+                    cell.category.text = title
+                }
             }
             else
             {
-                return cell
             }
-        })
 
-        
+    return cell
     }
-    
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return GroceryController.sharedInstance.categories.count
     }
