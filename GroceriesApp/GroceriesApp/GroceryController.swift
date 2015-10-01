@@ -17,9 +17,7 @@ class GroceryController: NSObject {
     
     override init() {
         super.init()
-//        self.downloadFridge { () -> Void in
-//        
-//        }
+      self.uploadCategories()
     }
     
     var fridge: Fridge?
@@ -28,7 +26,7 @@ class GroceryController: NSObject {
     func createItemInCategory(category: Category, name: String?) {
         
         let item = Item()
-//        item.category = category
+        item.category = category.title
         item.name = name
         item.shelfLife = 7
         item.purchaseDate = NSDate.init(timeIntervalSinceNow: 1)
@@ -56,52 +54,52 @@ class GroceryController: NSObject {
         item.saveInBackgroundWithBlock{(success,error) -> Void in
             if success {
                 print("list has been saved succesfully")
-//                self.addItemToFridge(item)
+                self.addItemToFridge(item)
             } else {
                 print("There has been an error saving the list object: \(error)")
             }
         }
     }
     
-//    func addItemToFridge(item:Item){
-//        let acl = PFACL.init(user: PFUser.currentUser()!)
-//
-//        if let fridge = self.fridge{
-//            fridge.ACL = acl
-//            fridge.items?.append(item)
-//            fridge.saveInBackgroundWithBlock({ (succeded, error) -> Void in
-//                if error == nil{
-//                    print("item has been saved to the fridge succesfully")
-//                }
-//                else
-//                {
-//                    print("There's been an error saving the item to the fridge")
-//                }
-//            })
-//        }
-//        else
-//        {
-//            self.fridge = Fridge()
-//            self.fridge!.ACL = acl
-//            if var items = self.fridge!.items{
-//                items.append(item)
-//            }
-//            else
-//            {
-//                self.fridge!.items = [Item]()
-//                self.fridge!.items?.append(item)
-//            }
-//            self.fridge!.saveInBackgroundWithBlock({ (succeded, error) -> Void in
-//                if error == nil{
-//                    print("item has been saved to the fridge succesfully")
-//                }
-//                else
-//                {
-//                    print("There's been an error saving the item to the fridge")
-//                }
-//            })
-//        }
-//    }
+    func addItemToFridge(item:Item){
+        let acl = PFACL.init(user: PFUser.currentUser()!)
+
+        if let fridge = self.fridge{
+            fridge.ACL = acl
+            fridge.items?.append(item)
+            fridge.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+                if error == nil{
+                    print("item has been saved to the fridge succesfully")
+                }
+                else
+                {
+                    print("There's been an error saving the item to the fridge")
+                }
+            })
+        }
+        else
+        {
+            self.fridge = Fridge()
+            self.fridge!.ACL = acl
+            if var items = self.fridge!.items{
+                items.append(item)
+            }
+            else
+            {
+                self.fridge!.items = [Item]()
+                self.fridge!.items?.append(item)
+            }
+            self.fridge!.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+                if error == nil{
+                    print("item has been saved to the fridge succesfully")
+                }
+                else
+                {
+                    print("There's been an error saving the item to the fridge")
+                }
+            })
+        }
+    }
     
     func downloadFridge(completion:()->Void) {
         
@@ -149,35 +147,59 @@ class GroceryController: NSObject {
     
     }
     
-//    func uploadCategories(){
-//    
+    func uploadCategories(){
+        
+        if let filePath = (NSBundle.mainBundle()).pathForResource("SmartCart", ofType: "json") {
+            
+            do {
+                let jsonData = try NSData(contentsOfFile: filePath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let jsonDict = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                 for dict in jsonDict["results"] as! NSArray
+                 {
+                    let category = Category()
+                    category.title = dict["Category"] as? String
+                    
+//                    let arrayOfItems = dict["items"] as NSArray
+//                    
+//                    for itemDict in arrayOfItems
+//                    {
+//                        let item = Item() as Item
+//                        item.name = itemDict["name"] as? String
+//                        
+//                        item.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+//                            print("item has been saved from JSON")
+//                            
+////                            if var categoryItems = category.items as [Item]!{
+//////                                 categoryItems = category.items.append(item)
+////                            }
+//                            
+//                            if (itemDict as! NSDictionary) == arrayOfItems.lastObject as! NSDictionary
+//                            {
+//                                print("All Items have been saved from JSON")
+//                            }
+//                        })
+//                        
 //
-//        
-//        if let filePath = (NSBundle.mainBundle()).pathForResource("SmartCart", ofType: "json") {
-//            
-//            do {
-//                let jsonData = try NSData(contentsOfFile: filePath, options: NSDataReadingOptions.DataReadingMappedIfSafe)
-//                let jsonDict = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-//                // use input
-//                
-//                for dict in jsonDict[""]
-//            }
-//            catch
-//            {
-//                fatalError("Error parsing the JSON")
-//            }
+//                    }
+//                    category.items = category.items.map{dict["items"] as? [Item]}
+                    category.items = dict["items"] as? [Item]
+                    category.saveInBackgroundWithBlock({ (succeded, error) -> Void in
+                        if error == nil{
+                            print("category from JSON has been saved")
+                        }
+                        else
+                        {
+                            print("there has been an error while saving the category from JSON: \(error)")
+                        }
+                    })
+                 }
+                
+            }
+            catch
+            {
+                fatalError("Error parsing the JSON")
+            }
 
-//        }
-    
-        
-        
-        
-        
-        
-//        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"example" ofType:@"json"];
-//        NSData *data = [NSData dataWithContentsOfFile:filePath];
-//        NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-
-//    }
-
+        }
+    }
 }

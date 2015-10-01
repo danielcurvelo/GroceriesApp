@@ -12,9 +12,9 @@ import Parse
 class Item: PFObject, PFSubclassing {
     
     @NSManaged var fridges: [Fridge]?
-    @NSManaged var category: Category?
+    @NSManaged var category: String?
     @NSManaged var purchaseDate: NSDate?
-    @NSManaged var tags: [Tag]?
+//    @NSManaged var tags: [Tag]?
     @NSManaged var lists: [List]?
     @NSManaged var shelfLife: NSNumber?
     @NSManaged var icon: PFFile?

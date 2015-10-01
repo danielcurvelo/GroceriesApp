@@ -19,7 +19,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.registerNib(UINib.init(nibName: "FridgeTableViewCell", bundle: nil), forCellReuseIdentifier: "fridgeCell")
         GroceryController.sharedInstance.downloadFridge { () -> Void in
             
-            if let fridge = GroceryController.sharedInstance.fridge{
+            if let fridge = GroceryController.sharedInstance.fridge {
                 ExpirationController.sharedInstance.seperateItemsByExpiration(fridge.items, completion: { () -> Void in
                     if let itemsUnwrapped = fridge.items
                     {
@@ -27,13 +27,12 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.tableView.reloadData()
                     }
                 })
-            }
-            else
-            {
+                
+            } else {
+                
                 GroceryController.sharedInstance.downloadFridge({ () -> Void in
                     ExpirationController.sharedInstance.seperateItemsByExpiration(GroceryController.sharedInstance.fridge!.items, completion: { () -> Void in
-                        if let itemsUnwrapped = GroceryController.sharedInstance.fridge!.items
-                        {
+                        if let itemsUnwrapped = GroceryController.sharedInstance.fridge!.items {
                             self.items = itemsUnwrapped
                             self.tableView.reloadData()
                         }
@@ -60,7 +59,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let arrayOfItems = ExpirationController.sharedInstance.expirationArrays[indexPath.section]
         let item = arrayOfItems[indexPath.row]
             cell.title.text = item.name
-            cell.category.text = item.category?.title
+            cell.category.text = item.category
         
         return cell
         
