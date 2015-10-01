@@ -592,7 +592,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAg-QK-Gug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2987" y="-994"/>
+            <point key="canvasLocation" x="3027" y="-992"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="gln-Cy-OLV">
@@ -654,7 +654,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add any Pertinent Details to your item. Ex. &quot;Gluten Free for Johnny's Diet&quot;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="awB-HB-SP2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Add any Pertinent Details to your item. Ex. &quot;Gluten Free for Johnny's Diet&quot;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="awB-HB-SP2">
                                 <rect key="frame" x="20" y="394" width="560" height="130"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.79644352531111107" green="0.77228284345169951" blue="0.63703474959766437" alpha="1" colorSpace="calibratedRGB"/>
@@ -1100,7 +1100,7 @@
         <image name="fridge" width="27" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6ky-ck-j3B"/>
-        <segue reference="HQJ-YQ-Ur0"/>
+        <segue reference="qb1-e3-CHQ"/>
+        <segue reference="T4V-vf-gyk"/>
     </inferredMetricsTieBreakers>
 </document>

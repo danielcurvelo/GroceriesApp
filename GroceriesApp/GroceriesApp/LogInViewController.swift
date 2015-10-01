@@ -41,8 +41,8 @@ class LogInViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
             
             if user != nil{
                 self.dismissViewControllerAnimated(true, completion: nil)
-            }
-            else {
+           
+            } else {
                 
                 let alert = UIAlertController(title: "Oops!", message: "Email and Password do not match.", preferredStyle: .Alert)
                 

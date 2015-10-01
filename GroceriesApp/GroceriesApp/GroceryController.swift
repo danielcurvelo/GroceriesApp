@@ -26,6 +26,7 @@ class GroceryController: NSObject {
     var categories:[Category] = []
     
     func createItemInCategory(category: Category, name: String?) {
+        
         let item = Item()
 //        item.category = category
         item.name = name
@@ -33,32 +34,30 @@ class GroceryController: NSObject {
         item.purchaseDate = NSDate.init(timeIntervalSinceNow: 1)
         if var items = category.items{
                 items.append(item)
-            }
-            else
-            {
+            
+            } else {
+            
                 category.items = [Item]()
                 category.items!.append(item)
             }
         
         category.saveInBackgroundWithBlock { (succeded, error) -> Void in
-            if error == nil{
+            if error == nil {
+                
                 print("array of items have been updated in category")
-            }
-            else
-            {
+            
+            } else {
+                
                 print("error updating array of items in category")
             }
         }
         
         
         item.saveInBackgroundWithBlock{(success,error) -> Void in
-            if success
-            {
+            if success {
                 print("list has been saved succesfully")
 //                self.addItemToFridge(item)
-            }
-            else
-            {
+            } else {
                 print("There has been an error saving the list object: \(error)")
             }
         }
@@ -104,27 +103,23 @@ class GroceryController: NSObject {
 //        }
 //    }
     
-    func downloadFridge(completion:()->Void)
-    {
+    func downloadFridge(completion:()->Void) {
+        
         let query = Fridge.query()
         query?.includeKey("items")
         query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
-            if error == nil{
+            if error == nil {
             
                 let queryFridges:[Fridge]? = objects as? [Fridge]
                 
                 if let fridges = queryFridges{
                     self.fridge = fridges.first
                     completion()
-                }
-                else
-                {
+                } else {
                     print("There are no objects fridges when downloaded")
                     completion()
                 }
-            }
-            else
-            {
+            } else {
                 print("There was an error while downloading fridge")
             }
             
@@ -145,6 +140,7 @@ class GroceryController: NSObject {
                 print("Successfully retrieved: \(objects)")
                 completion()
             } else {
+                
                 print("Error: \(error)")
 
             }

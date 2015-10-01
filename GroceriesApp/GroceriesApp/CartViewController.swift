@@ -101,7 +101,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "outOfStock" {
             _ = segue.destinationViewController as! UINavigationController
         }
-        //Something
+        //Something, what was the var that is now _?
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -111,8 +111,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    @IBAction func unwindToCartViewController(segue:UIStoryboardSegue)
-    {
+    @IBAction func unwindToCartViewController(segue:UIStoryboardSegue) {
         
     }
     
@@ -131,6 +130,9 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
 
+    @IBAction func checkOutButtonTapped(sender: UIButton) {
+        //wire up the add to cart button.
+    }
 
     /*
     // MARK: - Navigation
