@@ -136,9 +136,9 @@ class GroceryController: NSObject {
                 
                 if let categoryObjects = objects as? [Category] {
                     self.categories = categoryObjects
+                    completion()
                 }
                 print("Successfully retrieved: \(objects)")
-                completion()
             } else {
                 
                 print("Error: \(error)")

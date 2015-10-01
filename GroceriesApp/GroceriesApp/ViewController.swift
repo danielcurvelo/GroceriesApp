@@ -13,8 +13,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     override func viewDidLoad() {
-        
+        tableView.registerNib(UINib.init(nibName: "FridgeTableViewCell", bundle: nil), forCellReuseIdentifier: "fridgeCell")
         super.viewDidLoad()
+        
+        tableView.rowHeight = 66
         
         GroceryController.sharedInstance.downloadCategories { () -> Void in
             self.tableView.reloadData()
@@ -23,12 +25,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.registerNib(UINib.init(nibName: "FridgeTableViewCell", bundle: nil), forCellReuseIdentifier: "fridgeCell")
 
         if GroceryController.sharedInstance.categories.count > 0
         {
             let category = GroceryController.sharedInstance.categories[section]
-            category.fetchIfNeededInBackground()
+//            category.fetchIfNeededInBackground()
             if let items = category.items {
                 return items.count
                 
